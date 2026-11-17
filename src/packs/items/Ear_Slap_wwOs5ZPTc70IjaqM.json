@@ -4,29 +4,11 @@
   "img": "modules/wfrp4e-core/icons/injuries/injury.png",
   "effects": [
     {
-      "img": "systems/wfrp4e/icons/conditions/deafened.png",
-      "statuses": [
-        "deafened"
-      ],
-      "name": "Deafened",
-      "description": "WFRP4E.Conditions.Deafened",
+      "name": "Ear Slap (Conditions)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "zLrSPDEPTVavjfsb",
+      "type": "base",
       "system": {
-        "condition": {
-          "value": 2,
-          "numbered": true
-        },
-        "scriptData": [
-          {
-            "trigger": "dialog",
-            "label": "Tests related to hearing",
-            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
-            "options": {
-              "targeter": false,
-              "deleteEffect": false
-            },
-            "async": false
-          }
-        ],
         "transferData": {
           "type": "document",
           "originalType": "document",
@@ -66,6 +48,18 @@
           "ids": [],
           "allItems": false
         },
+        "scriptData": [
+          {
+            "script": "await this.actor.addCondition(\"deafened\", 2)",
+            "label": "Apply Conditions",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
         "zone": {
           "type": "zone",
           "traits": {},
@@ -74,10 +68,12 @@
         "sourceData": {
           "test": {}
         },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
         "changes": []
       },
-      "_id": "x7RHjQvDYJAdnLA6",
-      "type": "base",
       "disabled": false,
       "duration": {
         "value": null,
@@ -85,26 +81,32 @@
         "expiry": null,
         "expired": false
       },
+      "description": "",
       "origin": null,
       "tint": "#ffffff",
       "transfer": true,
+      "statuses": [],
       "sort": 0,
-      "flags": {},
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
       "_stats": {
         "compendiumSource": null,
         "duplicateSource": null,
+        "exportSource": null,
         "coreVersion": "14.360",
         "systemId": "wfrp4e",
-        "systemVersion": "8.4.1",
-        "createdTime": 1738838561176,
-        "modifiedTime": 1738838563786,
-        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
-        "exportSource": null
+        "systemVersion": "10.1.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
       },
-      "showIcon": 2,
       "start": null,
+      "showIcon": 1,
       "folder": null,
-      "_key": "!items.effects!wwOs5ZPTc70IjaqM.x7RHjQvDYJAdnLA6"
+      "_key": "!items.effects!wwOs5ZPTc70IjaqM.zLrSPDEPTVavjfsb"
     }
   ],
   "flags": {

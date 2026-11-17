@@ -4,42 +4,11 @@
   "img": "modules/wfrp4e-core/icons/injuries/injury.png",
   "effects": [
     {
-      "img": "systems/wfrp4e/icons/conditions/blinded.png",
-      "statuses": [
-        "blinded"
-      ],
-      "name": "Blinded",
-      "description": "WFRP4E.Conditions.Blinded",
+      "name": "Scraped Eye (Conditions)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "LOLdFQ8Suz8eXM4M",
+      "type": "base",
       "system": {
-        "condition": {
-          "value": 2,
-          "numbered": true
-        },
-        "scriptData": [
-          {
-            "trigger": "dialog",
-            "label": "Tests related to sight",
-            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
-            "options": {
-              "activateScript": "return ['ws', 'bs', 'ag'].includes(args.characteristic)",
-              "targeter": false,
-              "deleteEffect": false
-            },
-            "async": false
-          },
-          {
-            "trigger": "dialog",
-            "label": "Bonus to melee attacks",
-            "script": "args.fields.modifier += 10 * this.effect.conditionValue",
-            "options": {
-              "targeter": true,
-              "hideScript": "return args.item?.attackType != 'melee'",
-              "activateScript": "return args.item?.attackType == 'melee'",
-              "deleteEffect": false
-            },
-            "async": false
-          }
-        ],
         "transferData": {
           "type": "document",
           "originalType": "document",
@@ -79,6 +48,18 @@
           "ids": [],
           "allItems": false
         },
+        "scriptData": [
+          {
+            "script": "await this.actor.addCondition(\"blinded\", 2)",
+            "label": "Apply Conditions",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
         "zone": {
           "type": "zone",
           "traits": {},
@@ -87,10 +68,12 @@
         "sourceData": {
           "test": {}
         },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
         "changes": []
       },
-      "_id": "40dSSYS7XdXPMlUX",
-      "type": "base",
       "disabled": false,
       "duration": {
         "value": null,
@@ -98,26 +81,32 @@
         "expiry": null,
         "expired": false
       },
+      "description": "",
       "origin": null,
       "tint": "#ffffff",
       "transfer": true,
+      "statuses": [],
       "sort": 0,
-      "flags": {},
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
       "_stats": {
         "compendiumSource": null,
         "duplicateSource": null,
+        "exportSource": null,
         "coreVersion": "14.360",
         "systemId": "wfrp4e",
-        "systemVersion": "8.4.1",
-        "createdTime": 1738861073193,
-        "modifiedTime": 1738861073361,
-        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
-        "exportSource": null
+        "systemVersion": "10.1.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
       },
-      "showIcon": 2,
       "start": null,
+      "showIcon": 1,
       "folder": null,
-      "_key": "!items.effects!7BN0Lp9jUCJkasmI.40dSSYS7XdXPMlUX"
+      "_key": "!items.effects!7BN0Lp9jUCJkasmI.LOLdFQ8Suz8eXM4M"
     }
   ],
   "flags": {
