@@ -4,17 +4,11 @@
   "img": "modules/wfrp4e-core/icons/injuries/injury.png",
   "effects": [
     {
-      "img": "systems/wfrp4e/icons/conditions/unconscious.png",
-      "statuses": [
-        "unconscious"
-      ],
-      "name": "Unconscious",
-      "description": "WFRP4E.Conditions.Unconscious",
+      "name": "Stunned Spinal Cord (Conditions)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "3CQUdAeIEh54rRlq",
+      "type": "base",
       "system": {
-        "condition": {
-          "value": null,
-          "numbered": false
-        },
         "transferData": {
           "type": "document",
           "originalType": "document",
@@ -54,7 +48,18 @@
           "ids": [],
           "allItems": false
         },
-        "scriptData": [],
+        "scriptData": [
+          {
+            "script": "await this.actor.addCondition(\"unconscious\")",
+            "label": "Apply Conditions",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
         "zone": {
           "type": "zone",
           "traits": {},
@@ -63,10 +68,12 @@
         "sourceData": {
           "test": {}
         },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
         "changes": []
       },
-      "_id": "Jw4AR2JadYlApqAz",
-      "type": "base",
       "disabled": false,
       "duration": {
         "value": null,
@@ -74,26 +81,32 @@
         "expiry": null,
         "expired": false
       },
+      "description": "",
       "origin": null,
       "tint": "#ffffff",
       "transfer": true,
+      "statuses": [],
       "sort": 0,
-      "flags": {},
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
       "_stats": {
         "compendiumSource": null,
         "duplicateSource": null,
+        "exportSource": null,
         "coreVersion": "14.360",
         "systemId": "wfrp4e",
-        "systemVersion": "8.4.1",
-        "createdTime": 1741943759085,
-        "modifiedTime": 1741943759085,
-        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
-        "exportSource": null
+        "systemVersion": "10.1.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
       },
-      "showIcon": 2,
       "start": null,
+      "showIcon": 1,
       "folder": null,
-      "_key": "!items.effects!0iE2pXSdjQAfW9Wl.Jw4AR2JadYlApqAz"
+      "_key": "!items.effects!0iE2pXSdjQAfW9Wl.3CQUdAeIEh54rRlq"
     }
   ],
   "flags": {
