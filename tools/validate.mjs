@@ -79,6 +79,17 @@ for (const t of tableDocs.filter(d => d._key?.startsWith("!tables!"))) {
   if (src === "core" && next !== 101) errors.push(`Table ${t.name}: Core table ends at ${next - 1}, expected 100`);
 }
 
+// esmodules declared in module.json: must exist and parse as ES modules
+for (const esm of JSON.parse(fs.readFileSync("module.json", "utf8")).esmodules ?? []) {
+  if (!fs.existsSync(esm)) { errors.push(`esmodule ${esm} missing`); continue; }
+  try { acorn.parse(fs.readFileSync(esm, "utf8"), { ecmaVersion: "latest", sourceType: "module" }); stats.scripts++; }
+  catch (e) { errors.push(`esmodule ${esm}: ${e.message}`); }
+}
+// languages declared in module.json: must exist and be valid JSON
+for (const l of JSON.parse(fs.readFileSync("module.json", "utf8")).languages ?? []) {
+  try { JSON.parse(fs.readFileSync(l.path, "utf8")); } catch (e) { errors.push(`language ${l.path}: ${e.message}`); }
+}
+
 console.log(stats);
 if (errors.length) {
   console.error(`${errors.length} error(s):\n` + errors.join("\n"));
