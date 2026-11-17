@@ -4,59 +4,11 @@
   "img": "modules/wfrp4e-core/icons/injuries/injury.png",
   "effects": [
     {
-      "img": "systems/wfrp4e/icons/conditions/stunned.png",
-      "statuses": [
-        "stunned"
-      ],
-      "name": "Stunned",
-      "description": "WFRP4E.Conditions.Stunned",
+      "name": "Groin Kick (Conditions)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "5aSVe6crNjPramQX",
+      "type": "base",
       "system": {
-        "condition": {
-          "value": 3,
-          "numbered": true
-        },
-        "scriptData": [
-          {
-            "trigger": "dialog",
-            "label": "Penalty to all Tests (@effect.name)",
-            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
-            "options": {
-              "activateScript": "return true",
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          },
-          {
-            "trigger": "prePrepareData",
-            "label": "Half Movement",
-            "script": "args.actor.system.details.move.value /= 2",
-            "options": {
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          },
-          {
-            "trigger": "endRound",
-            "label": "Roll to remove Stunned",
-            "script": "const test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty: \"challenging\"}, skipTargets: true, appendTitle :  ` - ${this.effect.name}`, context: {success: \"Removed SL + 1 Conditions.\", failure: \"Failed to remove Conditions.\"}});\nawait test.roll();\nif (test.succeeded) {\n  const toRemove = 1 + Number(test.result.SL);\n  this.actor.removeCondition(\"stunned\", toRemove);\n}",
-            "options": {
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          }
-        ],
         "transferData": {
           "type": "document",
           "originalType": "document",
@@ -96,6 +48,18 @@
           "ids": [],
           "allItems": false
         },
+        "scriptData": [
+          {
+            "script": "await this.actor.addCondition(\"stunned\", 3)",
+            "label": "Apply Conditions",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
         "zone": {
           "type": "zone",
           "traits": {},
@@ -104,10 +68,12 @@
         "sourceData": {
           "test": {}
         },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
         "changes": []
       },
-      "_id": "QBIa6dInm8cxnmVj",
-      "type": "base",
       "disabled": false,
       "duration": {
         "value": null,
@@ -115,26 +81,32 @@
         "expiry": null,
         "expired": false
       },
+      "description": "",
       "origin": null,
       "tint": "#ffffff",
       "transfer": true,
+      "statuses": [],
       "sort": 0,
-      "flags": {},
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
       "_stats": {
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "14.360",
         "systemId": "wfrp4e",
-        "systemVersion": "9.3.2",
-        "createdTime": 1766168491475,
-        "modifiedTime": 1766168491866,
-        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+        "systemVersion": "10.1.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
       },
-      "showIcon": 2,
       "start": null,
+      "showIcon": 1,
       "folder": null,
-      "_key": "!items.effects!eGlaXWR2rCbdnAIQ.QBIa6dInm8cxnmVj"
+      "_key": "!items.effects!eGlaXWR2rCbdnAIQ.5aSVe6crNjPramQX"
     }
   ],
   "flags": {

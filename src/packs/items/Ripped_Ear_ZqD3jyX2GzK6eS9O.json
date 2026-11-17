@@ -4,32 +4,11 @@
   "img": "modules/wfrp4e-core/icons/injuries/injury.png",
   "effects": [
     {
-      "img": "systems/wfrp4e/icons/conditions/deafened.png",
-      "statuses": [
-        "deafened"
-      ],
-      "name": "Deafened",
-      "description": "WFRP4E.Conditions.Deafened",
+      "name": "Ripped Ear (Conditions)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "CE04gUhEzrKWvzIg",
+      "type": "base",
       "system": {
-        "condition": {
-          "value": 2,
-          "numbered": true
-        },
-        "scriptData": [
-          {
-            "trigger": "dialog",
-            "label": "Tests related to hearing",
-            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
-            "options": {
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          }
-        ],
         "transferData": {
           "type": "document",
           "originalType": "document",
@@ -69,6 +48,18 @@
           "ids": [],
           "allItems": false
         },
+        "scriptData": [
+          {
+            "script": "await this.actor.addCondition(\"deafened\", 2)",
+            "label": "Apply Conditions",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
         "zone": {
           "type": "zone",
           "traits": {},
@@ -77,10 +68,12 @@
         "sourceData": {
           "test": {}
         },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
         "changes": []
       },
-      "_id": "1PJpQ6gw2vzgyUE3",
-      "type": "base",
       "disabled": false,
       "duration": {
         "value": null,
@@ -88,26 +81,32 @@
         "expiry": null,
         "expired": false
       },
+      "description": "",
       "origin": null,
       "tint": "#ffffff",
       "transfer": true,
+      "statuses": [],
       "sort": 0,
-      "flags": {},
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
       "_stats": {
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "14.360",
         "systemId": "wfrp4e",
-        "systemVersion": "9.3.2",
-        "createdTime": 1765643078788,
-        "modifiedTime": 1765643078946,
-        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+        "systemVersion": "10.1.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
       },
-      "showIcon": 2,
       "start": null,
+      "showIcon": 1,
       "folder": null,
-      "_key": "!items.effects!ZqD3jyX2GzK6eS9O.1PJpQ6gw2vzgyUE3"
+      "_key": "!items.effects!ZqD3jyX2GzK6eS9O.CE04gUhEzrKWvzIg"
     }
   ],
   "flags": {

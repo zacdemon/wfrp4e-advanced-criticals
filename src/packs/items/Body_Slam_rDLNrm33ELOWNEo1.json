@@ -4,17 +4,11 @@
   "img": "modules/wfrp4e-core/icons/injuries/injury.png",
   "effects": [
     {
-      "img": "systems/wfrp4e/icons/conditions/unconscious.png",
-      "statuses": [
-        "unconscious"
-      ],
-      "name": "Unconscious",
-      "description": "WFRP4E.Conditions.Unconscious",
+      "name": "Body Slam (Conditions)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "pz2suvAP0a5ga8B6",
+      "type": "base",
       "system": {
-        "condition": {
-          "value": null,
-          "numbered": false
-        },
         "transferData": {
           "type": "document",
           "originalType": "document",
@@ -54,7 +48,18 @@
           "ids": [],
           "allItems": false
         },
-        "scriptData": [],
+        "scriptData": [
+          {
+            "script": "await this.actor.addCondition(\"unconscious\")",
+            "label": "Apply Conditions",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
         "zone": {
           "type": "zone",
           "traits": {},
@@ -63,10 +68,12 @@
         "sourceData": {
           "test": {}
         },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
         "changes": []
       },
-      "_id": "b6oQGxXfie5W98h8",
-      "type": "base",
       "disabled": false,
       "duration": {
         "value": null,
@@ -74,26 +81,32 @@
         "expiry": null,
         "expired": false
       },
+      "description": "",
       "origin": null,
       "tint": "#ffffff",
       "transfer": true,
+      "statuses": [],
       "sort": 0,
-      "flags": {},
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
       "_stats": {
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "14.360",
         "systemId": "wfrp4e",
-        "systemVersion": "9.3.2",
-        "createdTime": 1765632078669,
-        "modifiedTime": 1765632078669,
-        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+        "systemVersion": "10.1.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
       },
-      "showIcon": 2,
       "start": null,
+      "showIcon": 1,
       "folder": null,
-      "_key": "!items.effects!rDLNrm33ELOWNEo1.b6oQGxXfie5W98h8"
+      "_key": "!items.effects!rDLNrm33ELOWNEo1.pz2suvAP0a5ga8B6"
     }
   ],
   "flags": {

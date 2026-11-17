@@ -119,99 +119,76 @@
       "_key": "!items.effects!dM2Nx6TsXQ0P71gQ.pss38DiUOybUlH8h"
     },
     {
-      "img": "systems/wfrp4e/icons/conditions/prone.png",
-      "statuses": [
-        "prone"
-      ],
-      "name": "Prone",
-      "description": "WFRP4E.Conditions.Prone",
+      "name": "Shattered Knee (Conditions)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "j5UbBN1HezVqTe5A",
+      "type": "base",
       "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "script": "await this.actor.addCondition(\"prone\")\nawait this.actor.addCondition(\"stunned\", 3)",
+            "label": "Apply Conditions",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
         "condition": {
           "value": null,
           "numbered": false
         },
-        "scriptData": [
-          {
-            "trigger": "dialog",
-            "label": "Tests related to movement of any kind",
-            "script": "args.fields.modifier -= 20",
-            "options": {
-              "activateScript": "return ['ws', 'bs', 'ag'].includes(args.characteristic)",
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          },
-          {
-            "trigger": "dialog",
-            "label": "Bonus to melee attacks",
-            "script": "args.fields.modifier += 20",
-            "options": {
-              "targeter": true,
-              "hideScript": "return args.item?.system.attackType != 'melee'",
-              "activateScript": "return args.item?.system.attackType == 'melee'",
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          }
-        ],
-        "transferData": {
-          "type": "document",
-          "originalType": "document",
-          "documentType": "Actor",
-          "avoidTest": {
-            "value": "none",
-            "opposed": false,
-            "prevention": true,
-            "reversed": false
-          },
-          "testIndependent": false,
-          "equipTransfer": false,
-          "selfOnly": false,
-          "prompt": false,
-          "area": {
-            "templateData": {
-              "borderColor": null,
-              "fillColor": null,
-              "texture": null
-            },
-            "keep": false,
-            "aura": {
-              "transferred": false,
-              "render": false
-            },
-            "duration": "sustained"
-          },
-          "zone": {
-            "type": "zone",
-            "transferred": false,
-            "traits": {},
-            "skipImmediateOnPlacement": false,
-            "keep": false
-          }
-        },
-        "itemTargetData": {
-          "ids": [],
-          "allItems": false
-        },
-        "zone": {
-          "type": "zone",
-          "traits": {},
-          "skipImmediateOnPlacement": false
-        },
-        "sourceData": {
-          "test": {}
-        },
         "changes": []
       },
-      "_id": "CMs5Gk1hp4D9W4ti",
-      "type": "base",
       "disabled": false,
       "duration": {
         "value": null,
@@ -219,159 +196,32 @@
         "expiry": null,
         "expired": false
       },
+      "description": "",
       "origin": null,
       "tint": "#ffffff",
       "transfer": true,
+      "statuses": [],
       "sort": 0,
-      "flags": {},
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
       "_stats": {
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "14.360",
         "systemId": "wfrp4e",
-        "systemVersion": "9.3.2",
-        "createdTime": 1766168668234,
-        "modifiedTime": 1766168668234,
-        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+        "systemVersion": "10.1.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
       },
-      "showIcon": 2,
       "start": null,
+      "showIcon": 1,
       "folder": null,
-      "_key": "!items.effects!dM2Nx6TsXQ0P71gQ.CMs5Gk1hp4D9W4ti"
-    },
-    {
-      "img": "systems/wfrp4e/icons/conditions/stunned.png",
-      "statuses": [
-        "stunned"
-      ],
-      "name": "Stunned",
-      "description": "WFRP4E.Conditions.Stunned",
-      "system": {
-        "condition": {
-          "value": 3,
-          "numbered": true
-        },
-        "scriptData": [
-          {
-            "trigger": "dialog",
-            "label": "Penalty to all Tests (@effect.name)",
-            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
-            "options": {
-              "activateScript": "return true",
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          },
-          {
-            "trigger": "prePrepareData",
-            "label": "Half Movement",
-            "script": "args.actor.system.details.move.value /= 2",
-            "options": {
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          },
-          {
-            "trigger": "endRound",
-            "label": "Roll to remove Stunned",
-            "script": "const test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty: \"challenging\"}, skipTargets: true, appendTitle :  ` - ${this.effect.name}`, context: {success: \"Removed SL + 1 Conditions.\", failure: \"Failed to remove Conditions.\"}});\nawait test.roll();\nif (test.succeeded) {\n  const toRemove = 1 + Number(test.result.SL);\n  this.actor.removeCondition(\"stunned\", toRemove);\n}",
-            "options": {
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          }
-        ],
-        "transferData": {
-          "type": "document",
-          "originalType": "document",
-          "documentType": "Actor",
-          "avoidTest": {
-            "value": "none",
-            "opposed": false,
-            "prevention": true,
-            "reversed": false
-          },
-          "testIndependent": false,
-          "equipTransfer": false,
-          "selfOnly": false,
-          "prompt": false,
-          "area": {
-            "templateData": {
-              "borderColor": null,
-              "fillColor": null,
-              "texture": null
-            },
-            "keep": false,
-            "aura": {
-              "transferred": false,
-              "render": false
-            },
-            "duration": "sustained"
-          },
-          "zone": {
-            "type": "zone",
-            "transferred": false,
-            "traits": {},
-            "skipImmediateOnPlacement": false,
-            "keep": false
-          }
-        },
-        "itemTargetData": {
-          "ids": [],
-          "allItems": false
-        },
-        "zone": {
-          "type": "zone",
-          "traits": {},
-          "skipImmediateOnPlacement": false
-        },
-        "sourceData": {
-          "test": {}
-        },
-        "changes": []
-      },
-      "_id": "Gc3t4modDLGvYjNB",
-      "type": "base",
-      "disabled": false,
-      "duration": {
-        "value": null,
-        "units": "seconds",
-        "expiry": null,
-        "expired": false
-      },
-      "origin": null,
-      "tint": "#ffffff",
-      "transfer": true,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "14.360",
-        "systemId": "wfrp4e",
-        "systemVersion": "9.3.2",
-        "createdTime": 1766168669550,
-        "modifiedTime": 1766168669845,
-        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
-      },
-      "showIcon": 2,
-      "start": null,
-      "folder": null,
-      "_key": "!items.effects!dM2Nx6TsXQ0P71gQ.Gc3t4modDLGvYjNB"
+      "_key": "!items.effects!dM2Nx6TsXQ0P71gQ.j5UbBN1HezVqTe5A"
     }
   ],
   "flags": {

@@ -4,59 +4,11 @@
   "img": "modules/wfrp4e-core/icons/injuries/injury.png",
   "effects": [
     {
-      "img": "systems/wfrp4e/icons/conditions/stunned.png",
-      "statuses": [
-        "stunned"
-      ],
-      "name": "Stunned",
-      "description": "WFRP4E.Conditions.Stunned",
+      "name": "Head-Butt (Conditions)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "jjRNCMByNZmjgakJ",
+      "type": "base",
       "system": {
-        "condition": {
-          "value": 2,
-          "numbered": true
-        },
-        "scriptData": [
-          {
-            "trigger": "dialog",
-            "label": "Penalty to all Tests (@effect.name)",
-            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
-            "options": {
-              "activateScript": "return true",
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          },
-          {
-            "trigger": "prePrepareData",
-            "label": "Half Movement",
-            "script": "args.actor.system.details.move.value /= 2",
-            "options": {
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          },
-          {
-            "trigger": "endRound",
-            "label": "Roll to remove Stunned",
-            "script": "const test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty: \"challenging\"}, skipTargets: true, appendTitle :  ` - ${this.effect.name}`, context: {success: \"Removed SL + 1 Conditions.\", failure: \"Failed to remove Conditions.\"}});\nawait test.roll();\nif (test.succeeded) {\n  const toRemove = 1 + Number(test.result.SL);\n  this.actor.removeCondition(\"stunned\", toRemove);\n}",
-            "options": {
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          }
-        ],
         "transferData": {
           "type": "document",
           "originalType": "document",
@@ -96,128 +48,18 @@
           "ids": [],
           "allItems": false
         },
-        "zone": {
-          "type": "zone",
-          "traits": {},
-          "skipImmediateOnPlacement": false
-        },
-        "sourceData": {
-          "test": {}
-        },
-        "changes": []
-      },
-      "_id": "Al2tr0NSJ352nD3o",
-      "type": "base",
-      "disabled": false,
-      "duration": {
-        "value": null,
-        "units": "seconds",
-        "expiry": null,
-        "expired": false
-      },
-      "origin": null,
-      "tint": "#ffffff",
-      "transfer": true,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "14.360",
-        "systemId": "wfrp4e",
-        "systemVersion": "9.3.2",
-        "createdTime": 1765642967820,
-        "modifiedTime": 1765642967932,
-        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
-      },
-      "showIcon": 2,
-      "start": null,
-      "folder": null,
-      "_key": "!items.effects!pzf7XORwpG9Ka02P.Al2tr0NSJ352nD3o"
-    },
-    {
-      "img": "systems/wfrp4e/icons/conditions/blinded.png",
-      "statuses": [
-        "blinded"
-      ],
-      "name": "Blinded",
-      "description": "WFRP4E.Conditions.Blinded",
-      "system": {
-        "condition": {
-          "value": 2,
-          "numbered": true
-        },
         "scriptData": [
           {
-            "trigger": "dialog",
-            "label": "Tests related to sight",
-            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
+            "script": "await this.actor.addCondition(\"stunned\", 2)\nawait this.actor.addCondition(\"blinded\", 2)",
+            "label": "Apply Conditions",
+            "trigger": "immediate",
             "options": {
-              "activateScript": "return ['ws', 'bs', 'ag'].includes(args.characteristic)",
               "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          },
-          {
-            "trigger": "dialog",
-            "label": "Bonus to melee attacks",
-            "script": "args.fields.modifier += 10 * this.effect.conditionValue",
-            "options": {
-              "targeter": true,
-              "hideScript": "return args.item?.attackType != 'melee'",
-              "activateScript": "return args.item?.attackType == 'melee'",
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
+              "deleteEffect": true
             },
             "async": false
           }
         ],
-        "transferData": {
-          "type": "document",
-          "originalType": "document",
-          "documentType": "Actor",
-          "avoidTest": {
-            "value": "none",
-            "opposed": false,
-            "prevention": true,
-            "reversed": false
-          },
-          "testIndependent": false,
-          "equipTransfer": false,
-          "selfOnly": false,
-          "prompt": false,
-          "area": {
-            "templateData": {
-              "borderColor": null,
-              "fillColor": null,
-              "texture": null
-            },
-            "keep": false,
-            "aura": {
-              "transferred": false,
-              "render": false
-            },
-            "duration": "sustained"
-          },
-          "zone": {
-            "type": "zone",
-            "transferred": false,
-            "traits": {},
-            "skipImmediateOnPlacement": false,
-            "keep": false
-          }
-        },
-        "itemTargetData": {
-          "ids": [],
-          "allItems": false
-        },
         "zone": {
           "type": "zone",
           "traits": {},
@@ -226,10 +68,12 @@
         "sourceData": {
           "test": {}
         },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
         "changes": []
       },
-      "_id": "CEpchunWnOsJRV4E",
-      "type": "base",
       "disabled": false,
       "duration": {
         "value": null,
@@ -237,26 +81,32 @@
         "expiry": null,
         "expired": false
       },
+      "description": "",
       "origin": null,
       "tint": "#ffffff",
       "transfer": true,
+      "statuses": [],
       "sort": 0,
-      "flags": {},
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
       "_stats": {
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "14.360",
         "systemId": "wfrp4e",
-        "systemVersion": "9.3.2",
-        "createdTime": 1765642969337,
-        "modifiedTime": 1765642969483,
-        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+        "systemVersion": "10.1.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
       },
-      "showIcon": 2,
       "start": null,
+      "showIcon": 1,
       "folder": null,
-      "_key": "!items.effects!pzf7XORwpG9Ka02P.CEpchunWnOsJRV4E"
+      "_key": "!items.effects!pzf7XORwpG9Ka02P.jjRNCMByNZmjgakJ"
     }
   ],
   "flags": {
