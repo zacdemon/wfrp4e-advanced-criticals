@@ -4,48 +4,11 @@
   "img": "modules/wfrp4e-core/icons/injuries/injury.png",
   "effects": [
     {
-      "img": "systems/wfrp4e/icons/conditions/prone.png",
-      "statuses": [
-        "prone"
-      ],
-      "name": "Prone",
-      "description": "WFRP4E.Conditions.Prone",
+      "name": "Snatch And Grab (Conditions)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "pOrj1VtptQAzRfwG",
+      "type": "base",
       "system": {
-        "condition": {
-          "value": null,
-          "numbered": false
-        },
-        "scriptData": [
-          {
-            "trigger": "dialog",
-            "label": "Tests related to movement of any kind",
-            "script": "args.fields.modifier -= 20",
-            "options": {
-              "activateScript": "return ['ws', 'bs', 'ag'].includes(args.characteristic)",
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          },
-          {
-            "trigger": "dialog",
-            "label": "Bonus to melee attacks",
-            "script": "args.fields.modifier += 20",
-            "options": {
-              "targeter": true,
-              "hideScript": "return args.item?.system.attackType != 'melee'",
-              "activateScript": "return args.item?.system.attackType == 'melee'",
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          }
-        ],
         "transferData": {
           "type": "document",
           "originalType": "document",
@@ -85,6 +48,18 @@
           "ids": [],
           "allItems": false
         },
+        "scriptData": [
+          {
+            "script": "await this.actor.addCondition(\"prone\")",
+            "label": "Apply Conditions",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
         "zone": {
           "type": "zone",
           "traits": {},
@@ -93,10 +68,12 @@
         "sourceData": {
           "test": {}
         },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
         "changes": []
       },
-      "_id": "T50XhLD8pZNuMv4c",
-      "type": "base",
       "disabled": false,
       "duration": {
         "value": null,
@@ -104,26 +81,32 @@
         "expiry": null,
         "expired": false
       },
+      "description": "",
       "origin": null,
       "tint": "#ffffff",
       "transfer": true,
+      "statuses": [],
       "sort": 0,
-      "flags": {},
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
       "_stats": {
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "14.360",
         "systemId": "wfrp4e",
-        "systemVersion": "9.3.2",
-        "createdTime": 1765631593783,
-        "modifiedTime": 1765631593783,
-        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+        "systemVersion": "10.1.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
       },
-      "showIcon": 2,
       "start": null,
+      "showIcon": 1,
       "folder": null,
-      "_key": "!items.effects!lI9bZkhcWLWWC5qh.T50XhLD8pZNuMv4c"
+      "_key": "!items.effects!lI9bZkhcWLWWC5qh.pOrj1VtptQAzRfwG"
     }
   ],
   "flags": {
