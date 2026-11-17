@@ -4,31 +4,11 @@
   "img": "modules/wfrp4e-core/icons/injuries/injury.png",
   "effects": [
     {
-      "img": "systems/wfrp4e/icons/conditions/stunned.png",
-      "statuses": [
-        "stunned"
-      ],
-      "name": "Stunned",
-      "description": "WFRP4E.Conditions.Stunned",
+      "name": "Groin Hit (Conditions)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "BRKXwjlqSn8rj1kc",
+      "type": "base",
       "system": {
-        "condition": {
-          "value": 3,
-          "numbered": true
-        },
-        "scriptData": [
-          {
-            "trigger": "dialog",
-            "label": "Penalty to all Tests (@effect.name)",
-            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
-            "options": {
-              "activateScript": "return true",
-              "targeter": false,
-              "defending": false,
-              "deleteEffect": false
-            },
-            "async": false
-          }
-        ],
         "transferData": {
           "type": "document",
           "originalType": "document",
@@ -68,6 +48,18 @@
           "ids": [],
           "allItems": false
         },
+        "scriptData": [
+          {
+            "script": "await this.actor.addCondition(\"stunned\", 3)",
+            "label": "Apply Conditions",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
         "zone": {
           "type": "zone",
           "traits": {},
@@ -76,10 +68,12 @@
         "sourceData": {
           "test": {}
         },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
         "changes": []
       },
-      "_id": "MrJrkFEseazKrw0e",
-      "type": "base",
       "disabled": false,
       "duration": {
         "value": null,
@@ -87,26 +81,32 @@
         "expiry": null,
         "expired": false
       },
+      "description": "",
       "origin": null,
       "tint": "#ffffff",
       "transfer": true,
+      "statuses": [],
       "sort": 0,
-      "flags": {},
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
       "_stats": {
         "compendiumSource": null,
         "duplicateSource": null,
+        "exportSource": null,
         "coreVersion": "14.360",
         "systemId": "wfrp4e",
-        "systemVersion": "8.5.1",
-        "createdTime": 1744364871995,
-        "modifiedTime": 1744364872310,
-        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
-        "exportSource": null
+        "systemVersion": "10.1.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
       },
-      "showIcon": 2,
       "start": null,
+      "showIcon": 1,
       "folder": null,
-      "_key": "!items.effects!GemELu8gTpcJT8af.MrJrkFEseazKrw0e"
+      "_key": "!items.effects!GemELu8gTpcJT8af.BRKXwjlqSn8rj1kc"
     }
   ],
   "flags": {
