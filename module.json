@@ -16,6 +16,13 @@
           "verified": "9.6.1"
         }
       }
+    ],
+    "requires": [
+      {
+        "id": "wfrp4e-core",
+        "type": "module",
+        "reason": "Critical item scripts use Torn Muscle, Broken Bone, Amputation, Festering Wound and Blood Rot items, icons and system scripts from the WFRP4e Core Rulebook module."
+      }
     ]
   },
   "description": "<p>A module adding alternative critical tables for WFRP4ed for different kinds of damage source. Based on the ruleset written by Josef Tham and the work by Chuck Morrison of www.windsofchaos.com</p>",
