@@ -520,8 +520,8 @@
       "type": "document",
       "weight": 1,
       "range": [
-        0,
-        0
+        100,
+        100
       ],
       "drawn": false,
       "_id": "2wUf7AB41EWykjT4",

@@ -211,7 +211,7 @@
         },
         "scriptData": [
           {
-            "script": "let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), skipTargets: true, appendTitle :  \" - \" + this.effect.name})\nawait test.roll();\nif(test.failed)\n{\n    let item = await fromUuid(\"Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb\")\nthis.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n}",
+            "script": "let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  \" - \" + this.effect.name, fields : {difficulty : \"average\"}})\nawait test.roll();\nif(test.failed)\n{\n    let item = await fromUuid(\"Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb\")\n    this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n}",
             "label": "Festering Wound",
             "trigger": "immediate",
             "options": {

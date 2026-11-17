@@ -163,7 +163,7 @@
         },
         "scriptData": [
           {
-            "script": "args.fields.modifier -= =1",
+            "script": "args.fields.modifier -= 10",
             "label": "Heat Shock",
             "trigger": "dialog",
             "options": {

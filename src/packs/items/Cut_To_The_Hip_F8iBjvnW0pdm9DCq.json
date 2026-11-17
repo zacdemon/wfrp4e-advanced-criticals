@@ -155,7 +155,7 @@
         },
         "scriptData": [
           {
-            "script": "nbvcghfederfrfrfr",
+            "script": "let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  \" - \" + this.effect.name, fields : {difficulty : \"average\"}})\nawait test.roll();\nif(test.failed)\n{\n    await this.actor.addCondition(\"stunned\", 1)\n    if (Number(test.result.SL) <= -4)\n    {\n        await this.actor.addCondition(\"prone\")\n    }\n}",
             "label": "Cut to the Hip",
             "trigger": "immediate",
             "options": {

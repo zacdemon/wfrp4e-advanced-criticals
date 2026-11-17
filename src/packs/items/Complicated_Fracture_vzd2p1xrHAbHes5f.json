@@ -163,14 +163,14 @@
         },
         "scriptData": [
           {
-            "script": "args.fields.modifer-= 20;",
+            "script": "args.fields.modifier -= 20",
             "label": "Complicated Fracture",
             "trigger": "dialog",
             "options": {
               "targeter": false,
               "defending": false,
-              "hideScript": "return ![\"ag”].ncludes(args.characteristic)",
-              "activateScript": "return [\"ag”].ncludes(args.characteristic)",
+              "hideScript": "return ![\"ag\"].includes(args.characteristic)",
+              "activateScript": "return [\"ag\"].includes(args.characteristic)",
               "submissionScript": "",
               "deleteEffect": false
             },

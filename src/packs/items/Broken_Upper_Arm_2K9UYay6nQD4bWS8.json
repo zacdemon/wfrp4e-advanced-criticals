@@ -159,14 +159,14 @@
         },
         "scriptData": [
           {
-            "script": "args.fields.modifer-= 10;",
+            "script": "args.fields.modifier -= 10",
             "label": "Broken Upper Arm",
             "trigger": "dialog",
             "options": {
               "targeter": false,
               "defending": false,
-              "hideScript": "return ![\"ag”].ncludes(args.characteristic)",
-              "activateScript": "return [\"ag”].ncludes(args.characteristic)",
+              "hideScript": "return ![\"ag\"].includes(args.characteristic)",
+              "activateScript": "return [\"ag\"].includes(args.characteristic)",
               "submissionScript": "",
               "deleteEffect": false
             },
