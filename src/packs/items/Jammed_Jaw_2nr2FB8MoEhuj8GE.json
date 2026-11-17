@@ -4,246 +4,6 @@
   "img": "modules/wfrp4e-core/icons/injuries/injury.png",
   "effects": [
     {
-      "img": "systems/wfrp4e/icons/conditions/fatigued.png",
-      "statuses": [
-        "fatigued"
-      ],
-      "name": "Fatigued",
-      "description": "WFRP4E.Conditions.Fatigued",
-      "system": {
-        "condition": {
-          "value": 1,
-          "numbered": true
-        },
-        "scriptData": [
-          {
-            "trigger": "dialog",
-            "label": "Penalty to all Tests (@effect.name)",
-            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
-            "options": {
-              "activateScript": "return true",
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          }
-        ],
-        "transferData": {
-          "type": "document",
-          "originalType": "document",
-          "documentType": "Actor",
-          "avoidTest": {
-            "value": "none",
-            "opposed": false,
-            "prevention": true,
-            "reversed": false
-          },
-          "testIndependent": false,
-          "equipTransfer": false,
-          "selfOnly": false,
-          "prompt": false,
-          "area": {
-            "templateData": {
-              "borderColor": null,
-              "fillColor": null,
-              "texture": null
-            },
-            "keep": false,
-            "aura": {
-              "transferred": false,
-              "render": false
-            },
-            "duration": "sustained"
-          },
-          "zone": {
-            "type": "zone",
-            "transferred": false,
-            "traits": {},
-            "skipImmediateOnPlacement": false,
-            "keep": false
-          }
-        },
-        "itemTargetData": {
-          "ids": [],
-          "allItems": false
-        },
-        "zone": {
-          "type": "zone",
-          "traits": {},
-          "skipImmediateOnPlacement": false
-        },
-        "sourceData": {
-          "test": {}
-        },
-        "changes": []
-      },
-      "_id": "ly0snwRKmuxHW8NX",
-      "type": "base",
-      "disabled": false,
-      "duration": {
-        "value": null,
-        "units": "seconds",
-        "expiry": null,
-        "expired": false
-      },
-      "origin": null,
-      "tint": "#ffffff",
-      "transfer": true,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "14.360",
-        "systemId": "wfrp4e",
-        "systemVersion": "9.3.2",
-        "createdTime": 1765638095797,
-        "modifiedTime": 1765638095797,
-        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
-      },
-      "showIcon": 2,
-      "start": null,
-      "folder": null,
-      "_key": "!items.effects!2nr2FB8MoEhuj8GE.ly0snwRKmuxHW8NX"
-    },
-    {
-      "img": "systems/wfrp4e/icons/conditions/stunned.png",
-      "statuses": [
-        "stunned"
-      ],
-      "name": "Stunned",
-      "description": "WFRP4E.Conditions.Stunned",
-      "system": {
-        "condition": {
-          "value": 2,
-          "numbered": true
-        },
-        "scriptData": [
-          {
-            "trigger": "dialog",
-            "label": "Penalty to all Tests (@effect.name)",
-            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
-            "options": {
-              "activateScript": "return true",
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          },
-          {
-            "trigger": "prePrepareData",
-            "label": "Half Movement",
-            "script": "args.actor.system.details.move.value /= 2",
-            "options": {
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          },
-          {
-            "trigger": "endRound",
-            "label": "Roll to remove Stunned",
-            "script": "const test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty: \"challenging\"}, skipTargets: true, appendTitle :  ` - ${this.effect.name}`, context: {success: \"Removed SL + 1 Conditions.\", failure: \"Failed to remove Conditions.\"}});\nawait test.roll();\nif (test.succeeded) {\n  const toRemove = 1 + Number(test.result.SL);\n  this.actor.removeCondition(\"stunned\", toRemove);\n}",
-            "options": {
-              "targeter": false,
-              "defending": false,
-              "runIfDisabled": false,
-              "deleteEffect": false,
-              "showDuplicates": false
-            },
-            "async": false
-          }
-        ],
-        "transferData": {
-          "type": "document",
-          "originalType": "document",
-          "documentType": "Actor",
-          "avoidTest": {
-            "value": "none",
-            "opposed": false,
-            "prevention": true,
-            "reversed": false
-          },
-          "testIndependent": false,
-          "equipTransfer": false,
-          "selfOnly": false,
-          "prompt": false,
-          "area": {
-            "templateData": {
-              "borderColor": null,
-              "fillColor": null,
-              "texture": null
-            },
-            "keep": false,
-            "aura": {
-              "transferred": false,
-              "render": false
-            },
-            "duration": "sustained"
-          },
-          "zone": {
-            "type": "zone",
-            "transferred": false,
-            "traits": {},
-            "skipImmediateOnPlacement": false,
-            "keep": false
-          }
-        },
-        "itemTargetData": {
-          "ids": [],
-          "allItems": false
-        },
-        "zone": {
-          "type": "zone",
-          "traits": {},
-          "skipImmediateOnPlacement": false
-        },
-        "sourceData": {
-          "test": {}
-        },
-        "changes": []
-      },
-      "_id": "oy2ikJSrsl0nKh36",
-      "type": "base",
-      "disabled": false,
-      "duration": {
-        "value": null,
-        "units": "seconds",
-        "expiry": null,
-        "expired": false
-      },
-      "origin": null,
-      "tint": "#ffffff",
-      "transfer": true,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "14.360",
-        "systemId": "wfrp4e",
-        "systemVersion": "9.3.2",
-        "createdTime": 1765638097546,
-        "modifiedTime": 1765638097705,
-        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
-      },
-      "showIcon": 2,
-      "start": null,
-      "folder": null,
-      "_key": "!items.effects!2nr2FB8MoEhuj8GE.oy2ikJSrsl0nKh36"
-    },
-    {
       "_id": "fD5f8zacfFtBxTdE",
       "flags": {
         "wfrp4e": {
@@ -357,6 +117,111 @@
       "showIcon": 1,
       "folder": null,
       "_key": "!items.effects!2nr2FB8MoEhuj8GE.fD5f8zacfFtBxTdE"
+    },
+    {
+      "name": "Jammed Jaw (Conditions)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "nHgetKB2aoHx9OyC",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "script": "await this.actor.addCondition(\"stunned\", 2)\nawait this.actor.addCondition(\"fatigued\")",
+            "label": "Apply Conditions",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "10.1.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!2nr2FB8MoEhuj8GE.nHgetKB2aoHx9OyC"
     }
   ],
   "flags": {
