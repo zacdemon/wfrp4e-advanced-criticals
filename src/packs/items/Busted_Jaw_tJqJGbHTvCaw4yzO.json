@@ -163,7 +163,7 @@
         },
         "scriptData": [
           {
-            "script": "let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"average\"}, skipTargets: true, appendTitle :  \" - \" + this.effect.name})\nawait test.roll();\nif(test.failed)\n{\n  await this.actor.addCondition(\"unconscious\");\n}",
+            "script": "let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"average\"}, skipTargets: true, appendTitle :  \" - \" + this.effect.name})\nawait test.roll();\nif(test.failed)\n{\n  await this.actor.addCondition(\"unconscious\");\n}\nelse\n{\n  await this.actor.addCondition(\"stunned\", 2);\n}",
             "label": "Busted Jaw",
             "trigger": "immediate",
             "options": {
