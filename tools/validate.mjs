@@ -37,8 +37,11 @@ const macroDocs = loadPack("macros");
 const folders = Object.fromEntries(itemDocs.filter(d => d._key?.startsWith("!folders!")).map(d => [d._id, d.name]));
 const items = Object.fromEntries(itemDocs.filter(d => d._key?.startsWith("!items!")).map(d => [d._id, d]));
 
+const CONDITION_KEYS = new Set(["stunned", "bleeding", "prone", "fatigued", "blinded", "unconscious", "deafened", "ablaze", "broken", "entangled", "poisoned", "surprised", "dead"]);
 for (const item of Object.values(items)) {
   for (const effect of item.effects ?? []) {
+    if ((effect.statuses ?? []).some(s => CONDITION_KEYS.has(s)))
+      errors.push(`Embedded condition copy '${effect.name}' on ${folders[item.folder]} / ${item.name} (${item._id}): use this.actor.addCondition in an immediate script instead`);
     for (const [i, s] of (effect.system?.scriptData ?? []).entries()) {
       const where = `${folders[item.folder]} / ${item.name} (${item._id}) / ${effect.name} [${s.trigger} #${i}]`;
       checkScript(s.script, where);
