@@ -1,0 +1,62 @@
+{
+  "name": "Neck Wound",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The arrow digs a shallow groove in the side of your neck. You are absolutely horrified, for a moment believing you just took your death wound! What was your Dooming again?</p><p><strong>Effects:</strong> You must pass an <strong>Average (+20) Cool</strong> or <strong>Endurance</strong> Test to avoid dropping whatever you are carrying in your primary hand and clap it to your wound. (You can still let go and take an Action normally on your Turn.) </p><p>No Extraction is necessary.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "1",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1738231040054,
+    "modifiedTime": 1738840436617,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "T07Ug5OERH70yg0G",
+  "_id": "bC002bOrM4Q5V1PN",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!bC002bOrM4Q5V1PN"
+}

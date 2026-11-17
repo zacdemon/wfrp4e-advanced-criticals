@@ -1,0 +1,62 @@
+{
+  "name": "Smashed Mouth",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> The projectile slams into your mouth, breaking bone and shattering teeth.</p> <p><strong>Effects:</strong> Pass a Challenging (+0) Endurance Test or gain @Condition[Unconscious], otherwise gaining @Condition[Stunned] (3). You also suffer a Broken Bone (Major) and lose 1d10 teeth – Amputation (Average). \n If the projectile was a Lead Bullet you must also pass a Challenging (+0) Toughness Test or also lose your tongue (see under Amputated Parts) as the almond-shaped projectile penetrates deeply, tearing through the soft tissues of your mouth. Also roll for any Pummel Quality.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "4",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231054305,
+    "modifiedTime": 1738231054305,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "kLZ2Ijw6dU67roNs",
+  "_id": "3ehTjdoy72W5vZoY",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!3ehTjdoy72W5vZoY"
+}

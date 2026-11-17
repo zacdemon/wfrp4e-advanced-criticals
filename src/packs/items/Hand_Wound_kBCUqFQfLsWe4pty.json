@@ -1,0 +1,175 @@
+{
+  "name": "Hand Wound",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "name": "Hand Wound",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "NQqiuzVobEJkI1Lo",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "script": "args.fields.modifier -= 10;",
+            "label": "Hand Wound",
+            "trigger": "dialog",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "hideScript": "",
+              "activateScript": "return this.item.system.usesLocation(args.weapon)",
+              "submissionScript": "",
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false,
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {}
+        }
+      },
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4ed-advanced-criticals.advanced-criticals.Item.rZ0BUp8AL9KE7Ela.ActiveEffect.IDim6DTMTCnXrlVP",
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.4.1",
+        "createdTime": 1741475132822,
+        "modifiedTime": 1741475150822,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!kBCUqFQfLsWe4pty.NQqiuzVobEJkI1Lo"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The bullet cuts a track across the meat at the base of your thumb, causing blood to well up and make your grip slippery.</p><p><strong>Effects:</strong> Until you take an Action to wipe off the blood you suffer a -10 penalty to any Tests using that hand. </p><p>No Extraction is necessary.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "1",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Arm",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1738249711119,
+    "modifiedTime": 1741475111575,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "d9ul7VNz3K6ON5iI",
+  "_id": "kBCUqFQfLsWe4pty",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!kBCUqFQfLsWe4pty"
+}

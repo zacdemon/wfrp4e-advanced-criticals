@@ -1,0 +1,185 @@
+{
+  "name": "Collision",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/prone.png",
+      "statuses": [
+        "prone"
+      ],
+      "name": "Prone",
+      "description": "WFRP4E.Conditions.Prone",
+      "system": {
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Tests related to movement of any kind",
+            "script": "args.fields.modifier -= 20",
+            "options": {
+              "activateScript": "return ['ws', 'bs', 'ag'].includes(args.characteristic)",
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "dialog",
+            "label": "Bonus to melee attacks",
+            "script": "args.fields.modifier += 20",
+            "options": {
+              "targeter": true,
+              "hideScript": "return args.item?.system.attackType != 'melee'",
+              "activateScript": "return args.item?.system.attackType == 'melee'",
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "Azv86yUmhEOIvosS",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1766166230168,
+        "modifiedTime": 1766166230168,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!XL0ymhv3iPMNBAsv.Azv86yUmhEOIvosS"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> As you attempt to dodge your enemy’s slavering attention you are taken unaware by a sudden rush. The ensuing collision sends you flying!</p> <p><strong>Effects:</strong> You gain @Condition[Prone]. You must pass an Average (+20) Dexterity Test or drop anything held in your primary hand, sending it flying 1d10 yards in a random direction.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "1",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Leg",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231055824,
+    "modifiedTime": 1738231055824,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "kwl0ma51IwYYTYif",
+  "_id": "XL0ymhv3iPMNBAsv",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!XL0ymhv3iPMNBAsv"
+}

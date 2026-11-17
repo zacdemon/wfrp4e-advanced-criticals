@@ -1,0 +1,62 @@
+{
+  "name": "Transfixed Heart",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> The arrow cleanly transfixes your heart, killing you pretty much instantly. A most impressive instant kill shot!</p> <p><strong>Effects:</strong> What part of “killing you pretty much instantly” and “instant kill shot” didn’t you understand?</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "D",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Body",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231040054,
+    "modifiedTime": 1738830870953,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "dfcfKRuNqVlaJss0",
+  "_id": "fOx8OZxv6t3QoFP8",
+  "sort": 1500000,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!fOx8OZxv6t3QoFP8"
+}

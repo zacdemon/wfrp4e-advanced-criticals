@@ -1,0 +1,23 @@
+{
+  "name": "Teeth - Body",
+  "sorting": "a",
+  "folder": "WA9lCQB27eGhNN6x",
+  "type": "Item",
+  "_id": "at3TTCGRE0v19BUf",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231055771,
+    "modifiedTime": 1765630120626,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": null
+  },
+  "_key": "!folders!at3TTCGRE0v19BUf"
+}

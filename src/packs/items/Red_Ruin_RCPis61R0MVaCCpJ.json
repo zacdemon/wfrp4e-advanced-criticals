@@ -1,0 +1,62 @@
+{
+  "name": "Red Ruin",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> Red ruin flops at your opponent’s feet as he splits you in half. From shoulder to hip or horizontally; the angle of it doesn’t really matter, as most of your vital organs are bisected regardless.</p> <p><strong>Effects:</strong> You are quite messily dead.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "D",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Body",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231047793,
+    "modifiedTime": 1738231047793,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "StB5irjAsV64CK1L",
+  "_id": "RCPis61R0MVaCCpJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!RCPis61R0MVaCCpJ"
+}

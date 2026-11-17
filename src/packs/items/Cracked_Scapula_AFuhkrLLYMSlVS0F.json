@@ -1,0 +1,272 @@
+{
+  "name": "Cracked Scapula",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/stunned.png",
+      "statuses": [
+        "stunned"
+      ],
+      "name": "Stunned",
+      "description": "WFRP4E.Conditions.Stunned",
+      "system": {
+        "condition": {
+          "value": 2,
+          "numbered": true
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Penalty to all Tests (@effect.name)",
+            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
+            "options": {
+              "activateScript": "return true",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "xvq5KAH3HBWppyk1",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.3.3",
+        "createdTime": 1738272326736,
+        "modifiedTime": 1738272327182,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!AFuhkrLLYMSlVS0F.xvq5KAH3HBWppyk1"
+    },
+    {
+      "name": "Broken Arm (Minor)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "3mfWelkzvuTjfDvC",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.items.4lj1ik958mbgAlaF\")\nlet data = item.toObject();\ndata.system.location.key = this.item.system.location.key\nthis.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect : this.effect.id})",
+            "label": "Broken Arm (Minor)",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.3.3",
+        "createdTime": 1738274103580,
+        "modifiedTime": 1738274155403,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!AFuhkrLLYMSlVS0F.3mfWelkzvuTjfDvC"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your foe’s shot fractures your scapula, either cracking the shoulder blade or snapping one of the protruding bony processes that are part of the shoulder joint. Sure sucks to be your arm right now!</p><p><strong>Effects:</strong> Gain @Condition[Stunned] (2) and suffer a @UUID[Compendium.wfrp4e-core.items.Item.4lj1ik958mbgAlaF]{Broken Bone (Minor)}.</p><p>Extraction will require <strong>Surgery (Challenging)</strong> as the arrowhead has lodged in bone.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "4",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Arm",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": true
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231040054,
+    "modifiedTime": 1738296465563,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "NL9Hi4HnLYoMohtK",
+  "_id": "AFuhkrLLYMSlVS0F",
+  "sort": 700000,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!AFuhkrLLYMSlVS0F"
+}

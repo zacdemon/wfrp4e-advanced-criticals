@@ -1,0 +1,27 @@
+{
+  "name": "Arrows/Bolts",
+  "sorting": "a",
+  "folder": "KSqRStRhANS9D8ub",
+  "type": "RollTable",
+  "description": "",
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "9b481411e03afa0cd60584b0fb3dfd89e368fac3"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233386396,
+    "modifiedTime": 1766233386396,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "_id": "mu1ju1XA9rGUV0SL",
+  "sort": 0,
+  "_key": "!folders!mu1ju1XA9rGUV0SL"
+}

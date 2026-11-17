@@ -1,0 +1,181 @@
+{
+  "name": "Baked Shoe",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/prone.png",
+      "statuses": [
+        "prone"
+      ],
+      "name": "Prone",
+      "description": "WFRP4E.Conditions.Prone",
+      "system": {
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Tests related to movement of any kind",
+            "script": "args.fields.modifier -= 20",
+            "options": {
+              "activateScript": "return ['ws', 'bs', 'ag'].includes(args.characteristic)",
+              "targeter": false,
+              "defending": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "dialog",
+            "label": "Bonus to melee attacks",
+            "script": "args.fields.modifier += 20",
+            "options": {
+              "targeter": true,
+              "hideScript": "return args.item?.system.attackType != 'melee'",
+              "activateScript": "return args.item?.system.attackType == 'melee'",
+              "defending": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "id4hfLvQSs9A3A5g",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.1.3",
+        "createdTime": 1752566161684,
+        "modifiedTime": 1752566161684,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!VptTOvsKBLfr96kD.id4hfLvQSs9A3A5g"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> Your footwear takes a grilling, causing it to fail just as you put your foot down. The foot goes one way, the sole of the footwear another!</p> <p><strong>Effects:</strong> Gain @Condition[Prone]. If you’re not wearing any footwear you also gain the effects of the “Foot Blister” result.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "1",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Leg",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231049394,
+    "modifiedTime": 1738231049394,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "uMucX4eN6U839xRD",
+  "_id": "VptTOvsKBLfr96kD",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!VptTOvsKBLfr96kD"
+}

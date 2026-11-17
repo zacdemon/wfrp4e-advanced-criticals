@@ -1,0 +1,270 @@
+{
+  "name": "Brain Damage",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/unconscious.png",
+      "statuses": [
+        "unconscious"
+      ],
+      "name": "Unconscious",
+      "description": "WFRP4E.Conditions.Unconscious",
+      "system": {
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "ETaIy7t39McbxgAk",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1765544258872,
+        "modifiedTime": 1765544258872,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!93sAIYWnJeztxgA7.ETaIy7t39McbxgAk"
+    },
+    {
+      "_id": "qwd2DiNMmwJvsCxI",
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {},
+          "manualEffectKeys": false
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "origin": null,
+      "name": "Amputated Eye",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-core.items.Item.GBaH4wyVes6ds7Wv.ActiveEffect.SYIKc7QymcGfIwN9",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1765544412255,
+        "modifiedTime": 1765544412255,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "equipTransfer": false,
+          "prompt": false,
+          "area": {
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "duration": "sustained"
+          },
+          "originalType": "document",
+          "testIndependent": false,
+          "selfOnly": false,
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "scriptData": [
+          {
+            "script": "[Script.00ZCnahnTGvzG9KA]",
+            "label": "Amputated Eye",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "deleteEffect": false,
+              "runIfDisabled": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!93sAIYWnJeztxgA7.qwd2DiNMmwJvsCxI"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your enemy’s blade crunches through your temple, penetrating to the brain. The resulting cerebral trauma comes with disturbing changes to your personality.</p><p><strong>Effects:</strong> You gain @Condition[Unconscious]. There is a 50% chance the thrust went through your eye socket rather than the temple, in which case you also lose an eye (see under @UUID[Compendium.wfrp4e-core.items.Item.weczkAMPlTjX7lqU]{Amputated Parts}). Roll once on the @Table[mutatemental] Table when you wake up. This does not lose you any Corruption Points nor does it count towards your Corruption Limit. You must also pass a <strong>Challenging (+0) Endurance</strong> Test or contract Blood Rot due to meningitis from the bacteria deposited inside your skull by the weapon.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": true
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1738231050983,
+    "modifiedTime": 1765544407524,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "QmHaVf32j8cFZxEj",
+  "_id": "93sAIYWnJeztxgA7",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!93sAIYWnJeztxgA7"
+}

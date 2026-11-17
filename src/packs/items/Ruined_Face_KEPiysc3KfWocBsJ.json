@@ -1,0 +1,272 @@
+{
+  "name": "Ruined Face",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/stunned.png",
+      "statuses": [
+        "stunned"
+      ],
+      "name": "Stunned",
+      "description": "WFRP4E.Conditions.Stunned",
+      "system": {
+        "condition": {
+          "value": 3,
+          "numbered": true
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Penalty to all Tests (@effect.name)",
+            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
+            "options": {
+              "activateScript": "return true",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "qinZTTHzGvnX0BzX",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.4.1",
+        "createdTime": 1738860852893,
+        "modifiedTime": 1738860853236,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!KEPiysc3KfWocBsJ.qinZTTHzGvnX0BzX"
+    },
+    {
+      "name": "Ruined Face",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "9dzX9T4rhsE3poSA",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "script": "teeth = await fromUuid(\"Compendium.wfrp4e-core.items.fBcZhOBn8IpoVqQ1\")\nnose = await fromUuid(\"Compendium.wfrp4e-core.items.Item.SpPRZZRHxly7uo2G\")\neye = await fromUuid(\"Compendium.wfrp4e-core.items.Item.weczkAMPlTjX7lqU\")\n\nteeth = teeth.toObject();\nnose = nose.toObject();\neye = eye.toObject();\n\nlet roll = await new Roll(\"1d10\").roll();\nroll.toMessage(this.script.getChatData({flavor : \"Teeth Lost\"}))\n\nteeth.system.location.value = `${roll.total} ${teeth.system.location.value}`\nthis.actor.createEmbeddedDocuments(\"Item\", [teeth, nose,eye])",
+            "label": "Ruined Face",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.4.1",
+        "createdTime": 1738860876837,
+        "modifiedTime": 1738861016468,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!KEPiysc3KfWocBsJ.9dzX9T4rhsE3poSA"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The arrow comes in from the side, going in at the edge of your eye socket, damaging the eyeball, then punches through facial bones and sinuses, completely wrecking most of your upper jaw including the nasal cavity. It finally knocks out a couple of teeth before poking out through the opposite cheek. This wound will leave your facial features between the level of your eyes and your mouth somewhat…irregular.</p><p><strong>Effects:</strong> Gain @Condition[Stunned] (3). Also, lose one eye, the nose and 1d10 teeth – Amputation (Hard). </p><p>Extraction will be <strong>Challenging (+0)</strong>. If not performed within one week you’ll also contract a @UUID[Compendium.wfrp4e-core.items.Item.kKccDTGzWzSXCBOb]{Festering Wound}.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1738231040054,
+    "modifiedTime": 1738860847671,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "T07Ug5OERH70yg0G",
+  "_id": "KEPiysc3KfWocBsJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!KEPiysc3KfWocBsJ"
+}

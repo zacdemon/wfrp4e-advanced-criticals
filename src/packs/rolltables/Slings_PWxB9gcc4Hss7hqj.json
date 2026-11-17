@@ -1,0 +1,27 @@
+{
+  "name": "Slings",
+  "sorting": "a",
+  "folder": "KSqRStRhANS9D8ub",
+  "type": "RollTable",
+  "description": "",
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "d6a4d313d09f48534d032095436b2f665771a403"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233386396,
+    "modifiedTime": 1766233386396,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "_id": "PWxB9gcc4Hss7hqj",
+  "sort": 0,
+  "_key": "!folders!PWxB9gcc4Hss7hqj"
+}

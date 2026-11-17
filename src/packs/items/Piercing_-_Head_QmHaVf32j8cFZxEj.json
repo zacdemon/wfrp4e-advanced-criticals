@@ -1,0 +1,23 @@
+{
+  "name": "Piercing - Head",
+  "sorting": "a",
+  "folder": "cWVU2JyRw5o3BO3p",
+  "type": "Item",
+  "_id": "QmHaVf32j8cFZxEj",
+  "description": "",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231050938,
+    "modifiedTime": 1765542967480,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": null
+  },
+  "_key": "!folders!QmHaVf32j8cFZxEj"
+}

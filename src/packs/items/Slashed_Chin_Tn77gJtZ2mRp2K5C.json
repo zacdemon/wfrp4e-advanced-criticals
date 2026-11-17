@@ -1,0 +1,185 @@
+{
+  "name": "Slashed Chin",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/prone.png",
+      "statuses": [
+        "prone"
+      ],
+      "name": "Prone",
+      "description": "WFRP4E.Conditions.Prone",
+      "system": {
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Tests related to movement of any kind",
+            "script": "args.fields.modifier -= 20",
+            "options": {
+              "activateScript": "return ['ws', 'bs', 'ag'].includes(args.characteristic)",
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "dialog",
+            "label": "Bonus to melee attacks",
+            "script": "args.fields.modifier += 20",
+            "options": {
+              "targeter": true,
+              "hideScript": "return args.item?.system.attackType != 'melee'",
+              "activateScript": "return args.item?.system.attackType == 'melee'",
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "Fz46eWPO3gZQjE69",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1765545445117,
+        "modifiedTime": 1765545445117,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!Tn77gJtZ2mRp2K5C.Fz46eWPO3gZQjE69"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The point of your enemy’s weapon scores a line of red across your chin, bisecting any beard you may have.</p><p><strong>Effects:</strong> You stumble backwards and must pass an <strong>Average (+20) Athletics</strong> Test or gain @Condition[Prone].</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "1",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1738231050983,
+    "modifiedTime": 1765545441324,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "QmHaVf32j8cFZxEj",
+  "_id": "Tn77gJtZ2mRp2K5C",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!Tn77gJtZ2mRp2K5C"
+}

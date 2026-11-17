@@ -1,0 +1,579 @@
+{
+  "name": "Cutting Criticals - Leg (Core)",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "_id": "w3YR9ZGEJyDypFnZ",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858148,
+        "modifiedTime": 1782468831161
+      },
+      "name": "Damaged Shoe",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.h0mMQDdvQfJ8evB6",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.w3YR9ZGEJyDypFnZ"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "_id": "WlO8YdVzRklkOjMl",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858148,
+        "modifiedTime": 1782468831161
+      },
+      "name": "Shin Hit",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.PTv5fLjvjgHa14Kc",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.WlO8YdVzRklkOjMl"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        21,
+        25
+      ],
+      "drawn": false,
+      "_id": "HYYBL6rHxKH85kLK",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858148,
+        "modifiedTime": 1782468831161
+      },
+      "name": "Calf Wound",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.gcNoeYAdkcG1dgxT",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.HYYBL6rHxKH85kLK"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        26,
+        30
+      ],
+      "drawn": false,
+      "_id": "chnk0XAE07C1j0am",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858148,
+        "modifiedTime": 1782468831161
+      },
+      "name": "Minor Cut",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.lk8w6uXgisZRhrN2",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.chnk0XAE07C1j0am"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "_id": "cXgN7tfb83RoF3dq",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858148,
+        "modifiedTime": 1782468831161
+      },
+      "name": "Hip Strike",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.dk904tei1ZfGCboK",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.cXgN7tfb83RoF3dq"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        36,
+        40
+      ],
+      "drawn": false,
+      "_id": "xWsMq945B76ZBHrH",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858149,
+        "modifiedTime": 1782468831161
+      },
+      "name": "Lacerated Foot",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.55uJ4MHRmDsAGm6s",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.xWsMq945B76ZBHrH"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "_id": "1tgGDSCZA0oZTjnL",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858149,
+        "modifiedTime": 1782468831161
+      },
+      "name": "Hewn-Open Thigh",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.7GcuJjoUQCcamzPs",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.1tgGDSCZA0oZTjnL"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "_id": "CIKpNykjMmyOqpMI",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858149,
+        "modifiedTime": 1782468831161
+      },
+      "name": "Lacerated Hamstrings",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.U7VlTL99EO81kKSH",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.CIKpNykjMmyOqpMI"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "_id": "cIMOOHSJcXLeFqes",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858149,
+        "modifiedTime": 1782468831162
+      },
+      "name": "Cut To The Knee",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.ETpcYIdN9fZD18gm",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.cIMOOHSJcXLeFqes"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "_id": "jIZkNj1LLDZDVaKd",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858149,
+        "modifiedTime": 1782468831162
+      },
+      "name": "This Little Piggy",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.oSJJMJcluB9MLu44",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.jIZkNj1LLDZDVaKd"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "_id": "f5iWXwlKkgCR1Z1a",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858150,
+        "modifiedTime": 1782468831162
+      },
+      "name": "Cracked Shin",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.s6Detu584p2IKFjX",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.f5iWXwlKkgCR1Z1a"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        66,
+        70
+      ],
+      "drawn": false,
+      "_id": "5dmbPtwgwjo8eFQA",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858150,
+        "modifiedTime": 1782468831162
+      },
+      "name": "Severed Achilles Tendon",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.bRoMNknBpXkqNzkS",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.5dmbPtwgwjo8eFQA"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "_id": "yNkJ9CzVoTmNaT8n",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858150,
+        "modifiedTime": 1782468831163
+      },
+      "name": "Severed Hamstrings",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.nNiT9lNSNvO5U8Vx",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.yNkJ9CzVoTmNaT8n"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "_id": "HiGGKXInTBBVLmmA",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858150,
+        "modifiedTime": 1782468831163
+      },
+      "name": "Groin Slash",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.bA64WsOSLWdP8nYx",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.HiGGKXInTBBVLmmA"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "_id": "hQvpmkNAxSNBstHo",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858150,
+        "modifiedTime": 1782468831163
+      },
+      "name": "Femoral Artery",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.CcWFl3FX3PqOZbHp",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.hQvpmkNAxSNBstHo"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "_id": "5DoQQ2NFsTLUgLdJ",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858151,
+        "modifiedTime": 1782468831163
+      },
+      "name": "Wrecked Knee",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.nByF5cWrlHrCaOeT",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.5DoQQ2NFsTLUgLdJ"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        91,
+        93
+      ],
+      "drawn": false,
+      "_id": "MRueNM75wrtc0xdr",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858151,
+        "modifiedTime": 1782468831163
+      },
+      "name": "Heel",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.39D8t5RdZuTv21pR",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.MRueNM75wrtc0xdr"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        94,
+        96
+      ],
+      "drawn": false,
+      "_id": "COkrrFcPJmglanXN",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858151,
+        "modifiedTime": 1782468831163
+      },
+      "name": "Severed Foot",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.lQWEIIy1OUWsAsUU",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.COkrrFcPJmglanXN"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        97,
+        99
+      ],
+      "drawn": false,
+      "_id": "BJNinafzcfEoBiPt",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858151,
+        "modifiedTime": 1782468831163
+      },
+      "name": "Call Me Stumpy",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.eIBP51XWoKljItqC",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.BJNinafzcfEoBiPt"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "_id": "sDbc1lT9mfFg6zWf",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950858151,
+        "modifiedTime": 1782468831163
+      },
+      "name": "Timber",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.7RQHrSgrUcMV0uBU",
+      "description": "",
+      "_key": "!tables.results!fq6B8OheXgO0nRF7.sDbc1lT9mfFg6zWf"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "mtLGI55RZ5PP2hGD",
+  "flags": {
+    "wfrp4e": {
+      "key": "critleg",
+      "column": "core-cutting"
+    },
+    "scene-packer": {
+      "sourceId": "Compendium.artantares-advanced-criticals.rolltables.RollTable.fq6B8OheXgO0nRF7",
+      "hash": "742f0c7ed11b9c53660968a5ed6b4a4d6eff762c"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.364",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233385454,
+    "modifiedTime": 1782468831160,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "formula": "1d100",
+  "_id": "fq6B8OheXgO0nRF7",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "XtBZYPNGm0g6PJIk": 3
+  },
+  "_key": "!tables!fq6B8OheXgO0nRF7"
+}

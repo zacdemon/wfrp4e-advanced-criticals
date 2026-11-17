@@ -1,0 +1,22 @@
+{
+  "name": "Arrows - Head",
+  "sorting": "a",
+  "folder": "bZHHSzQKnZqtnxeL",
+  "type": "Item",
+  "_id": "T07Ug5OERH70yg0G",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231040023,
+    "modifiedTime": 1738830766606,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1"
+  },
+  "_key": "!folders!T07Ug5OERH70yg0G"
+}

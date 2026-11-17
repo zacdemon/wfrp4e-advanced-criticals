@@ -1,0 +1,62 @@
+{
+  "name": "A Mere Prick",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your grandfather’s pocket watch, a belt buckle, a small book of Sigmarite hymns or some other possibly valuable object took most of the blow, and you get away with merely the tiniest prick, causing a single drop of blood to well up from the tiny puncture.</p><p><strong>Effects:</strong> If on your next turn wish to do anything but attack the foe who inflicted this hit you’ll have to first pass an <strong>Easy (+40) Cool</strong> Test.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "T",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Body",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1738231050983,
+    "modifiedTime": 1765540952059,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "kABDE4VXvAEAmv8U",
+  "_id": "XmEDOeOJsy3fyHhM",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!XmEDOeOJsy3fyHhM"
+}

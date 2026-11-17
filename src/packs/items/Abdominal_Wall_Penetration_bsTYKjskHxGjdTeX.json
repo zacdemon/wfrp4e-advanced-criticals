@@ -1,0 +1,274 @@
+{
+  "name": "Abdominal Wall Penetration",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/stunned.png",
+      "statuses": [
+        "stunned"
+      ],
+      "name": "Stunned",
+      "description": "WFRP4E.Conditions.Stunned",
+      "system": {
+        "condition": {
+          "value": 3,
+          "numbered": true
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Penalty to all Tests (@effect.name)",
+            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
+            "options": {
+              "activateScript": "return true",
+              "targeter": false,
+              "defending": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "Zd4yI1190CsiMju6",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.4.1",
+        "createdTime": 1741478486557,
+        "modifiedTime": 1741478486923,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!bsTYKjskHxGjdTeX.Zd4yI1190CsiMju6"
+    },
+    {
+      "name": "Abdominal Wall Penetration",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "93FSUwQDHykmw0xa",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "script": "let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  \" - \" + this.effect.name, fields : {difficulty : \"challenging\"}})\nawait test.roll();\nif(test.failed)\n{\n    this.actor.addCondition(\"prone\")\n}",
+            "label": "Abdominal Wall Penetration",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.4.1",
+        "createdTime": 1741478496876,
+        "modifiedTime": 1741478601727,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!bsTYKjskHxGjdTeX.93FSUwQDHykmw0xa"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The bullet punches you in the stomach, penetrating into the abdominal cavity. Fortunately it was thus spent, failing to lacerate your intestines, instead nestling into the fatty tissue of the mesentery (the folds attaching the intestines to the abdominal wall).</p><p><strong>Effects:</strong> Gain @Condition[Stunned] (3) and pass a <strong>Challenging (+0) Endurance</strong> Test or also gain @Condition[Prone]. As the bullet settles inside your body, a cyst forms, eventually encapsulating this foreign object. As this takes place, you contract a @UUID[Compendium.wfrp4e-core.items.Item.1hQuVFZt9QnnbWzg]{Minor Infection}. No Extraction is necessary or advisable.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "3",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Body",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1738231042018,
+    "modifiedTime": 1741478482955,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "loF3VtXUNpF8jJLL",
+  "_id": "bsTYKjskHxGjdTeX",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!bsTYKjskHxGjdTeX"
+}

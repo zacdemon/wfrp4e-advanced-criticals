@@ -1,0 +1,27 @@
+{
+  "name": "Piercing",
+  "sorting": "a",
+  "folder": "KSqRStRhANS9D8ub",
+  "type": "RollTable",
+  "description": "",
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "59d17ba1aa378969147198b40ccb7d1361198977"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233386396,
+    "modifiedTime": 1766233386396,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "_id": "pCyZ52GUPuH1sj4B",
+  "sort": 0,
+  "_key": "!folders!pCyZ52GUPuH1sj4B"
+}

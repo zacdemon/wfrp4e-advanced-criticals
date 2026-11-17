@@ -1,0 +1,155 @@
+{
+  "name": "Rattle-Rattle",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/unconscious.png",
+      "statuses": [
+        "unconscious"
+      ],
+      "name": "Unconscious",
+      "description": "WFRP4E.Conditions.Unconscious",
+      "system": {
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "6qgz0V09G7gVM8Ky",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.4.1",
+        "createdTime": 1741943385462,
+        "modifiedTime": 1741943385462,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!AWDEqYt6sjbCtEJg.6qgz0V09G7gVM8Ky"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The bullet pierces your temple, but instead of boring through your brain it veers off and takes a trip along the inside of your skull, between bone and cortex. Mimicking a daredevil motorcycle rider in a Globe of Death Cage it tours most of the circumference of the inside of your cranium, finally coming to a stop somewhere in the back.</p><p><strong>Effects:</strong> You go @Condition[Unconscious]. Anyone seeing the bullet entry hole will assume you’re quite dead, needing to pass a <strong>Hard (-20) Perception</strong> Test to notice you’re still breathing. You need to pass a <strong>Challenging (+0) Endurance</strong> Test (rolling once daily) to wake up again. Once you wake you’ll need to pass the same Test again to avoid contracting @UUID[Compendium.wfrp4e-core.items.Item.M8XyRs9DN12XsFTQ]{Blood Rot} from meningitis. If you pass you’ll still be @Condition[Fatigued] (2) for another 1d10 days. Although you’re certain you can sometimes hear the bullet rattle around inside your skull no Extraction is necessary.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1738231042018,
+    "modifiedTime": 1741943452235,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "9JgtHiwFt0Gs0yzo",
+  "_id": "AWDEqYt6sjbCtEJg",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!AWDEqYt6sjbCtEJg"
+}

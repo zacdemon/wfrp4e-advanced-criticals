@@ -1,0 +1,407 @@
+{
+  "name": "Destroyed Face",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/broken.png",
+      "statuses": [
+        "broken"
+      ],
+      "name": "Broken",
+      "description": "WFRP4E.Conditions.Broken",
+      "system": {
+        "condition": {
+          "value": 1,
+          "numbered": true
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Penalty to all Tests not involving running and hiding.",
+            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
+            "options": {
+              "activateScript": "return !args.skill?.name?.includes(game.i18n.localize('NAME.Stealth')) && args.skill?.name != game.i18n.localize('NAME.Athletics')",
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "SugJGeK52vkJOjZR",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1765638017829,
+        "modifiedTime": 1765638017829,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!xIMqvooGVQU0X0nd.SugJGeK52vkJOjZR"
+    },
+    {
+      "img": "systems/wfrp4e/icons/conditions/prone.png",
+      "statuses": [
+        "prone"
+      ],
+      "name": "Prone",
+      "description": "WFRP4E.Conditions.Prone",
+      "system": {
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Tests related to movement of any kind",
+            "script": "args.fields.modifier -= 20",
+            "options": {
+              "activateScript": "return ['ws', 'bs', 'ag'].includes(args.characteristic)",
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "dialog",
+            "label": "Bonus to melee attacks",
+            "script": "args.fields.modifier += 20",
+            "options": {
+              "targeter": true,
+              "hideScript": "return args.item?.system.attackType != 'melee'",
+              "activateScript": "return args.item?.system.attackType == 'melee'",
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "WXw0Biu57SLMmYtu",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1765638018737,
+        "modifiedTime": 1765638018737,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!xIMqvooGVQU0X0nd.WXw0Biu57SLMmYtu"
+    },
+    {
+      "_id": "RstZbUUTOciw0nZu",
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {},
+          "manualEffectKeys": false
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "origin": null,
+      "name": "Broken Head (Major)",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-core.items.Item.nZK8CBZTlWTQG2K8.ActiveEffect.WjHgjbRuh0M3H8g6",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1765638023968,
+        "modifiedTime": 1765638023968,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "equipTransfer": false,
+          "prompt": false,
+          "area": {
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "duration": "sustained"
+          },
+          "originalType": "document",
+          "testIndependent": false,
+          "selfOnly": false,
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "scriptData": [
+          {
+            "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.items.hCadFsTRvLN9faaY\")\nlet data = item.toObject();\ndata.system.location.value = \"Jaw\"\nthis.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect : this.effect.id})",
+            "label": "Broken Head (Major)",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "deleteEffect": false,
+              "runIfDisabled": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!xIMqvooGVQU0X0nd.RstZbUUTOciw0nZu"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> You roll around on the ground, both hands clasped to the ruin of your face.</p> <p><strong>Effects:</strong> Gain @Condition[Prone] and Broken. You suffer a Broken Bone (Major) and also lose various parts – Amputation (Hard). Roll three times and ignore but don’t reroll any multiples of an already rolled result: \n Roll 1d10: \n 1-2 Left ear \n 3-4 Right ear \n 5-6 Nose \n 7 1d10 teeth \n 8 Another 1d10 teeth \n 9 One eye \n 10 Both eyes</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231052620,
+    "modifiedTime": 1738231052620,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "AvpLsC5ECUzRtEKO",
+  "_id": "xIMqvooGVQU0X0nd",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!xIMqvooGVQU0X0nd"
+}

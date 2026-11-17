@@ -1,0 +1,22 @@
+{
+  "name": "Cutting - Leg",
+  "sorting": "a",
+  "folder": "0CybKNyNEPLrSCe2",
+  "type": "Item",
+  "_id": "Ac0ZZvHXn1DHh6vQ",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231047754,
+    "modifiedTime": 1745001827403,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1"
+  },
+  "_key": "!folders!Ac0ZZvHXn1DHh6vQ"
+}

@@ -1,0 +1,305 @@
+{
+  "name": "Broken Foot",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/stunned.png",
+      "statuses": [
+        "stunned"
+      ],
+      "name": "Stunned",
+      "description": "WFRP4E.Conditions.Stunned",
+      "system": {
+        "condition": {
+          "value": 1,
+          "numbered": true
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Penalty to all Tests (@effect.name)",
+            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
+            "options": {
+              "activateScript": "return true",
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "prePrepareData",
+            "label": "Half Movement",
+            "script": "args.actor.system.details.move.value /= 2",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "endRound",
+            "label": "Roll to remove Stunned",
+            "script": "const test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty: \"challenging\"}, skipTargets: true, appendTitle :  ` - ${this.effect.name}`, context: {success: \"Removed SL + 1 Conditions.\", failure: \"Failed to remove Conditions.\"}});\nawait test.roll();\nif (test.succeeded) {\n  const toRemove = 1 + Number(test.result.SL);\n  this.actor.removeCondition(\"stunned\", toRemove);\n}",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "ug7iciw4avfc4wxe",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1766168278861,
+        "modifiedTime": 1766168278861,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!COA8NrTr929X70xw.ug7iciw4avfc4wxe"
+    },
+    {
+      "name": "Broken Foot",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "zyXVYbzdaWkCCQ4i",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "numbered": false
+        },
+        "changes": [
+          {
+            "key": "system.characteristics.ag.modifier",
+            "value": -30,
+            "priority": null,
+            "type": "add"
+          },
+          {
+            "key": "system.details.move.value",
+            "value": 1,
+            "priority": null,
+            "type": "override"
+          }
+        ]
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false,
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {}
+        }
+      },
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-advanced-criticals.items.Item.hHMfw6Mbx1bCX7hw.ActiveEffect.LtUFaGnz2bpeYO66",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1766168310811,
+        "modifiedTime": 1766168316918,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!COA8NrTr929X70xw.zyXVYbzdaWkCCQ4i"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> A metatarsal bone, one of the long bones of the midfoot, snaps as you suffer a heavy hit.</p> <p><strong>Effects:</strong> Gain @Condition[Stunned] (1). Your M is reduced to 1 and you suffer a penalty of -30 to your Agility until the bone has healed in 30 minus your Toughness Bonus days.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "3",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Leg",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231057745,
+    "modifiedTime": 1738231057745,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "TSvCJBKYItLK1j2O",
+  "_id": "COA8NrTr929X70xw",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!COA8NrTr929X70xw"
+}

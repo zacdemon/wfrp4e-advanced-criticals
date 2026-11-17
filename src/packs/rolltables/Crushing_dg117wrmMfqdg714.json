@@ -1,0 +1,27 @@
+{
+  "name": "Crushing",
+  "sorting": "a",
+  "folder": "MDPxZUWtltmTfole",
+  "type": "RollTable",
+  "description": "",
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "1b240e4332b3571a6d52b581dc4282b959dc8e94"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233384817,
+    "modifiedTime": 1766233384817,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "_id": "dg117wrmMfqdg714",
+  "sort": 0,
+  "_key": "!folders!dg117wrmMfqdg714"
+}

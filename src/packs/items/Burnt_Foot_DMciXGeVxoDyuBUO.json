@@ -1,0 +1,412 @@
+{
+  "name": "Burnt Foot",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/stunned.png",
+      "statuses": [
+        "stunned"
+      ],
+      "name": "Stunned",
+      "description": "WFRP4E.Conditions.Stunned",
+      "system": {
+        "condition": {
+          "value": 2,
+          "numbered": true
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Penalty to all Tests (@effect.name)",
+            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
+            "options": {
+              "activateScript": "return true",
+              "targeter": false,
+              "defending": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "prePrepareData",
+            "label": "Half Movement",
+            "script": "args.actor.system.details.move.value /= 2",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "endRound",
+            "label": "Roll to remove Stunned",
+            "script": "const test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty: \"challenging\"}, skipTargets: true, appendTitle :  ` - ${this.effect.name}`, context: {success: \"Removed SL + 1 Conditions.\", failure: \"Failed to remove Conditions.\"}});\nawait test.roll();\nif (test.succeeded) {\n  const toRemove = 1 + Number(test.result.SL);\n  this.actor.removeCondition(\"stunned\", toRemove);\n}",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "LBxLACflUs2AnvAj",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.1.3",
+        "createdTime": 1752566308634,
+        "modifiedTime": 1752566308799,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!DMciXGeVxoDyuBUO.LBxLACflUs2AnvAj"
+    },
+    {
+      "name": "Minor Infection",
+      "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "_id": "6pdVSkhGtsoV716d",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.1hQuVFZt9QnnbWzg\")\nthis.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})",
+            "label": "Minor Infection",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false,
+              "defending": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false,
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {}
+        }
+      },
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4ed-advanced-criticals.advanced-criticals.Item.Igb6f8IMhqWKHeFk.ActiveEffect.BhEuXjvEbguIZsIb",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.1.3",
+        "createdTime": 1752566311252,
+        "modifiedTime": 1752566311252,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!DMciXGeVxoDyuBUO.6pdVSkhGtsoV716d"
+    },
+    {
+      "_id": "3l8D5qm52CndsWfV",
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {},
+          "manualEffectKeys": false
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "origin": null,
+      "name": "Torn Leg Muscle (Minor)",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-core.items.Item.wbbDM7rUetyWYgLt.ActiveEffect.rtWfTN6wJ4BbJslf",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.1.3",
+        "createdTime": 1752566316919,
+        "modifiedTime": 1752566316919,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "equipTransfer": false,
+          "prompt": false,
+          "area": {
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "duration": "sustained"
+          },
+          "originalType": "document",
+          "testIndependent": false,
+          "selfOnly": false,
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "scriptData": [
+          {
+            "script": "[Script.re1UFtxvRRjpPB7Z]",
+            "label": "Torn Leg Muscle (Minor)",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "deleteEffect": false,
+              "defending": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!DMciXGeVxoDyuBUO.3l8D5qm52CndsWfV"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The upper side of your foot is torched, skin and tendons crinkling under the jet of flame.</p><p><strong>Effects:</strong> You gain @Condition[Stunned] (2) and suffer a @UUID[Compendium.wfrp4e-core.items.Item.nF5z1OEhpi4t6a6S]{Torn Muscle (Minor)}. You also contract a @UUID[Compendium.wfrp4e-core.items.Item.1hQuVFZt9QnnbWzg]{Minor Infection} due to the deep burn and loss of skin.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "3",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Leg",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": true
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.1.3",
+    "createdTime": 1738231049394,
+    "modifiedTime": 1752566827677,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "uMucX4eN6U839xRD",
+  "_id": "DMciXGeVxoDyuBUO",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!DMciXGeVxoDyuBUO"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Teeth/Claws",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "WA9lCQB27eGhNN6x",
+  "description": "",
+  "sort": 800000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231055771,
+    "modifiedTime": 1742110036501,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1"
+  },
+  "_key": "!folders!WA9lCQB27eGhNN6x"
+}

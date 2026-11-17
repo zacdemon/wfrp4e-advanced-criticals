@@ -1,0 +1,311 @@
+{
+  "name": "Broken Teeth",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/stunned.png",
+      "statuses": [
+        "stunned"
+      ],
+      "name": "Stunned",
+      "description": "WFRP4E.Conditions.Stunned",
+      "system": {
+        "condition": {
+          "value": 2,
+          "numbered": true
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Penalty to all Tests (@effect.name)",
+            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
+            "options": {
+              "activateScript": "return true",
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "prePrepareData",
+            "label": "Half Movement",
+            "script": "args.actor.system.details.move.value /= 2",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "endRound",
+            "label": "Roll to remove Stunned",
+            "script": "const test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty: \"challenging\"}, skipTargets: true, appendTitle :  ` - ${this.effect.name}`, context: {success: \"Removed SL + 1 Conditions.\", failure: \"Failed to remove Conditions.\"}});\nawait test.roll();\nif (test.succeeded) {\n  const toRemove = 1 + Number(test.result.SL);\n  this.actor.removeCondition(\"stunned\", toRemove);\n}",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "CLbQ6IcRpNK6IG6K",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1765638577470,
+        "modifiedTime": 1765638577637,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!iSfBDrw0WrXu2OKX.CLbQ6IcRpNK6IG6K"
+    },
+    {
+      "_id": "lipfLSNdSVQlBJJc",
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {},
+          "manualEffectKeys": false
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "origin": null,
+      "name": "Amputated Teeth",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-core.items.Item.LZ8ThwJsGDgiPkAd.ActiveEffect.N5WsBzINexkLMQVY",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1765638583908,
+        "modifiedTime": 1765638583908,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "equipTransfer": false,
+          "prompt": false,
+          "area": {
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "duration": "sustained"
+          },
+          "originalType": "document",
+          "testIndependent": false,
+          "selfOnly": false,
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "scriptData": [
+          {
+            "script": "[Script.kiJ6AiaYVUjt6aV6]",
+            "label": "Amputated Teeth",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "deleteEffect": false,
+              "runIfDisabled": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!iSfBDrw0WrXu2OKX.lipfLSNdSVQlBJJc"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> You take your foe’s projectile straight in the mouth and start spitting blood and tooth fragments.</p> <p><strong>Effects:</strong> Gain @Condition[Stunned] (2). You lose 1d10/2 teeth – Amputation (Easy). Also roll for any Pummel Quality.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231054305,
+    "modifiedTime": 1738231054305,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "kLZ2Ijw6dU67roNs",
+  "_id": "iSfBDrw0WrXu2OKX",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!iSfBDrw0WrXu2OKX"
+}

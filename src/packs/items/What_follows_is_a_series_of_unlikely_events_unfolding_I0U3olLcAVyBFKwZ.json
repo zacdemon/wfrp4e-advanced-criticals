@@ -1,0 +1,62 @@
+{
+  "name": "What follows is a series of unlikely events unfolding",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>\n If the projectile was a Lead Bullet at least it makes some sense that deep penetration was a contributing factor, with the fast-moving and spinning almond-shaped heavy bullet smashing into your groin where the thigh meets the abdomen and punching through skin and soft tissue to tear your femoral artery in half. \n With the bullet plugging the entry-hole in your leg, the level of internal bleeding is not immediately obvious, with friends and foes alike smirking in fake sympathy as you grab your groin and sink to your knees with a pained expression on your face. It’s only when you keel over and croak, still with the same pained expression on your face, that a large pool of blood starts spreading around you, making the cause of your demise obvious. \n If the projectile was a Stone Bullet or improvised rock picked from the ground*, things start getting even more unlikely! It smashes into your thigh, managing to hit just in the groove between the rectus femoris and either the medial or lateral vastus muscles of the quadriceps, allowing the stone to apply its full kinetic energy to your femur where it is weakly padded by protective sheaths of muscle. The long thigh bone thus snaps from the impact, about a third of the way up from the knee. \n A chunk of bone marrow detaches from the fractured bone and gets into the bloodstream by way of the femoral vein. From there it travels to your heart and gets ejected into the pulmonary artery, whereupon it then gets stuck in your lung as a massive fatty pulmonary embolism. You grow pale, grab your chest and then slump to the ground where you quietly expire.</p> <p><strong>Effects:</strong> (I do apologize for this mess, but figuring out how being hit by a stone on the leg can kill you required quite a bit of effort!) \n Whether by bleeding out or courtesy of a fatty embolus, you are very much expired.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "D",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Leg",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231054305,
+    "modifiedTime": 1738231054305,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "WRMnTsZevAjQBjbk",
+  "_id": "I0U3olLcAVyBFKwZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!I0U3olLcAVyBFKwZ"
+}

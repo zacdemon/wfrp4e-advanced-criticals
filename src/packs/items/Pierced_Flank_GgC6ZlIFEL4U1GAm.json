@@ -1,0 +1,275 @@
+{
+  "name": "Pierced Flank",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "statuses": [
+        "bleeding"
+      ],
+      "name": "Bleeding",
+      "description": "WFRP4E.Conditions.Bleeding",
+      "system": {
+        "condition": {
+          "value": 1,
+          "numbered": true,
+          "trigger": "endRound"
+        },
+        "scriptData": [
+          {
+            "trigger": "manual",
+            "label": "@effect.name",
+            "script": "let actor = this.actor;\n                            let effect = this.effect;\n                            let bleedingAmt;\n                            let bleedingRoll;\n                            let msg = \"\"\n\n                            let damage = effect.conditionValue;\n                            let scriptArgs = {msg, damage};\n                            await Promise.all(actor.runScripts(\"preApplyCondition\", {effect, data : scriptArgs}))\n                            msg = scriptArgs.msg;\n                            damage = scriptArgs.damage;\n                            msg += await actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, minimumOne : false, suppressMsg : true})\n\n                            if (actor.status.wounds.value == 0 && !actor.hasCondition(\"unconscious\"))\n                            {\n                                await actor.addCondition(\"unconscious\")\n                                msg += \"<br>\" + game.i18n.format(\"BleedUnc\", {name: actor.prototypeToken.name })\n                            }\n\n                            if (actor.hasCondition(\"unconscious\"))\n                            {\n                                bleedingAmt = effect.conditionValue;\n                                bleedingRoll = (await new Roll(\"1d100\").roll()).total;\n                                if (bleedingRoll <= bleedingAmt * 10)\n                                {\n                                    msg += \"<br>\" + game.i18n.format(\"BleedFail\", {name: actor.prototypeToken.name}) + \" (\" + game.i18n.localize(\"Rolled\") + \" \" + bleedingRoll + \")\";\n                                    await actor.addCondition(\"dead\")\n                                }\n                                else if (bleedingRoll % 11 == 0)\n                                {\n                                    msg += \"<br>\" + game.i18n.format(\"BleedCrit\", { name: actor.prototypeToken.name } ) + \" (\" + game.i18n.localize(\"Rolled\") + bleedingRoll + \")\"\n                                    await actor.removeCondition(\"bleeding\")\n                                }\n                                else\n                                {\n                                    msg += \"<br>\" + game.i18n.localize(\"BleedRoll\") + \": \" + bleedingRoll;\n                                }\n                            }\n\n                            await Promise.all(actor.runScripts(\"applyCondition\", {effect, data : {bleedingRoll}}))\n                            if (args.suppressMessage)\n                            {\n                                let messageData = game.wfrp4e.utility.chatDataSetup(msg);\n                                messageData.speaker = {alias: this.effect.name}\n                                messageData.flavor = this.effect.name;\n                                return messageData\n                            }\n                            else\n                            {\n                                return this.script.message(msg)\n                            }",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "oBpvd5SS7W1uerUz",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.3.3",
+        "createdTime": 1738333244597,
+        "modifiedTime": 1738333244597,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!GgC6ZlIFEL4U1GAm.oBpvd5SS7W1uerUz"
+    },
+    {
+      "name": "Pierced Flank",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "dEdySHpRLTGbY3AX",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "script": "args.fields.modifier -= 10;",
+            "label": "Any physical Action",
+            "trigger": "dialog",
+            "options": {
+              "targeter": false,
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.3.3",
+        "createdTime": 1738333288071,
+        "modifiedTime": 1738333373702,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!GgC6ZlIFEL4U1GAm.dEdySHpRLTGbY3AX"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The arrowhead enters and exits your flank, leaving the shaft embedded in your side with the ends protruding front and back. Fortunately it’s only stuck in the flesh and muscle of the abdominal wall, not having actually penetrated into the abdominal cavity.</p><p><strong>Effects:</strong> Gain @Condition[Bleeding] (1). Until the arrow is Extracted you’ll suffer a -10 penalty to any physical Tests.</p><p>Extraction is easy, requiring only two hands and a full Action to snap and withdraw the shaft. The Heal skill is not necessary but if you lack it you must first pass an <strong>Average (+20) Cool</strong> Test to take the Action.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Body",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231040054,
+    "modifiedTime": 1738830870953,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "dfcfKRuNqVlaJss0",
+  "_id": "GgC6ZlIFEL4U1GAm",
+  "sort": 800000,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!GgC6ZlIFEL4U1GAm"
+}

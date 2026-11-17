@@ -1,0 +1,22 @@
+{
+  "name": "Bullets - Body",
+  "sorting": "a",
+  "folder": "Df5oi4XBeG2yHZn6",
+  "type": "Item",
+  "_id": "loF3VtXUNpF8jJLL",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231041989,
+    "modifiedTime": 1741032926634,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1"
+  },
+  "_key": "!folders!loF3VtXUNpF8jJLL"
+}

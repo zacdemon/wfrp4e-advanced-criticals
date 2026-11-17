@@ -1,0 +1,175 @@
+{
+  "name": "Severed Toe",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "_id": "89y6M9K7sfEHFPmp",
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {},
+          "manualEffectKeys": false
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "origin": null,
+      "name": "Severed Toe",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-core.items.Item.NPhLsxsUV8wwdKWj.ActiveEffect.nWRttvafUnh1XIZU",
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.4.1",
+        "createdTime": 1738862399170,
+        "modifiedTime": 1738862869300,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "equipTransfer": false,
+          "prompt": false,
+          "area": {
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "duration": "sustained"
+          },
+          "originalType": "document",
+          "testIndependent": false,
+          "selfOnly": false,
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "scriptData": [
+          {
+            "script": "let injury = await fromUuid(\"Compendium.wfrp4e-core.items.ZhMADOqoo0y8Q9bx\");\n    injury = injury.toObject()\n    injury.system.location.key = this.item.system.location.key[0] + injury.system.location.value\n    if (injury.system.location.key[0] == \"r\")\n    {\n        injury.system.location.value = `1 Right ${injury.system.location.value}s`\n    }\n    else if (injury.system.location.key[0] == \"l\")\n    {\n        injury.system.location.value = `1 Left ${injury.system.location.value}s`\n    }\n    foundry.utils.setProperty(injury, \"system.wfrp4e.count\", 1)\n    this.actor.createEmbeddedDocuments(\"Item\", [injury])",
+            "label": "Severed Toe",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!A4sVT163LB898IZo.89y6M9K7sfEHFPmp"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The arrowhead pierces the front of your footwear. Next time you remove the footwear, one of your toes fall out. Disturbing!</p><p><strong>Effects:</strong> You lose one toe – @UUID[Compendium.wfrp4e-core.items.Item.ZhMADOqoo0y8Q9bx]{Amputation (Easy)}.</p><p>No Extraction is necessary.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Leg",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": true
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1738249699695,
+    "modifiedTime": 1738862596848,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "GGMGJXQynVtIPLcV",
+  "_id": "A4sVT163LB898IZo",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!A4sVT163LB898IZo"
+}

@@ -1,0 +1,579 @@
+{
+  "name": "Flames Criticals - Arm (Core)",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "_id": "yO2WQEL4k7nGeGrr",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854927,
+        "modifiedTime": 1782468829710
+      },
+      "name": "Finger Warmer",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.RDzx6KRzpaReNSFC",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.yO2WQEL4k7nGeGrr"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "_id": "iAEPjkc2l0Qw8wwz",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854927,
+        "modifiedTime": 1782468829710
+      },
+      "name": "Hot-Hot-Hot",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.qdYyZtHPFqq7BHfz",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.iAEPjkc2l0Qw8wwz"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        21,
+        25
+      ],
+      "drawn": false,
+      "_id": "ICEcX7HdHGfaj9Ro",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854927,
+        "modifiedTime": 1782468829710
+      },
+      "name": "Feel The Burn",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.idp5RsaxzK3tdrWp",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.ICEcX7HdHGfaj9Ro"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        26,
+        30
+      ],
+      "drawn": false,
+      "_id": "uQtDzuFI1Br9LZGk",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854928,
+        "modifiedTime": 1782468829711
+      },
+      "name": "Blistered Hand",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.0NIOGHwyZ0Es2Zvo",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.uQtDzuFI1Br9LZGk"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "_id": "3UvemqTuwhfvHQ8o",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854928,
+        "modifiedTime": 1782468829711
+      },
+      "name": "A Light Toasting",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.l4G7D7ppGkvPIt92",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.3UvemqTuwhfvHQ8o"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        36,
+        40
+      ],
+      "drawn": false,
+      "_id": "5XL9mM3oPDG2yHR6",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854928,
+        "modifiedTime": 1782468829711
+      },
+      "name": "Burnt Fingers",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.WroHu1T5dORORhfF",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.5XL9mM3oPDG2yHR6"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "_id": "gevI4a7KUyBQHkho",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854929,
+        "modifiedTime": 1782468829711
+      },
+      "name": "Flame-Grilled Shoulder",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.3zNTojIMfQOkhTif",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.gevI4a7KUyBQHkho"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "_id": "mmpH4PZ7K8e1cvs1",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854929,
+        "modifiedTime": 1782468829711
+      },
+      "name": "Lightly Charred Appendage",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.Cwe3VZDOoa9uxnrP",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.mmpH4PZ7K8e1cvs1"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "_id": "pOsOWoU85zVoqtuf",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854929,
+        "modifiedTime": 1782468829712
+      },
+      "name": "Skin Peel",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.p6FeZFAZYzpfrcTE",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.pOsOWoU85zVoqtuf"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "_id": "6Iygrpz417J51jIg",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854930,
+        "modifiedTime": 1782468829712
+      },
+      "name": "BBQ Pit",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.cU9I9icnLf92Dmli",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.6Iygrpz417J51jIg"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "_id": "yfci1uMOQkwg144u",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854930,
+        "modifiedTime": 1782468829712
+      },
+      "name": "Blackened Finger",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.c816qDEluIc3sSUR",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.yfci1uMOQkwg144u"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        66,
+        70
+      ],
+      "drawn": false,
+      "_id": "Cw3fCKWshQdjaCuf",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854930,
+        "modifiedTime": 1782468829712
+      },
+      "name": "Shoulder Impact",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.L3sStfjWc8qEexPb",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.Cw3fCKWshQdjaCuf"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "_id": "jg2HE66445h7Wg09",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854931,
+        "modifiedTime": 1782468829712
+      },
+      "name": "Biceps BBQ",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.6DYJ5rJgXws8WSmm",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.jg2HE66445h7Wg09"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "_id": "TzX0NXQeiLQyihRS",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854931,
+        "modifiedTime": 1782468829712
+      },
+      "name": "Debridement Case",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.jgg32pSvcVfCNie1",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.TzX0NXQeiLQyihRS"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "_id": "BthRUA3TWuPVTgMi",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854931,
+        "modifiedTime": 1782468829713
+      },
+      "name": "Exploded Hand",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.b3RKzNwlZ2A6nBlh",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.BthRUA3TWuPVTgMi"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "_id": "yoEF9V0GuySRHnQk",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854931,
+        "modifiedTime": 1782468829713
+      },
+      "name": "Charbroiled Arm",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.PdkXYsXmTJ9nW30D",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.yoEF9V0GuySRHnQk"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        91,
+        93
+      ],
+      "drawn": false,
+      "_id": "ZLV6t3X6twEbZdN6",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854932,
+        "modifiedTime": 1782468829713
+      },
+      "name": "Blackened Stump",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.FSDV7zDXsTTrFIYB",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.ZLV6t3X6twEbZdN6"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        94,
+        96
+      ],
+      "drawn": false,
+      "_id": "GWrqpC8qubG4bmuP",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854932,
+        "modifiedTime": 1782468829713
+      },
+      "name": "Amputation By Fire",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.i89FvnkoRyB2nE7X",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.GWrqpC8qubG4bmuP"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        97,
+        99
+      ],
+      "drawn": false,
+      "_id": "1Y8FyVx1cu76Nwnb",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854932,
+        "modifiedTime": 1782468829713
+      },
+      "name": "Compartment Syndrome",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.vCWodBYRyxOuxjLZ",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.1Y8FyVx1cu76Nwnb"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "_id": "ilac0yjgyLNyOoWV",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950854933,
+        "modifiedTime": 1782468829713
+      },
+      "name": "Conflagration",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.wfE4wbD6QWK2PLji",
+      "description": "",
+      "_key": "!tables.results!5Lh5RSjRtA3GPOa5.ilac0yjgyLNyOoWV"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "MyzK3xzHwE8K7RjQ",
+  "flags": {
+    "wfrp4e": {
+      "key": "critarm",
+      "column": "core-flames"
+    },
+    "scene-packer": {
+      "sourceId": "Compendium.artantares-advanced-criticals.rolltables.RollTable.5Lh5RSjRtA3GPOa5",
+      "hash": "f166f00b2405db5bc76f586922bcc6d082ab1de6"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.364",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233385454,
+    "modifiedTime": 1782468829709,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "formula": "1d100",
+  "_id": "5Lh5RSjRtA3GPOa5",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "XtBZYPNGm0g6PJIk": 3
+  },
+  "_key": "!tables!5Lh5RSjRtA3GPOa5"
+}

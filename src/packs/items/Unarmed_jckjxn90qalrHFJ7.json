@@ -1,0 +1,22 @@
+{
+  "name": "Unarmed",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "jckjxn90qalrHFJ7",
+  "description": "",
+  "sort": 1000000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231057688,
+    "modifiedTime": 1742110036501,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1"
+  },
+  "_key": "!folders!jckjxn90qalrHFJ7"
+}

@@ -1,0 +1,579 @@
+{
+  "name": "Teeth Criticals - Leg (Core)",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "_id": "iiv8M42yiErXF7w7",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856228,
+        "modifiedTime": 1782468830259
+      },
+      "name": "Chewed Shoe",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.jsp1B3NLKfq2k48B",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.iiv8M42yiErXF7w7"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "_id": "wu2JKlfe5uMLxOWl",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856228,
+        "modifiedTime": 1782468830259
+      },
+      "name": "Foot Bump",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.fltOP4GCAYBH6FeB",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.wu2JKlfe5uMLxOWl"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        21,
+        25
+      ],
+      "drawn": false,
+      "_id": "WjpYAgc8J8Wv2lRE",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856228,
+        "modifiedTime": 1782468830259
+      },
+      "name": "Grazed Leg",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.iUK3Qe9jBqSFjCNd",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.WjpYAgc8J8Wv2lRE"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        26,
+        30
+      ],
+      "drawn": false,
+      "_id": "GBCF4gRqZC3xuDkK",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856228,
+        "modifiedTime": 1782468830260
+      },
+      "name": "Raked Hip",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.OHhRuC4Th1g7rFm8",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.GBCF4gRqZC3xuDkK"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "_id": "veulu9UzgrBePdix",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856229,
+        "modifiedTime": 1782468830260
+      },
+      "name": "Collision",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.XL0ymhv3iPMNBAsv",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.veulu9UzgrBePdix"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        36,
+        40
+      ],
+      "drawn": false,
+      "_id": "9Uw4ZfP1G2ZU7sX4",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856229,
+        "modifiedTime": 1782468830260
+      },
+      "name": "Sprain",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.zntV12fzxDkqpo9k",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.9Uw4ZfP1G2ZU7sX4"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "_id": "sodly10xzk5TotKi",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856229,
+        "modifiedTime": 1782468830260
+      },
+      "name": "Burger Feast",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.KkxblPxYbCQZIxxh",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.sodly10xzk5TotKi"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "_id": "dLimUBbocRQ6BJOb",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856229,
+        "modifiedTime": 1782468830260
+      },
+      "name": "Tastes Like Chicken",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.VUrgTG3iZVVjUtdQ",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.dLimUBbocRQ6BJOb"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "_id": "p6yoUNm491SabiFE",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856229,
+        "modifiedTime": 1782468830260
+      },
+      "name": "Severed Toe Tendons",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.pJAeqvnuqSl2GN0O",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.p6yoUNm491SabiFE"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "_id": "C1RXS4SA1y4UD6LZ",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856230,
+        "modifiedTime": 1782468830260
+      },
+      "name": "Achilles Atrocity",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.g7e0KJNkCiNBzJYA",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.C1RXS4SA1y4UD6LZ"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "_id": "8dFsczrQq3mIx3lq",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856230,
+        "modifiedTime": 1782468830261
+      },
+      "name": "Broken Ankle",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.xsucPGjxlEI33FUZ",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.8dFsczrQq3mIx3lq"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        66,
+        70
+      ],
+      "drawn": false,
+      "_id": "ACv7yaJYHulzWPbm",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856230,
+        "modifiedTime": 1782468830261
+      },
+      "name": "Don’t Like Fast Food",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.lr14NdbDdWEAa25y",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.ACv7yaJYHulzWPbm"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "_id": "0OoxPnDicVqC3s5G",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856230,
+        "modifiedTime": 1782468830261
+      },
+      "name": "This Little Piggy",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.oSJJMJcluB9MLu44",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.0OoxPnDicVqC3s5G"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "_id": "BI0j7vu0bwmTp7fs",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856230,
+        "modifiedTime": 1782468830261
+      },
+      "name": "Is Calf The Same As Veal",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.0QSWx2OpRmbjXSg5",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.BI0j7vu0bwmTp7fs"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "_id": "LCwxP49UIyiACwlp",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856231,
+        "modifiedTime": 1782468830261
+      },
+      "name": "Is Thigh Dark Meat Or White Meat",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.pT61byvSCRYOj5j4",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.LCwxP49UIyiACwlp"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "_id": "tjDqp2qOFJCauBne",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856231,
+        "modifiedTime": 1782468830261
+      },
+      "name": "Knee d’Oeuvre",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.UtqaXGIw52QmZJET",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.tjDqp2qOFJCauBne"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        91,
+        93
+      ],
+      "drawn": false,
+      "_id": "dJj8jaR2xUTGr5xz",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856231,
+        "modifiedTime": 1782468830261
+      },
+      "name": "Eat Here Or To Go",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.bJykNiCsXH4fP4uA",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.dJj8jaR2xUTGr5xz"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        94,
+        96
+      ],
+      "drawn": false,
+      "_id": "yWDkIraWtP6B7alt",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856231,
+        "modifiedTime": 1782468830262
+      },
+      "name": "Could You Slice It For Me",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.qT3C75FIDgFoV37l",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.yWDkIraWtP6B7alt"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        97,
+        99
+      ],
+      "drawn": false,
+      "_id": "8gHc0a0hqFPRWc94",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856232,
+        "modifiedTime": 1782468830262
+      },
+      "name": "I Like My Steak Bloody",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.1lOqp7QU9mt7d2yo",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.8gHc0a0hqFPRWc94"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "_id": "FxbXNjmNanFho9fj",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856232,
+        "modifiedTime": 1782468830262
+      },
+      "name": "Drum Stick",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.NunpwEC12HlSY23v",
+      "description": "",
+      "_key": "!tables.results!OyDpu2nehPq5sFUh.FxbXNjmNanFho9fj"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "CR6et6Mgfn1yLW56",
+  "flags": {
+    "wfrp4e": {
+      "key": "critleg",
+      "column": "core-teeth"
+    },
+    "scene-packer": {
+      "sourceId": "Compendium.artantares-advanced-criticals.rolltables.RollTable.OyDpu2nehPq5sFUh",
+      "hash": "bf11dcc73d7d2f0c2375dd79a0a6138bf92d0e36"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.364",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233385454,
+    "modifiedTime": 1782468830259,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "formula": "1d100",
+  "_id": "OyDpu2nehPq5sFUh",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "XtBZYPNGm0g6PJIk": 3
+  },
+  "_key": "!tables!OyDpu2nehPq5sFUh"
+}

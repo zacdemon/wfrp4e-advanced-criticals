@@ -1,0 +1,403 @@
+{
+  "name": "Lower Spine Injury",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "_id": "XahG73Ig8w6krpTz",
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {},
+          "manualEffectKeys": false
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "origin": null,
+      "name": "Amputated Left Leg",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-core.items.Item.9s7eE2U30R774sxO.ActiveEffect.r5t7w5lcG1iddbUt",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.1.3",
+        "createdTime": 1752443746213,
+        "modifiedTime": 1752443746213,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "equipTransfer": false,
+          "prompt": false,
+          "area": {
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "duration": "sustained"
+          },
+          "originalType": "document",
+          "testIndependent": false,
+          "selfOnly": false,
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "scriptData": [
+          {
+            "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.items.k00PimCWkff11IA0\")\nlet data = item.toObject();\ndata.system.location.key = \"lLeg\"\nthis.actor.createEmbeddedDocuments(\"Item\", [data])",
+            "label": "Amputated Left Leg",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "deleteEffect": false,
+              "defending": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!BpWs9mu0aOAXLF93.XahG73Ig8w6krpTz"
+    },
+    {
+      "name": "Amputated Right Leg",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "mkJmTACnHt8O39MC",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.items.k00PimCWkff11IA0\")\nlet data = item.toObject();\ndata.system.location.key = \"rLeg\"\nthis.actor.createEmbeddedDocuments(\"Item\", [data])",
+            "label": "Amputated Right Leg",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false,
+              "defending": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false,
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {}
+        }
+      },
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-advanced-criticals.items.Item.UmcJjPW7Xuffp50U.ActiveEffect.Ec6Uwnn3vOev82Me",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.1.3",
+        "createdTime": 1752443748201,
+        "modifiedTime": 1752443748201,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!BpWs9mu0aOAXLF93.mkJmTACnHt8O39MC"
+    },
+    {
+      "img": "systems/wfrp4e/icons/conditions/prone.png",
+      "statuses": [
+        "prone"
+      ],
+      "name": "Prone",
+      "description": "WFRP4E.Conditions.Prone",
+      "system": {
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Tests related to movement of any kind",
+            "script": "args.fields.modifier -= 20",
+            "options": {
+              "activateScript": "return ['ws', 'bs', 'ag'].includes(args.characteristic)",
+              "targeter": false,
+              "defending": false,
+              "deleteEffect": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "dialog",
+            "label": "Bonus to melee attacks",
+            "script": "args.fields.modifier += 20",
+            "options": {
+              "targeter": true,
+              "hideScript": "return args.item?.system.attackType != 'melee'",
+              "activateScript": "return args.item?.system.attackType == 'melee'",
+              "defending": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "NQLqJIOz1qEmJhrN",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.1.3",
+        "createdTime": 1752443751159,
+        "modifiedTime": 1752443751159,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!BpWs9mu0aOAXLF93.NQLqJIOz1qEmJhrN"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your foe hacks into your lower back, damaging your spinal column, hurling you to the ground and possibly also injuring your spinal cord.</p><p><strong>Effects:</strong> You suffer the loss of the use of both legs – effectively a double @UUID[Compendium.wfrp4e-core.items.Item.k00PimCWkff11IA0]{Amputation (Hard)} but roll only once. If you get successful Surgery the lost function of the legs instead change to @UUID[Compendium.wfrp4e-core.items.Item.2iult41Jehz0F1O8]{Broken Bone (Major)} affecting both limbs as the surgeon manages to brace your back in such a way that your battered but un-severed spinal cord can recover. (A failure would possibly indicate a good brace but that the spinal cord really was severed after all.)</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Body",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.1.3",
+    "createdTime": 1738231047793,
+    "modifiedTime": 1752443706268,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "StB5irjAsV64CK1L",
+  "_id": "BpWs9mu0aOAXLF93",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!BpWs9mu0aOAXLF93"
+}

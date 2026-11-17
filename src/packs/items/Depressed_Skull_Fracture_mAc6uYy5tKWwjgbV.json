@@ -1,0 +1,155 @@
+{
+  "name": "Depressed Skull Fracture",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/unconscious.png",
+      "statuses": [
+        "unconscious"
+      ],
+      "name": "Unconscious",
+      "description": "WFRP4E.Conditions.Unconscious",
+      "system": {
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "EHHepVYXwOPjHb1j",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.5.1",
+        "createdTime": 1744368360316,
+        "modifiedTime": 1744368360316,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!mAc6uYy5tKWwjgbV.EHHepVYXwOPjHb1j"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your foe’s weapon crunches into your skull, shards pressing down on your brain and a large subdural hematoma forming.</p><p><strong>Effects:</strong> You go @Condition[Unconscious] and will stay that way until Surgery removes the offending bone-shard and clears away the large clot to relieve the pressure on the brain. This process is known as trepanation, and tends to take a full day. It is often attended by a large crowd of onlookers eager to see the latest in scientific medical advances. Should the surgery be successful you’ll still have to pass a <strong>Challenging (+0) Endurance</strong> Test or contract @UUID[Compendium.wfrp4e-core.items.Item.M8XyRs9DN12XsFTQ]{Blood Rot} from resulting meningitis. If Surgery never becomes available you could conceivably last a long time with the right care, just uselessly comatose.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.5.1",
+    "createdTime": 1738231045957,
+    "modifiedTime": 1744368357509,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "qoVpO3xKjG06lmQo",
+  "_id": "mAc6uYy5tKWwjgbV",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!mAc6uYy5tKWwjgbV"
+}

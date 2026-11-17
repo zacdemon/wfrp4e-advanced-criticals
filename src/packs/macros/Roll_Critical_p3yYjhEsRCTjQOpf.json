@@ -1,0 +1,28 @@
+{
+  "name": "Roll Critical",
+  "type": "script",
+  "command": "new Dialog({\n    title: \"Select Critical Hit Parameters\",\n    content: `\n    <form>\n        <div class=\"form-group\">\n            <label>Source</label>\n            <div class=\"form-fields\">\n                <select name=\"source\">\n                    <option value=\"uia\" selected>UiA</option>\n                    <option value=\"core\">Core</option>\n                </select>\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label>Damage Type</label>\n            <div class=\"form-fields\">\n                <select name=\"damageType\">\n                    <option value=\"arrows\">Arrows/Bolts</option>\n                    <option value=\"bullets\">Bullets</option>\n                    <option value=\"crushing\">Crushing</option>\n                    <option value=\"cutting\">Cutting</option>\n                    <option value=\"flames\">Flames/Energy</option>\n                    <option value=\"piercing\">Piercing</option>\n                    <option value=\"shrapnel\">Shrapnel/Shot</option>\n                    <option value=\"slings\">Slings</option>\n                    <option value=\"teeth\">Teeth/Claws</option>\n                    <option value=\"unarmed\">Unarmed</option>\n                </select>\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label>Target Area</label>\n            <div class=\"form-fields\">\n                <select name=\"targetArea\">\n                    <option value=\"head\">Head</option>\n                    <option value=\"arm\">Arm</option>\n                    <option value=\"body\">Body</option>\n                    <option value=\"leg\">Leg</option>\n                </select>\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label>Modifier</label>\n            <div class=\"form-fields\">\n                <input type=\"number\" name=\"modifier\" value=\"0\">\n            </div>\n        </div>\n    </form>\n    `,\n    buttons: {\n        confirm: {\n            icon: '<i class=\"fas fa-check\"></i>',\n            label: \"Send to Chat\",\n            callback: async (html) => {\n                const sourceValue = html.find(\"[name='source']\").val();\n                const sourceText = html.find(\"[name='source'] option:selected\").text();\n\n                const damageTypeValue = html.find(\"[name='damageType']\").val();\n                const damageTypeText = html.find(\"[name='damageType'] option:selected\").text();\n\n                const targetAreaValue = html.find(\"[name='targetArea']\").val();\n                const targetAreaText = html.find(\"[name='targetArea'] option:selected\").text();\n\n                const modifier = parseInt(html.find(\"[name='modifier']\").val() || 0);\n                const modifierSign = modifier >= 0 ? `+${modifier}` : `${modifier}`; // Ensures proper sign formatting\n\n                // Define table name and column\n                const tableName = `crit${targetAreaValue}`;\n                const column = `${sourceValue}-${damageTypeValue}`;\n\n                // Send chat message with clickable roll link\n                ChatMessage.create({\n                    user: game.user.id,\n                    speaker: ChatMessage.getSpeaker(),\n                    content: `\n                        <p><strong>Critical Hit Roll:</strong></p>\n                        <p><strong>Source:</strong> ${sourceText}</p>\n                        <p><strong>Damage Type:</strong> ${damageTypeText}</p>\n                        <p><strong>Target Area:</strong> ${targetAreaText}</p>\n                        <p>\n                            <a data-action=\"clickTable\"\n                               class=\"action-link critical\" \n                               data-modifier=\"${modifier}\" \n                               data-table=\"${tableName}\" \n                               data-column=\"${column}\">\n                               <i class='fas fa-list'></i> Roll Critical (${modifierSign})\n                            </a>\n                        </p>\n                    `\n                });\n            }\n        },\n        cancel: {\n            icon: '<i class=\"fas fa-times\"></i>',\n            label: \"Cancel\"\n        }\n    },\n    default: \"confirm\"\n}).render(true);",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "author": "yWOr6WVvMImJ3rH1",
+  "scope": "global",
+  "folder": null,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14.364",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1741489164135,
+    "modifiedTime": 1781951133832,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": null
+  },
+  "_id": "p3yYjhEsRCTjQOpf",
+  "sort": 0,
+  "_key": "!macros!p3yYjhEsRCTjQOpf"
+}

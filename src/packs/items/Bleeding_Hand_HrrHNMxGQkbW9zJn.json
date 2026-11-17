@@ -1,0 +1,62 @@
+{
+  "name": "Bleeding Hand",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You take a cut across your hand, nicking tendons and making your grip slippery with blood.</p><p><strong>Effects:</strong> Before taking an Action that requires you to hold something in that hand, you need to pass a <strong>Very Easy (+30) Dexterity</strong> Test to avoid having that object slip from your hand. If object is held in two hands you may reroll a failed Test. This effect lasts until the end of the encounter.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Arm",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.5.1",
+    "createdTime": 1738231047793,
+    "modifiedTime": 1745001894119,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "nGdbmM0UwXX6Mjg8",
+  "_id": "HrrHNMxGQkbW9zJn",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!HrrHNMxGQkbW9zJn"
+}

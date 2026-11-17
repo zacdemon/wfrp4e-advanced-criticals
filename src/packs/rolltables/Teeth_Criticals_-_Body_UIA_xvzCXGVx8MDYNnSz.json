@@ -1,0 +1,579 @@
+{
+  "name": "Teeth Criticals - Body (UIA)",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "_id": "UU4zi7to7ScsTNfd",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859541,
+        "modifiedTime": 1782468831811
+      },
+      "name": "Things That Go Bump",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.PjTAwZ5XnI279loW",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.UU4zi7to7ScsTNfd"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "_id": "wA8rJWFVRiYQx1YR",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859541,
+        "modifiedTime": 1782468831811
+      },
+      "name": "Fashion Vandal",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.yzcDAsLrWr3yixGA",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.wA8rJWFVRiYQx1YR"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        21,
+        25
+      ],
+      "drawn": false,
+      "_id": "7hbtC1otZGVBtMQQ",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859541,
+        "modifiedTime": 1782468831812
+      },
+      "name": "Snatch And Grab",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.lI9bZkhcWLWWC5qh",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.7hbtC1otZGVBtMQQ"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        26,
+        30
+      ],
+      "drawn": false,
+      "_id": "XnIQ0QEJaWgKoqDd",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859542,
+        "modifiedTime": 1782468831812
+      },
+      "name": "Pecs For The Peckish",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.1pdNgRb76CMQ4zhQ",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.XnIQ0QEJaWgKoqDd"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "_id": "24dXzXagRCneaAT1",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859542,
+        "modifiedTime": 1782468831812
+      },
+      "name": "Thin Slices, Please",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.EGlZ3YwR2bujjrWR",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.24dXzXagRCneaAT1"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        36,
+        40
+      ],
+      "drawn": false,
+      "_id": "akhpolfqWzwDZhNx",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859542,
+        "modifiedTime": 1782468831812
+      },
+      "name": "Shoulder Cut",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.fkdsLDlnvC0FVlVi",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.akhpolfqWzwDZhNx"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "_id": "NhX1jCMeQHoYfPtY",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859542,
+        "modifiedTime": 1782468831812
+      },
+      "name": "Raked Hip",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.OHhRuC4Th1g7rFm8",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.NhX1jCMeQHoYfPtY"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "_id": "UdvZrYjQMrDlI2R3",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859543,
+        "modifiedTime": 1782468831812
+      },
+      "name": "Just A Piece Off The Flank",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.DwQILBoBPTBIJmjj",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.UdvZrYjQMrDlI2R3"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "_id": "zxTQ4FPmvJHsvwtl",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859543,
+        "modifiedTime": 1782468831812
+      },
+      "name": "Ooomph",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.sH0V3M6cxQfDfi4r",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.zxTQ4FPmvJHsvwtl"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "_id": "4MHqfNTu4EIj1OuK",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859543,
+        "modifiedTime": 1782468831812
+      },
+      "name": "One Rack Of Ribs, Please",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.czKe70V7U5EKaEuF",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.4MHqfNTu4EIj1OuK"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "_id": "RIrusOvllR5J2SFZ",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859543,
+        "modifiedTime": 1782468831812
+      },
+      "name": "Bestial Pounce",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.qEhAavAqtC53yjPt",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.RIrusOvllR5J2SFZ"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        66,
+        70
+      ],
+      "drawn": false,
+      "_id": "TfXDsNHU4ssJdt3M",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859543,
+        "modifiedTime": 1782468831813
+      },
+      "name": "Lung Lunch",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.O3TASQr0dk24xyJe",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.TfXDsNHU4ssJdt3M"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "_id": "Auirk7W1NxPvIJf4",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859543,
+        "modifiedTime": 1782468831813
+      },
+      "name": "Horrendous Hug",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.P5OgRQoAhHD4jEUb",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.Auirk7W1NxPvIJf4"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "_id": "OPpuZ2YEKJOSQ3Na",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859544,
+        "modifiedTime": 1782468831813
+      },
+      "name": "Respiratory Banquet",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.3tPmMBHIanc8nCNe",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.OPpuZ2YEKJOSQ3Na"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "_id": "muFcajkiMl1T3SFC",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859544,
+        "modifiedTime": 1782468831813
+      },
+      "name": "Eviscerating Slash",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.e3S8t2FdBrUYtviv",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.muFcajkiMl1T3SFC"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "_id": "yoHFd577TmkBltIw",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859544,
+        "modifiedTime": 1782468831813
+      },
+      "name": "Groin Groceries",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.Efh9CwTWakKeikvS",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.yoHFd577TmkBltIw"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        91,
+        95
+      ],
+      "drawn": false,
+      "_id": "pLnqyuHqGRRPua6j",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859544,
+        "modifiedTime": 1782468831813
+      },
+      "name": "Belly Buffet",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.auys5KN5Fg84fjRM",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.pLnqyuHqGRRPua6j"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        96,
+        110
+      ],
+      "drawn": false,
+      "_id": "ETGo05wL44JoyNK5",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859545,
+        "modifiedTime": 1782468831813
+      },
+      "name": "Gore Fest",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.2R4Apw0DwkFCArxR",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.ETGo05wL44JoyNK5"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        111,
+        115
+      ],
+      "drawn": false,
+      "_id": "tug6E61iMmYOn5u0",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859545,
+        "modifiedTime": 1782468831813
+      },
+      "name": "Gutted",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.g3YmB7M7Xu7YpA4k",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.tug6E61iMmYOn5u0"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        116,
+        116
+      ],
+      "drawn": false,
+      "_id": "93fRSxjMs7XB7FmK",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950859545,
+        "modifiedTime": 1782468831813
+      },
+      "name": "Partition",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.yVSUL8184ZuQqnHs",
+      "description": "",
+      "_key": "!tables.results!xvzCXGVx8MDYNnSz.93fRSxjMs7XB7FmK"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "c1xx1QT4LlCJyqPi",
+  "flags": {
+    "wfrp4e": {
+      "key": "critbody",
+      "column": "uia-teeth"
+    },
+    "scene-packer": {
+      "sourceId": "Compendium.artantares-advanced-criticals.rolltables.RollTable.xvzCXGVx8MDYNnSz",
+      "hash": "ecf81c1339f1a5fe2043da7a7437ec448e9404d5"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.364",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233385454,
+    "modifiedTime": 1782468831811,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "formula": "1d100",
+  "_id": "xvzCXGVx8MDYNnSz",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "XtBZYPNGm0g6PJIk": 3
+  },
+  "_key": "!tables!xvzCXGVx8MDYNnSz"
+}

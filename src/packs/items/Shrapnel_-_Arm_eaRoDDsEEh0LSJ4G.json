@@ -1,0 +1,23 @@
+{
+  "name": "Shrapnel - Arm",
+  "sorting": "a",
+  "folder": "CKFY2GKFOgejhImn",
+  "type": "Item",
+  "_id": "eaRoDDsEEh0LSJ4G",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231052571,
+    "modifiedTime": 1765557264336,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": null
+  },
+  "_key": "!folders!eaRoDDsEEh0LSJ4G"
+}

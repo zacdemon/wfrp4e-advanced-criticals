@@ -1,0 +1,579 @@
+{
+  "name": "Crushing Criticals - Head (Core)",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "_id": "zQ8A1JtxDZMdGqvh",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856956,
+        "modifiedTime": 1782468830692
+      },
+      "name": "I Felt The Draft",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.Ztd2DVIGjRvbN9k0",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.zQ8A1JtxDZMdGqvh"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "_id": "raHr0t5R7Bpfc88a",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856956,
+        "modifiedTime": 1782468830692
+      },
+      "name": "Noggin’ Rung",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.4kgyS6pH55FDjNPF",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.raHr0t5R7Bpfc88a"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        21,
+        25
+      ],
+      "drawn": false,
+      "_id": "ol0fB7newKBmQPZl",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856956,
+        "modifiedTime": 1782468830692
+      },
+      "name": "Black Eye",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.VmitoJ2lmsBEdybR",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.ol0fB7newKBmQPZl"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        26,
+        30
+      ],
+      "drawn": false,
+      "_id": "nIkEd9zdZ0KZCZof",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856956,
+        "modifiedTime": 1782468830692
+      },
+      "name": "Broken Nose",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.ZbMNyOysaY8uZaRn",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.nIkEd9zdZ0KZCZof"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "_id": "ZOtZQBcqHj0y8eA4",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856957,
+        "modifiedTime": 1782468830692
+      },
+      "name": "Mashed Ear",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.6tpiciRAHw3HG9Dx",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.ZOtZQBcqHj0y8eA4"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        36,
+        40
+      ],
+      "drawn": false,
+      "_id": "ch7wvPs4e8cV1KXY",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856957,
+        "modifiedTime": 1782468830692
+      },
+      "name": "Scalp Flap",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.aYXS00x3FWkNzrDp",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.ch7wvPs4e8cV1KXY"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "_id": "Ud8bRvZWTF8V2stu",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856957,
+        "modifiedTime": 1782468830692
+      },
+      "name": "Burst Eardrum",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.1jp4HU3v7Fp7iUVp",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.Ud8bRvZWTF8V2stu"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "_id": "c9Zh4Le5ppGcsL2V",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856957,
+        "modifiedTime": 1782468830692
+      },
+      "name": "Neck Smash",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.EIciWvd0KWd5FQTw",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.c9Zh4Le5ppGcsL2V"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "_id": "YMvZzpIpBWayaujg",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856958,
+        "modifiedTime": 1782468830693
+      },
+      "name": "Face Crunch",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.aXdmsWAX63udlP3H",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.YMvZzpIpBWayaujg"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "_id": "xXPElqOVPltf4xEj",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856958,
+        "modifiedTime": 1782468830693
+      },
+      "name": "Broken Teeth",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.iSfBDrw0WrXu2OKX",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.xXPElqOVPltf4xEj"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "_id": "47fWRL4byGQ4XaVU",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856958,
+        "modifiedTime": 1782468830693
+      },
+      "name": "Busted Jaw",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.tJqJGbHTvCaw4yzO",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.47fWRL4byGQ4XaVU"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        66,
+        70
+      ],
+      "drawn": false,
+      "_id": "LG2fy3crOpcObawq",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856958,
+        "modifiedTime": 1782468830693
+      },
+      "name": "Crushed Larynx",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.zhQuDrutCumeCZnj",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.LG2fy3crOpcObawq"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "_id": "stHibnofyHprsrGZ",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856958,
+        "modifiedTime": 1782468830693
+      },
+      "name": "Concussion",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.taFUy2wGbF7PEOIa",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.stHibnofyHprsrGZ"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "_id": "MkNXv0crU3kenfff",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856959,
+        "modifiedTime": 1782468830693
+      },
+      "name": "Whip-Lash Trauma",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.aCh1tEJRc68cvfUH",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.MkNXv0crU3kenfff"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "_id": "gUAuKX9m2gD9Hgk0",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856959,
+        "modifiedTime": 1782468830693
+      },
+      "name": "Fractured Skull",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.plQbXJyTM08rqFJz",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.gUAuKX9m2gD9Hgk0"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "_id": "vVoHP49VrxloWqbC",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856959,
+        "modifiedTime": 1782468830693
+      },
+      "name": "Fractured Orbit",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.2q1tbcfTo6CCae1f",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.vVoHP49VrxloWqbC"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        91,
+        93
+      ],
+      "drawn": false,
+      "_id": "ND762sPdbVjK9qU4",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856959,
+        "modifiedTime": 1782468830693
+      },
+      "name": "Burst Eye",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.AgRjuTdsh0YEbFAk",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.ND762sPdbVjK9qU4"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        94,
+        96
+      ],
+      "drawn": false,
+      "_id": "rbfHhpZzhxMNGq2n",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856959,
+        "modifiedTime": 1782468830694
+      },
+      "name": "Depressed Skull Fracture",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.mAc6uYy5tKWwjgbV",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.rbfHhpZzhxMNGq2n"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        97,
+        99
+      ],
+      "drawn": false,
+      "_id": "vDZgf3hx4tfetsbt",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856960,
+        "modifiedTime": 1782468830694
+      },
+      "name": "Brain Damage",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.qvpOwLpvsqNF2eZb",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.vDZgf3hx4tfetsbt"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "_id": "haJL7owlM2DjHsxN",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856960,
+        "modifiedTime": 1782468830694
+      },
+      "name": "Splattered All Over The Place",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.UmS6uwhLxs5leI8o",
+      "description": "",
+      "_key": "!tables.results!YqJ79AzgPX86Uy9t.haJL7owlM2DjHsxN"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dg117wrmMfqdg714",
+  "flags": {
+    "wfrp4e": {
+      "key": "crithead",
+      "column": "core-crushing"
+    },
+    "scene-packer": {
+      "sourceId": "Compendium.artantares-advanced-criticals.rolltables.RollTable.YqJ79AzgPX86Uy9t",
+      "hash": "6d4716e873ff9adaffad4f2ed4a5b9bb6e7d8f2b"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.364",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233385454,
+    "modifiedTime": 1782468830691,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "formula": "1d100",
+  "_id": "YqJ79AzgPX86Uy9t",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "XtBZYPNGm0g6PJIk": 3
+  },
+  "_key": "!tables!YqJ79AzgPX86Uy9t"
+}

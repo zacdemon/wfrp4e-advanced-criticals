@@ -1,0 +1,579 @@
+{
+  "name": "Teeth Criticals - Arm (Core)",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "_id": "egKkFArMCEbYsg9s",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856899,
+        "modifiedTime": 1782468830655
+      },
+      "name": "Tug-Of-War",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.ok9nO9abuUDSRLor",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.egKkFArMCEbYsg9s"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "_id": "4stNc6X3rZ33AbMh",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856899,
+        "modifiedTime": 1782468830655
+      },
+      "name": "Raked Hand",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.twRE7Xk2chn7hTl6",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.4stNc6X3rZ33AbMh"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        21,
+        25
+      ],
+      "drawn": false,
+      "_id": "nWoIHqMJG1dBTGGC",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856899,
+        "modifiedTime": 1782468830655
+      },
+      "name": "Wrist Wound",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.bkeQibgpUJ9uEeNB",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.nWoIHqMJG1dBTGGC"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        26,
+        30
+      ],
+      "drawn": false,
+      "_id": "onDaiBA7VJPPc4PN",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856900,
+        "modifiedTime": 1782468830656
+      },
+      "name": "Biceps Bite",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.COqbENtLfLfUlVKB",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.onDaiBA7VJPPc4PN"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "_id": "cQoCDZJasYpthuGw",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856900,
+        "modifiedTime": 1782468830656
+      },
+      "name": "Deltoid Dinner",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.ZXzx5qcdFq2s3vHW",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.cQoCDZJasYpthuGw"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        36,
+        40
+      ],
+      "drawn": false,
+      "_id": "x7ZzkkRrNbwgS5tP",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856900,
+        "modifiedTime": 1782468830656
+      },
+      "name": "Forearm Food",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.1j0qp1ai0VZAwMMr",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.x7ZzkkRrNbwgS5tP"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "_id": "MLNSTvRihb63yjsn",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856900,
+        "modifiedTime": 1782468830656
+      },
+      "name": "Wrenched Arm",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.W8b4keHQLsnVbAbj",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.MLNSTvRihb63yjsn"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "_id": "pf4tdkRVkV8q3wIH",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856900,
+        "modifiedTime": 1782468830656
+      },
+      "name": "Savaged Hand",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.6zx6KLKMiK2gM276",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.pf4tdkRVkV8q3wIH"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "_id": "3Emv4kVrouygF5yG",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856901,
+        "modifiedTime": 1782468830656
+      },
+      "name": "Ri-i-i-i-ip",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.rx6zamwiLQiIi1Zw",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.3Emv4kVrouygF5yG"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "_id": "nB0jKzL8QgMZKVAj",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856901,
+        "modifiedTime": 1782468830656
+      },
+      "name": "Dislocated Shoulder",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.BDDD6k9wgmbkS1JX",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.nB0jKzL8QgMZKVAj"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "_id": "nrq0XO9d77aCsFft",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856901,
+        "modifiedTime": 1782468830656
+      },
+      "name": "Crunchy And Tasty",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.NcjVtPwfYZbADvNv",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.nrq0XO9d77aCsFft"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        66,
+        70
+      ],
+      "drawn": false,
+      "_id": "tUG5YJrOOONYwgIp",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856901,
+        "modifiedTime": 1782468830657
+      },
+      "name": "Finger Food",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.Ait8jSOo3mUeCZBA",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.tUG5YJrOOONYwgIp"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "_id": "IwpAV1wdMIxvUWlY",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856901,
+        "modifiedTime": 1782468830657
+      },
+      "name": "Pit Stop",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.dwm8yy9u88GL6r5D",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.IwpAV1wdMIxvUWlY"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "_id": "QSRLlEMgGOf7jY9s",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856902,
+        "modifiedTime": 1782468830657
+      },
+      "name": "Dislocated Elbow",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.spXpsN4qdHejPamJ",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.QSRLlEMgGOf7jY9s"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "_id": "4SLJjATuy5zQlzwH",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856902,
+        "modifiedTime": 1782468830657
+      },
+      "name": "Marrow Munch",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.8Y7a6EGrlLNBYRcF",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.4SLJjATuy5zQlzwH"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "_id": "fBkD4CcereTNLjSX",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856902,
+        "modifiedTime": 1782468830657
+      },
+      "name": "Digit Delight",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.RuSGec7YvCOct8En",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.fBkD4CcereTNLjSX"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        91,
+        93
+      ],
+      "drawn": false,
+      "_id": "jFJTClAqorjasUKp",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856902,
+        "modifiedTime": 1782468830657
+      },
+      "name": "Meat Off The Bone",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.fCXFi4wXDaP4u7qQ",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.jFJTClAqorjasUKp"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        94,
+        96
+      ],
+      "drawn": false,
+      "_id": "IkvsAbmFKvhfyg5f",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856902,
+        "modifiedTime": 1782468830657
+      },
+      "name": "Bite Size",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.vHxXA4Nyej78zxbJ",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.IkvsAbmFKvhfyg5f"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        97,
+        99
+      ],
+      "drawn": false,
+      "_id": "POGHaOQzZrzHKJ2s",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856903,
+        "modifiedTime": 1782468830657
+      },
+      "name": "Donate Blood, Anyone",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.AXvI5PVNVmy6BWmO",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.POGHaOQzZrzHKJ2s"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "_id": "rbFgb5FLEUR9B3FP",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856903,
+        "modifiedTime": 1782468830658
+      },
+      "name": "Dismemberment",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.hItrfSjV2qiFAGJE",
+      "description": "",
+      "_key": "!tables.results!YO7sKhtIJjecLy1f.rbFgb5FLEUR9B3FP"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "CR6et6Mgfn1yLW56",
+  "flags": {
+    "wfrp4e": {
+      "key": "critarm",
+      "column": "core-teeth"
+    },
+    "scene-packer": {
+      "sourceId": "Compendium.artantares-advanced-criticals.rolltables.RollTable.YO7sKhtIJjecLy1f",
+      "hash": "25d8c468c24ba01f40f646183ff4ca8171209940"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.364",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233385454,
+    "modifiedTime": 1782468830655,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "formula": "1d100",
+  "_id": "YO7sKhtIJjecLy1f",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "XtBZYPNGm0g6PJIk": 3
+  },
+  "_key": "!tables!YO7sKhtIJjecLy1f"
+}

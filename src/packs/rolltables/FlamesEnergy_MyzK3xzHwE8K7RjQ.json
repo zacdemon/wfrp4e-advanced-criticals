@@ -1,0 +1,27 @@
+{
+  "name": "Flames/Energy",
+  "sorting": "a",
+  "folder": "MDPxZUWtltmTfole",
+  "type": "RollTable",
+  "description": "",
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "40565213fb2da49f79f711c56d40b5c61b42850f"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233384817,
+    "modifiedTime": 1766233384817,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "_id": "MyzK3xzHwE8K7RjQ",
+  "sort": 0,
+  "_key": "!folders!MyzK3xzHwE8K7RjQ"
+}

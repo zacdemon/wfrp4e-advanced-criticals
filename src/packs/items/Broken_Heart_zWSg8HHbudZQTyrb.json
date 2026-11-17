@@ -1,0 +1,62 @@
+{
+  "name": "Broken Heart",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> The projectile slams into the center of your chest with deadly force. \n A Stone Bullet cracks your breastbone and causes your heart to falter and go into a fatal arrhythmia, the heart muscle beating furiously but without any coordination between its four chambers, resulting in quick loss of consciousness and death from lack of oxygenated blood. \n A Lead Bullet simply punches straight through your breastbone to tear up the large veins and arteries connecting the heart to the lungs, resulting in massive and fatal bleeding.</p> <p><strong>Effects:</strong> Since a working heart is required for proper living (being undead doesn’t count) you die tragically.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "D",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Body",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231054305,
+    "modifiedTime": 1738231054305,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "Tk1OUwNh3JxC7Q6b",
+  "_id": "zWSg8HHbudZQTyrb",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!zWSg8HHbudZQTyrb"
+}

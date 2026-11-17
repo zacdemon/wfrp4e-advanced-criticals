@@ -1,0 +1,579 @@
+{
+  "name": "Slings Criticals - Arm (Core)",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "_id": "4I5CpdwsD2W9ePAx",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856654,
+        "modifiedTime": 1782468830540
+      },
+      "name": "Finger Whack",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.gcvnk2nLWcG40pIH",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.4I5CpdwsD2W9ePAx"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "_id": "WTwSgsGC9yZzrP08",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856654,
+        "modifiedTime": 1782468830540
+      },
+      "name": "Scraped Hand",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.XubKEArzP2Ylvv0G",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.WTwSgsGC9yZzrP08"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        21,
+        25
+      ],
+      "drawn": false,
+      "_id": "iAYulSdYhzCkQXpP",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856654,
+        "modifiedTime": 1782468830540
+      },
+      "name": "Bruised Arm",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.qx9cyFifNJ7eXroZ",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.iAYulSdYhzCkQXpP"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        26,
+        30
+      ],
+      "drawn": false,
+      "_id": "PZeg3B30A55eTobY",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856654,
+        "modifiedTime": 1782468830541
+      },
+      "name": "Funny-Bone Injury",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.yhBndYccevj7PRom",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.PZeg3B30A55eTobY"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "_id": "IBYxyFni18oWs3Ws",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856655,
+        "modifiedTime": 1782468830541
+      },
+      "name": "Sprained Finger",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.rVyFvP8sV6j0Ddpk",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.IBYxyFni18oWs3Ws"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        36,
+        40
+      ],
+      "drawn": false,
+      "_id": "TNJt5MveFJx9b0a1",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856655,
+        "modifiedTime": 1782468830541
+      },
+      "name": "Battered Wrist",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.PbalA8JA5eYRGGul",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.TNJt5MveFJx9b0a1"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "_id": "Wc6SJvysZv3rJ7e2",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856655,
+        "modifiedTime": 1782468830541
+      },
+      "name": "Cracked Collarbone",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.pUdM0tV29QCxqJ0M",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.Wc6SJvysZv3rJ7e2"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "_id": "FF6b2yftSRkM7rrI",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856655,
+        "modifiedTime": 1782468830541
+      },
+      "name": "Broken Fingers",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.yCSM8r0tdLkS0vY1",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.FF6b2yftSRkM7rrI"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "_id": "moWb4AHjHGjaftdG",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856655,
+        "modifiedTime": 1782468830541
+      },
+      "name": "Fractured Shoulder",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.PU4GAwjeLVkjd6rZ",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.moWb4AHjHGjaftdG"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "_id": "aCHiP3QyDk0YdCAi",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856656,
+        "modifiedTime": 1782468830541
+      },
+      "name": "Broken Wrist",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.PwX3Oa5BZzh1wDAe",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.aCHiP3QyDk0YdCAi"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "_id": "kJ6PfUm6N3Y6skJC",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856656,
+        "modifiedTime": 1782468830542
+      },
+      "name": "Snapped Forearm Bone",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.eJLf9vs5ycx3HCJe",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.kJ6PfUm6N3Y6skJC"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        66,
+        70
+      ],
+      "drawn": false,
+      "_id": "HADRuxpeO3Av3LdH",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856656,
+        "modifiedTime": 1782468830542
+      },
+      "name": "Broken Humerus",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.Jkvot7ttOGjBLXYK",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.HADRuxpeO3Av3LdH"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "_id": "bCLToBFl7RsI8lj5",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856656,
+        "modifiedTime": 1782468830542
+      },
+      "name": "Broken Hand",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.LE2V32TxDVbFi7C5",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.bCLToBFl7RsI8lj5"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "_id": "le2MrTCFWIErUyk8",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856656,
+        "modifiedTime": 1782468830542
+      },
+      "name": "Broken Elbow",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.wCtnz4f9H1DHKG54",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.le2MrTCFWIErUyk8"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "_id": "xDPbJFxbbyY3IRF4",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856657,
+        "modifiedTime": 1782468830542
+      },
+      "name": "Shattered Hand",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.M8fNblOJg1YGBKhP",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.xDPbJFxbbyY3IRF4"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "_id": "L5AJdlTELzKI9Kam",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856657,
+        "modifiedTime": 1782468830542
+      },
+      "name": "Fractured Forearm",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.7LV0DC8IlTKWu10x",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.L5AJdlTELzKI9Kam"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        91,
+        93
+      ],
+      "drawn": false,
+      "_id": "jdR1wOXjRPGAfyYd",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856657,
+        "modifiedTime": 1782468830542
+      },
+      "name": "Nerve Damage",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.Xq0goVfSQ6Cn3Vgn",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.jdR1wOXjRPGAfyYd"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        94,
+        96
+      ],
+      "drawn": false,
+      "_id": "lMg1GL2RrziJr3KZ",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856657,
+        "modifiedTime": 1782468830543
+      },
+      "name": "Open Fracture",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.inKQR6KZxE380mOd",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.lMg1GL2RrziJr3KZ"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        97,
+        99
+      ],
+      "drawn": false,
+      "_id": "5FTBeyGuUkuAQ6AS",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856657,
+        "modifiedTime": 1782468830543
+      },
+      "name": "Internal Bleeding",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.iaOeRXuvdN3qEL9U",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.5FTBeyGuUkuAQ6AS"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "_id": "j6TXYnDQVAUNGqOB",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950856658,
+        "modifiedTime": 1782468830543
+      },
+      "name": "Arterial Disaster",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.aL6vMcgKeEh0EUB0",
+      "description": "",
+      "_key": "!tables.results!VmIYqlkKi5LmQHrA.j6TXYnDQVAUNGqOB"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "FsD9mwCCd7asvzIo",
+  "flags": {
+    "wfrp4e": {
+      "key": "critarm",
+      "column": "core-slings"
+    },
+    "scene-packer": {
+      "sourceId": "Compendium.artantares-advanced-criticals.rolltables.RollTable.VmIYqlkKi5LmQHrA",
+      "hash": "070170527444397e8487d1fc191a06b80569e1f3"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.364",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233385454,
+    "modifiedTime": 1782468830540,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "formula": "1d100",
+  "_id": "VmIYqlkKi5LmQHrA",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "XtBZYPNGm0g6PJIk": 3
+  },
+  "_key": "!tables!VmIYqlkKi5LmQHrA"
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Cracked Collarbone",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The projectile clips and cracks your clavicle. The fracture is stable but far from painless!</p><p><strong>Effects:</strong> Any time you want to use the arm for an Action during the rest of the encounter you must first pass an <strong>Average (+20) Cool </strong>or<strong> Endurance Test</strong>. Failure means you lose the Action. (You can still roll for Opposed Melee Tests as the defender, as necessity trumps discomfort.)</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Arm",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1738231054305,
+    "modifiedTime": 1765621878035,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "NpvDpGUWXoawJAKu",
+  "_id": "pUdM0tV29QCxqJ0M",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!pUdM0tV29QCxqJ0M"
+}

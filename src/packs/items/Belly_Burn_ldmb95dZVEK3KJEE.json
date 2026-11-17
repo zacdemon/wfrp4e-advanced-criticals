@@ -1,0 +1,62 @@
+{
+  "name": "Belly Burn",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your abdominal muscles are badly burned, leaving you doubled over and unable to straighten up properly for the pain.</p><p><strong>Effects:</strong> For the rest of the encounter you’ll have to pass a <strong>Challenging (+0) Endurance</strong> Test at the beginning of each of your turns or suffer a penalty of -20 to all physical Actions and Tests as well as halved M for the rest of that turn.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "3",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Body",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.346",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.1.3",
+    "createdTime": 1738231049394,
+    "modifiedTime": 1752559897116,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "O0YJjq9hZK73FCe7",
+  "_id": "ldmb95dZVEK3KJEE",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!ldmb95dZVEK3KJEE"
+}

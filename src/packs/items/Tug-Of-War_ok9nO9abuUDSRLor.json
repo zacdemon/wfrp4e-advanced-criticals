@@ -1,0 +1,62 @@
+{
+  "name": "Tug-Of-War",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your foe manages to grab whatever you are holding in that hand and starts pulling!</p><p><strong>Effects:</strong> Roll an <strong>Opposed Strength</strong> Test. Success or a draw means your enemy lets go. Loss by 1-4 SL means you lose your next Action but retain the item. Loss by 5+ SL means you drop what you held in that hand and your foe takes possession of it. If you were carrying it in both hands (like a two-handed weapon) you get to roll twice and pick the best result.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "1",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Arm",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1738231057745,
+    "modifiedTime": 1765624583423,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "OSlMTZL5QyVAUeTD",
+  "_id": "ok9nO9abuUDSRLor",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!ok9nO9abuUDSRLor"
+}

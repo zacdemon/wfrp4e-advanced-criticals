@@ -1,0 +1,62 @@
+{
+  "name": "Glancing Blow",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> Your headgear goes flying or is dislodged as your foe’s blade barely misses taking a chunk of your skull with it.</p> <p><strong>Effects:</strong> If this location is unarmored you gain @Condition[Stunned] (1). A Leather Skullcap or Open Helm is dropped. A Mail Coif or Helm cause @Condition[Blinded] (2), except you can negate it immediately by using a single Action to adjust it back to its proper position. If wearing layered Flexible armor only the outermost armor is affected.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "1",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231047793,
+    "modifiedTime": 1738231047793,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "vbeYuEBwyUkvHb4h",
+  "_id": "2h4fRwmg7qagpZG8",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!2h4fRwmg7qagpZG8"
+}

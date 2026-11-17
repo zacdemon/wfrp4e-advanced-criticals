@@ -1,0 +1,579 @@
+{
+  "name": "Arrows Criticals - Body (Core)",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "_id": "j0wsEsKwJ1hS3L3c",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855240,
+        "modifiedTime": 1782468829870
+      },
+      "name": "Torn Clothing",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.cfQu1EWaxdUWaBRR",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.j0wsEsKwJ1hS3L3c"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "_id": "JzfuXTAi3jzT77XJ",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855240,
+        "modifiedTime": 1782468829870
+      },
+      "name": "Just A Graze",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.rTRV7WBpqlBrmmjm",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.JzfuXTAi3jzT77XJ"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        21,
+        25
+      ],
+      "drawn": false,
+      "_id": "xrxVGR6iakXfxFAf",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855240,
+        "modifiedTime": 1782468829871
+      },
+      "name": "Sliced Rib",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.BHYjTA275Ll6lMkd",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.xrxVGR6iakXfxFAf"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        26,
+        30
+      ],
+      "drawn": false,
+      "_id": "obMRinMDyWAFyfEk",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855241,
+        "modifiedTime": 1782468829871
+      },
+      "name": "Thunk",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.DWcQUIHQyCBOSyZO",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.obMRinMDyWAFyfEk"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "_id": "sKh4xds1kiWkZbO3",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855241,
+        "modifiedTime": 1782468829871
+      },
+      "name": "Whack",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.wwssQEsJpP3CMGEp",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.sKh4xds1kiWkZbO3"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        36,
+        40
+      ],
+      "drawn": false,
+      "_id": "Fue2gLXErRF5tZdp",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855241,
+        "modifiedTime": 1782468829871
+      },
+      "name": "Pierced Flank",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.GgC6ZlIFEL4U1GAm",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.Fue2gLXErRF5tZdp"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "_id": "JI0muGFMfCY9LtwL",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855241,
+        "modifiedTime": 1782468829871
+      },
+      "name": "Hip Strike",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.dk904tei1ZfGCboK",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.JI0muGFMfCY9LtwL"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "_id": "srsb7Nd9hwOQanUo",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855241,
+        "modifiedTime": 1782468829871
+      },
+      "name": "Pierced Pectoral",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.K9zMABHDjDftQcDw",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.srsb7Nd9hwOQanUo"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "_id": "MDoRbgK8PyrtYDvF",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855242,
+        "modifiedTime": 1782468829871
+      },
+      "name": "Fractured Sternum",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.wrC0kXV8EfTJh6Vk",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.MDoRbgK8PyrtYDvF"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "_id": "KtHPKbdhkgaUBlt0",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855242,
+        "modifiedTime": 1782468829871
+      },
+      "name": "Punctured Abdomen",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.3UPwg8yEZFSwQSII",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.KtHPKbdhkgaUBlt0"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "_id": "AhYu70qiRCZPbWy7",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855242,
+        "modifiedTime": 1782468829872
+      },
+      "name": "Damaged Lung",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.sogtCTp6MrtlfFeQ",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.AhYu70qiRCZPbWy7"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        66,
+        70
+      ],
+      "drawn": false,
+      "_id": "5HdOhATCkGjQcwki",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855242,
+        "modifiedTime": 1782468829872
+      },
+      "name": "Pierced Bladder",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.UETawF1EmIntcmsr",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.5HdOhATCkGjQcwki"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "_id": "giUNxvnCrfkUvV5i",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855242,
+        "modifiedTime": 1782468829872
+      },
+      "name": "Internal Bleeding",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.iaOeRXuvdN3qEL9U",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.giUNxvnCrfkUvV5i"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "_id": "Uaw2QNwmzrx5kwAg",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855243,
+        "modifiedTime": 1782468829872
+      },
+      "name": "Lacerated Intestine",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.Igb6f8IMhqWKHeFk",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.Uaw2QNwmzrx5kwAg"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "_id": "7Gzej3PfT6suGJcZ",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855243,
+        "modifiedTime": 1782468829872
+      },
+      "name": "Pneumothorax",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.fgp22fznnOc88hzz",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.7Gzej3PfT6suGJcZ"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "_id": "9oYoZWB2BuCq8HYG",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855243,
+        "modifiedTime": 1782468829872
+      },
+      "name": "Major Chest Wound",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.xv07QDvbptTiVFIM",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.9oYoZWB2BuCq8HYG"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        91,
+        93
+      ],
+      "drawn": false,
+      "_id": "L6oq9DxvaQgt9Ofd",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855243,
+        "modifiedTime": 1782468829872
+      },
+      "name": "Punctured Kidney",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.WrfQJ7vEzzBTFpbg",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.L6oq9DxvaQgt9Ofd"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        94,
+        96
+      ],
+      "drawn": false,
+      "_id": "L568oxLnbXpAc3nn",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855244,
+        "modifiedTime": 1782468829872
+      },
+      "name": "Spinal Cord Damage",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.UmcJjPW7Xuffp50U",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.L568oxLnbXpAc3nn"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        97,
+        99
+      ],
+      "drawn": false,
+      "_id": "0BDzALTUF50sSBeX",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855244,
+        "modifiedTime": 1782468829873
+      },
+      "name": "Massive Abdominal Trauma",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.obWFS2QpkUF4mMpZ",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.0BDzALTUF50sSBeX"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "_id": "v4KEuZz9IKIsJM9q",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855244,
+        "modifiedTime": 1782468829873
+      },
+      "name": "Transfixed Heart",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.fOx8OZxv6t3QoFP8",
+      "description": "",
+      "_key": "!tables.results!C9LF6qbj5l5nn9mp.v4KEuZz9IKIsJM9q"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dmWFjptczvBHDMMi",
+  "flags": {
+    "wfrp4e": {
+      "key": "critbody",
+      "column": "core-arrows"
+    },
+    "scene-packer": {
+      "sourceId": "Compendium.artantares-advanced-criticals.rolltables.RollTable.C9LF6qbj5l5nn9mp",
+      "hash": "9a6e8b41a6f01c5d0d444e5fccd0de00f44b85d9"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.364",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233385454,
+    "modifiedTime": 1782468829870,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "formula": "1d100",
+  "_id": "C9LF6qbj5l5nn9mp",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "XtBZYPNGm0g6PJIk": 3
+  },
+  "_key": "!tables!C9LF6qbj5l5nn9mp"
+}

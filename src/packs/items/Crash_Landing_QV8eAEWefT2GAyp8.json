@@ -1,0 +1,62 @@
+{
+  "name": "Crash Landing",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> As you try to take a swing at him, your foe grabs your arm and uses your momentum to drag you toward him, and then roll backwards as he puts a foot in your stomach, hurling you over his head. You land with a crash, snapping your neck or crushing your skull! \n (If the GM judges that such a throw is completely unlikely, such as if you very considerably outweigh your foe, or have a very low centre of gravity, then he instead manages to get you so off-balance that you are still hurled to the ground and knocked unconscious, perhaps tripping you up as you stumble past him.)</p> <p><strong>Effects:</strong> You are dead due to an unfortunate and fatal landing! \n (If you are a Dwarf in full Plate, and thus extremely unlikely to be tossed, you instead gain @Condition[Unconscious].)</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "D",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Arm",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231057745,
+    "modifiedTime": 1738231057745,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "OSlMTZL5QyVAUeTD",
+  "_id": "QV8eAEWefT2GAyp8",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!QV8eAEWefT2GAyp8"
+}

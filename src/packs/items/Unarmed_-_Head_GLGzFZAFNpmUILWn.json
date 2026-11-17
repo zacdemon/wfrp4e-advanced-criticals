@@ -1,0 +1,23 @@
+{
+  "name": "Unarmed - Head",
+  "sorting": "a",
+  "folder": "jckjxn90qalrHFJ7",
+  "type": "Item",
+  "_id": "GLGzFZAFNpmUILWn",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231057688,
+    "modifiedTime": 1765640256076,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": null
+  },
+  "_key": "!folders!GLGzFZAFNpmUILWn"
+}

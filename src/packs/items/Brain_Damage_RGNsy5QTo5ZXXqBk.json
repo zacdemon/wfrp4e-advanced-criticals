@@ -1,0 +1,155 @@
+{
+  "name": "Brain Damage",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/unconscious.png",
+      "statuses": [
+        "unconscious"
+      ],
+      "name": "Unconscious",
+      "description": "WFRP4E.Conditions.Unconscious",
+      "system": {
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "pm8levQGywdgE0wO",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.4.1",
+        "createdTime": 1738834200283,
+        "modifiedTime": 1738834200283,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!RGNsy5QTo5ZXXqBk.pm8levQGywdgE0wO"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The arrow penetrates your skull deeply, slicing up brain tissue and blood vessels as it goes in. The ensuing subarachnoid bleeding causes further damage. You black out from the pain! Extracting of the arrow will require great care and a steady hand in order not to worsen the damage. Pray for no Fumbles! Simply leaving the arrow in place will involve sawing the shaft off as near your skull as possible, leaving a curious-looking stump protruding.</p><p><strong>Effects:</strong> Gain @Condition[Unconscious]. Once recovered from that Condition you instead gain @Condition[Fatigued] (1) that will remain for a full week as you experience a powerful headache. Roll 1d10 for long-term effects:</p><ul><li><p>1-5 Frontal Lobe Damage: Roll once on the @UUID[Compendium.wfrp4e-core.tables.RollTable.5HKnpyOk4XDPdZ7V]{Mental Corruption Table}. This does not lose you any Corruption Points nor does it count towards your Corruption Limit.</p></li><li><p>6-7 Temporal Lobe Damage: You become very forgetful and your Int is reduced by -10.</p></li><li><p>8-9 Parietal Lobe Damage: You suffer what is called expressive aphasia, effectively losing spoken speech (see under Amputated Parts - Tongue).</p></li><li><p>10 Pierced Eye: You lose one eye (see under @UUID[Compendium.wfrp4e-core.items.Item.weczkAMPlTjX7lqU]{Amputated Parts}) and will have to roll again, rerolling any additional 0 results.</p></li></ul><p><strong>Surgery (Hard)</strong> will be required for Extraction.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1738231040054,
+    "modifiedTime": 1738834407796,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "T07Ug5OERH70yg0G",
+  "_id": "RGNsy5QTo5ZXXqBk",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!RGNsy5QTo5ZXXqBk"
+}

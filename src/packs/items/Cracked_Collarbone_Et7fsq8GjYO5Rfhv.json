@@ -1,0 +1,62 @@
+{
+  "name": "Cracked Collarbone",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The bullet passes through the meaty part between shoulder and neck, clipping and cracking the clavicle on the way. The fracture is stable but far from painless!</p><p><strong>Effects:</strong> Any time you want to use the arm for an Action during the rest of the encounter you must first pass an <strong>Average (+20) Cool</strong> or <strong>Endurance</strong> Test. Failure means you lose the Action. (you can still roll for Opposed Melee Tests as the defender, as necessity trumps discomfort).</p><p>No Extraction is necessary.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Arm",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1738249711119,
+    "modifiedTime": 1741108418805,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "d9ul7VNz3K6ON5iI",
+  "_id": "Et7fsq8GjYO5Rfhv",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!Et7fsq8GjYO5Rfhv"
+}

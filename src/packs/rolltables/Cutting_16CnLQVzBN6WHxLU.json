@@ -1,0 +1,27 @@
+{
+  "name": "Cutting",
+  "sorting": "a",
+  "folder": "KSqRStRhANS9D8ub",
+  "type": "RollTable",
+  "description": "",
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "902cf58c790ee0241a0e43bc2fdc616fc99bd8b3"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233386396,
+    "modifiedTime": 1766233386396,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "_id": "16CnLQVzBN6WHxLU",
+  "sort": 0,
+  "_key": "!folders!16CnLQVzBN6WHxLU"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Teeth/Claws",
+  "sorting": "a",
+  "folder": "MDPxZUWtltmTfole",
+  "type": "RollTable",
+  "description": "",
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "e3005b80886ae5854af609fdd86cc7c0d16f5980"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233384817,
+    "modifiedTime": 1766233384817,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "_id": "CR6et6Mgfn1yLW56",
+  "sort": 0,
+  "_key": "!folders!CR6et6Mgfn1yLW56"
+}

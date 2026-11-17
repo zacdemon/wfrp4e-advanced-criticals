@@ -1,0 +1,62 @@
+{
+  "name": "Chewy-Chewy",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> Your whole head disappears inside fanged jaws or clawed paws. Some chewing and/or mauling later, you are neither whole, hale, hearty nor pretty!</p> <p><strong>Effects:</strong> You lose parts – Amputation (Difficult). \n Roll 1d10: \n 1-2 Right ear \n 3-4 Left ear \n 5 Nose \n 6 Right eye \n 7 Left eye \n 8-9 1d10 teeth \n 10 Roll twice \n Regardless, your Fellowship is reduced by an extra -10 due to the extensive facial scarring.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "4",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231055824,
+    "modifiedTime": 1738231055824,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "kryqVwEwcddV0a91",
+  "_id": "D8Prd3jk7SiEMZuV",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!D8Prd3jk7SiEMZuV"
+}

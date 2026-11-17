@@ -1,0 +1,417 @@
+{
+  "name": "Open Fracture",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "statuses": [
+        "bleeding"
+      ],
+      "name": "Bleeding",
+      "description": "WFRP4E.Conditions.Bleeding",
+      "system": {
+        "condition": {
+          "value": 2,
+          "numbered": true,
+          "trigger": "endRound"
+        },
+        "scriptData": [
+          {
+            "trigger": "manual",
+            "label": "@effect.name",
+            "script": "let uiaBleeding = game.settings.get(\"wfrp4e\", \"uiaBleeding\");\n                            let actor = this.actor;\n                            let effect = this.effect;\n                            let bleedingAmt;\n                            let bleedingRoll;\n                            let msg = \"\"\n\n                            let damage = effect.conditionValue;\n                            let scriptArgs = {msg, damage};\n                            await Promise.all(actor.runScripts(\"preApplyCondition\", {effect, data : scriptArgs}))\n                            msg = scriptArgs.msg;\n                            damage = scriptArgs.damage;\n                            msg += await actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, minimumOne : false, suppressMsg : true})\n\n                            if (actor.status.wounds.value == 0 && !actor.hasCondition(\"unconscious\"))\n                            {\n                                addBleedingUnconscious = async () => {\n                                    await actor.addCondition(\"unconscious\")\n                                    msg += \"<br>\" + game.i18n.format(\"BleedUnc\", {name: actor.prototypeToken.name })\n                                }\n                                if (uiaBleeding) {\n                                    test = await actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {appendTitle : \" - \" + this.effect.name, skipTargets: true, fields : {difficulty : \"challenging\"}});\n                                    await test.roll();\n                                    if (test.failed) {\n                                        await addBleedingUnconscious();\n                                    }\n                                } else {\n                                    await addBleedingUnconscious();\n                                }\n                            }\n\n                            if (actor.hasCondition(\"unconscious\"))\n                            {\n                                bleedingAmt = effect.conditionValue;\n                                bleedingRoll = (await new Roll(\"1d100\").roll()).total;\n                                if (bleedingRoll <= bleedingAmt * 10)\n                                {\n                                    msg += \"<br>\" + game.i18n.format(\"BleedFail\", {name: actor.prototypeToken.name}) + \" (\" + game.i18n.localize(\"Rolled\") + \" \" + bleedingRoll + \")\";\n                                    await actor.addCondition(\"dead\")\n                                }\n                                else if (bleedingRoll % 11 == 0)\n                                {\n                                    msg += \"<br>\" + game.i18n.format(\"BleedCrit\", { name: actor.prototypeToken.name } ) + \" (\" + game.i18n.localize(\"Rolled\") + bleedingRoll + \")\"\n                                    await actor.removeCondition(\"bleeding\")\n                                }\n                                else\n                                {\n                                    msg += \"<br>\" + game.i18n.localize(\"BleedRoll\") + \": \" + bleedingRoll;\n                                }\n                            }\n\n                            await Promise.all(actor.runScripts(\"applyCondition\", {effect, data : {bleedingRoll}}))\n                            if (args.suppressMessage)\n                            {\n                                let messageData = game.wfrp4e.utility.chatDataSetup(msg);\n                                messageData.speaker = {alias: this.effect.name}\n                                messageData.flavor = this.effect.name;\n                                return messageData\n                            }\n                            else\n                            {\n                                return this.script.message(msg)\n                            }",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "d5qjTS8xvYcMMHeu",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1765621991589,
+        "modifiedTime": 1765621991770,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!inKQR6KZxE380mOd.d5qjTS8xvYcMMHeu"
+    },
+    {
+      "img": "systems/wfrp4e/icons/conditions/stunned.png",
+      "statuses": [
+        "stunned"
+      ],
+      "name": "Stunned",
+      "description": "WFRP4E.Conditions.Stunned",
+      "system": {
+        "condition": {
+          "value": 3,
+          "numbered": true
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Penalty to all Tests (@effect.name)",
+            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
+            "options": {
+              "activateScript": "return true",
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "prePrepareData",
+            "label": "Half Movement",
+            "script": "args.actor.system.details.move.value /= 2",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          },
+          {
+            "trigger": "endRound",
+            "label": "Roll to remove Stunned",
+            "script": "const test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty: \"challenging\"}, skipTargets: true, appendTitle :  ` - ${this.effect.name}`, context: {success: \"Removed SL + 1 Conditions.\", failure: \"Failed to remove Conditions.\"}});\nawait test.roll();\nif (test.succeeded) {\n  const toRemove = 1 + Number(test.result.SL);\n  this.actor.removeCondition(\"stunned\", toRemove);\n}",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "MwA9W4y5ilbS8gAJ",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1765621994594,
+        "modifiedTime": 1765621994876,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!inKQR6KZxE380mOd.MwA9W4y5ilbS8gAJ"
+    },
+    {
+      "_id": "CRPeM1yUsVbE94rz",
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {},
+          "manualEffectKeys": false
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "origin": null,
+      "name": "Amputated Arm",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-core.items.Item.92vQ9g5DxlWNmD1c.ActiveEffect.Ce9QAvROf94V16sJ",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1765622003256,
+        "modifiedTime": 1765622003256,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "img": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "prompt": false,
+          "area": {
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "duration": "sustained"
+          },
+          "originalType": "document",
+          "selfOnly": false,
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "scriptData": [
+          {
+            "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.MnMZv7ZXoRqoH9dS\")\nlet data = item.toObject();\ndata.system.location.key = this.item.system.location.key\nif (this.item.system.location.key == \"rArm\")\n{\n\tdata.system.location.value = \"Right Hand\"\n\tdata.system.location.key = \"rHand\"\n}\nelse if (this.item.system.location.key == \"lArm\")\n{\n\tdata.system.location.value = \"Left Hand\"\n\tdata.system.location.key = \"lHand\"\n}\nthis.actor.createEmbeddedDocuments(\"Item\", [data])",
+            "label": "Amputated Arm",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "deleteEffect": false,
+              "runIfDisabled": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!inKQR6KZxE380mOd.CRPeM1yUsVbE94rz"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> Your elbow gets hit hard, the head of the upper arm bone breaking into at least three pieces, with both the medial and lateral epicondyles going separate ways. Sharp bone fragments tear out from the skin, creating an open complicated fracture!</p> <p><strong>Effects:</strong> Gain @Condition[Stunned] (3) and @Condition[Bleeding] (2). The arm is useless (see under Amputated Parts). Surgery will be required within one week to amputate above the elbow, or you’ll contract Blood Rot as gangrene sets in.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Arm",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": true
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1738231054305,
+    "modifiedTime": 1765621989336,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "NpvDpGUWXoawJAKu",
+  "_id": "inKQR6KZxE380mOd",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!inKQR6KZxE380mOd"
+}

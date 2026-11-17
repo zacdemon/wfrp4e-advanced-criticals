@@ -1,0 +1,579 @@
+{
+  "name": "Piercing Criticals - Head (Core)",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "_id": "cLtrNFJUQuHX8f0e",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855368,
+        "modifiedTime": 1782468829931
+      },
+      "name": "You Flinched",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.QXD7WJzQRfXySadp",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.cLtrNFJUQuHX8f0e"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "_id": "88LkY5Zm64jkkHG7",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855368,
+        "modifiedTime": 1782468829931
+      },
+      "name": "Pricked Cheek",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.eTD8hBPiXLZ53PBj",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.88LkY5Zm64jkkHG7"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        21,
+        25
+      ],
+      "drawn": false,
+      "_id": "qbZVxeJzA2iN1MN8",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855368,
+        "modifiedTime": 1782468829931
+      },
+      "name": "Split Nose Tip",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.cI4UNduDGGtqSuMH",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.qbZVxeJzA2iN1MN8"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        26,
+        30
+      ],
+      "drawn": false,
+      "_id": "XlNvZI0HHXcnBlag",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855368,
+        "modifiedTime": 1782468829931
+      },
+      "name": "Slashed Chin",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.Tn77gJtZ2mRp2K5C",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.XlNvZI0HHXcnBlag"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "_id": "rI1vpvCUc5qqKOp3",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855369,
+        "modifiedTime": 1782468829931
+      },
+      "name": "Ripped Ear",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.ZqD3jyX2GzK6eS9O",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.rI1vpvCUc5qqKOp3"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        36,
+        40
+      ],
+      "drawn": false,
+      "_id": "T0YQiG7kCieHjtCa",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855369,
+        "modifiedTime": 1782468829932
+      },
+      "name": "Sliced Eyelid",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.prZCH9H9Xm2w0vF2",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.T0YQiG7kCieHjtCa"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "_id": "H5pUFH8NBqCy3QNO",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855369,
+        "modifiedTime": 1782468829932
+      },
+      "name": "Forehead Stab",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.tqdjr08BYrPmMF26",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.H5pUFH8NBqCy3QNO"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "_id": "hrr6pqPtHiYipB6j",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855369,
+        "modifiedTime": 1782468829932
+      },
+      "name": "Vocal Apparatus Injury",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.s4oDzLOaDfBT5FlB",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.hrr6pqPtHiYipB6j"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "_id": "kGM4vo5KMnj21FHy",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855370,
+        "modifiedTime": 1782468829932
+      },
+      "name": "Scalp Wound",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.RGSb7naEQCca6f2j",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.kGM4vo5KMnj21FHy"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "_id": "uKiKeNhVu5eIKAkZ",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855370,
+        "modifiedTime": 1782468829932
+      },
+      "name": "Neck Vein",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.2of1pPklFKZ1nlZl",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.uKiKeNhVu5eIKAkZ"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "_id": "nio0zXsVBvRxwhwf",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855370,
+        "modifiedTime": 1782468829932
+      },
+      "name": "Stabbed In The Face",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.LN1LOsfAHRAjHaNH",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.nio0zXsVBvRxwhwf"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        66,
+        70
+      ],
+      "drawn": false,
+      "_id": "mb4CLpRp7g00yPEY",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855370,
+        "modifiedTime": 1782468829932
+      },
+      "name": "Stabbed In The Mouth",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.3bQJNaG8PDhA2NWD",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.mb4CLpRp7g00yPEY"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "_id": "RXWCDAVVXaXqkc1L",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855370,
+        "modifiedTime": 1782468829933
+      },
+      "name": "Lacerated Neck Muscles",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.FOuv2xhWfQeNyWUe",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.RXWCDAVVXaXqkc1L"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "_id": "zy8l6GRDyH9eNi8t",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855371,
+        "modifiedTime": 1782468829933
+      },
+      "name": "Split Jaw",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.sbC18l5wkl2uhgaj",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.zy8l6GRDyH9eNi8t"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "_id": "NWaoLj3ronORuY4F",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855371,
+        "modifiedTime": 1782468829933
+      },
+      "name": "Ear Puncture",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.KQg9yAWmUwtxdwwp",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.NWaoLj3ronORuY4F"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "_id": "oOlySwZPthoK622D",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855371,
+        "modifiedTime": 1782468829933
+      },
+      "name": "Ruined Mouth",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.ulIW3T9zC8gwxWkv",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.oOlySwZPthoK622D"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        91,
+        93
+      ],
+      "drawn": false,
+      "_id": "rwvrgXWhlIc5QF8q",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855371,
+        "modifiedTime": 1782468829933
+      },
+      "name": "Pierced Eye",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.vegm2elU0wBb9agn",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.rwvrgXWhlIc5QF8q"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        94,
+        96
+      ],
+      "drawn": false,
+      "_id": "8WwQzUgjsasGipv5",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855372,
+        "modifiedTime": 1782468829933
+      },
+      "name": "Deep Neck Wound",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.tEp5UsR2BdjpFk75",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.8WwQzUgjsasGipv5"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        97,
+        99
+      ],
+      "drawn": false,
+      "_id": "mCKInUPV5UM6LxvZ",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855372,
+        "modifiedTime": 1782468829933
+      },
+      "name": "Brain Damage",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.qvpOwLpvsqNF2eZb",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.mCKInUPV5UM6LxvZ"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "_id": "6qopgFQsyz8L1weh",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.364",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+        "createdTime": 1781950855372,
+        "modifiedTime": 1782468829933
+      },
+      "name": "Split Open",
+      "documentUuid": "Compendium.artantares-advanced-criticals.items.Item.oABgcwv9gO5n5DIf",
+      "description": "",
+      "_key": "!tables.results!E9xa8HdndBjvfGow.6qopgFQsyz8L1weh"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "eNH33FeFYPBQMdVb",
+  "flags": {
+    "wfrp4e": {
+      "key": "crithead",
+      "column": "core-piercing"
+    },
+    "scene-packer": {
+      "sourceId": "Compendium.artantares-advanced-criticals.rolltables.RollTable.E9xa8HdndBjvfGow",
+      "hash": "679e8211a20fd744013552e24c4535939986c824"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.364",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233385454,
+    "modifiedTime": 1782468829931,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "formula": "1d100",
+  "_id": "E9xa8HdndBjvfGow",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "XtBZYPNGm0g6PJIk": 3
+  },
+  "_key": "!tables!E9xa8HdndBjvfGow"
+}

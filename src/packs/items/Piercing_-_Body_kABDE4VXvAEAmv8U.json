@@ -1,0 +1,23 @@
+{
+  "name": "Piercing - Body",
+  "sorting": "a",
+  "folder": "cWVU2JyRw5o3BO3p",
+  "type": "Item",
+  "_id": "kABDE4VXvAEAmv8U",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231050938,
+    "modifiedTime": 1765540216490,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": null
+  },
+  "_key": "!folders!kABDE4VXvAEAmv8U"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Bullets",
+  "sorting": "a",
+  "folder": "MDPxZUWtltmTfole",
+  "type": "RollTable",
+  "description": "",
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "b0051c5d0b80eaa499ed2d9f882777954b3c98ff"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233384817,
+    "modifiedTime": 1766233384817,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "_id": "GzDKX2tR8oKuZB2e",
+  "sort": 0,
+  "_key": "!folders!GzDKX2tR8oKuZB2e"
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Abdominal Pain",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Several fragments rip into your glorious heroic six-pack. You double over and then find the experience of trying to straighten up a very painful one, as each such movement feels like you’re tearing your belly apart!</p><p><strong>Effects:</strong> For the rest of the encounter you’ll have to pass a <strong>Challenging (+0) Endurance</strong> Test at the beginning of each of your turns or suffer a penalty of -20 to all physical Actions and Tests as well as halved M for the rest of that turn.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Body",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1738231052620,
+    "modifiedTime": 1765625780824,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "rxVWKohY23lSBXnT",
+  "_id": "GDduQlJIwcEHHZXd",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!GDduQlJIwcEHHZXd"
+}

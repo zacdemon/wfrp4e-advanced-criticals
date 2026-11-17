@@ -1,0 +1,62 @@
+{
+  "name": "A Right Mess",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> The bullet performs acrobatics in your pelvic area, having entered through the hip. It ricochets back and forth between skeletal structures before taking an upward turn, ripping up through various organs like the bladder before hitting the lower part of the abdominal aorta at the bifurcation of the iliac vessels. Massive internal bleeding ensues, leading to rapid loss of blood pressure and consciousness followed by death.</p> <p><strong>Effects:</strong> Considering the current non-functionality of your various lower body organs, you’re probably best off dead anyway!</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "D",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Leg",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231042018,
+    "modifiedTime": 1738231042018,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "2PR8P7YPEbvyuJXV",
+  "_id": "qAZ609TqmQ5BLP4I",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!qAZ609TqmQ5BLP4I"
+}

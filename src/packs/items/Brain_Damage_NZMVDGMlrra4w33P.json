@@ -1,0 +1,169 @@
+{
+  "name": "Brain Damage",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "name": "Brain Damage",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "wHGYOOY1rxIUIQVe",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "script": "let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  \" - \" + this.effect.name, fields : {difficulty : \"challenging\"}})\nawait test.roll();\nif(test.failed)\n{\n    this.actor.addCondition(\"unconscious\")\n}\nelse\n{\n    this.actor.addCondition(\"stunned\",3)\n}",
+            "label": "Brain Damage",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.4.1",
+        "createdTime": 1741484883300,
+        "modifiedTime": 1741484994190,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!NZMVDGMlrra4w33P.wHGYOOY1rxIUIQVe"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The bullet removes a piece of your skull as it passes just a little too close for your comfort, taking a piece of the underlying brain with it. You now have a hole in your head! Better cover it up quickly! Enough intact scalp remains for the opening to close, but you’ll have a soft indention over the missing skull piece forever more…</p><p><strong>Effects:</strong> Pass a <strong>Challenging (+0) Endurance</strong> Test or go @Condition[Unconscious]; otherwise gain @Condition[Stunned] (3). Regardless, once recovered from either Condition you instead gain @Condition[Fatigued] (1) that will remain for a full week before you stop feeling dizzy. Roll 1d10 for long-term effects: </p><ul><li><p>1-5 Frontal Lobe Damage: Roll once on the Mental Corruption Table. This does not lose you any Corruption Points nor does it count towards your Corruption Limit. </p></li><li><p>6-7 Temporal Lobe Damage: You become very forgetful and your Int is reduced by -10. </p></li><li><p>8-9 Parietal Lobe Damage: You suffer what is called expressive aphasia, effectively losing spoken speech (see under Amputated Parts - Tongue). </p></li><li><p>10 Occipital Lobe Damage: You gain @Condition[Blinded] (1) except the Condition is permanent as your ability to perceive visual input is impaired. </p></li></ul><p>No Extraction is necessary.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Head",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1738231042018,
+    "modifiedTime": 1741484876131,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "9JgtHiwFt0Gs0yzo",
+  "_id": "NZMVDGMlrra4w33P",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!NZMVDGMlrra4w33P"
+}

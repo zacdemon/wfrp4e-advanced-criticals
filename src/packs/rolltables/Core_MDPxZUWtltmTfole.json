@@ -1,0 +1,27 @@
+{
+  "name": "Core",
+  "sorting": "a",
+  "folder": null,
+  "type": "RollTable",
+  "description": "",
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "90f522e02ae0aa1d8eb46cd781c1645682e47d88"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233384817,
+    "modifiedTime": 1766233385833,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "_id": "MDPxZUWtltmTfole",
+  "sort": 100000,
+  "_key": "!folders!MDPxZUWtltmTfole"
+}

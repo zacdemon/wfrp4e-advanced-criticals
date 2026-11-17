@@ -1,0 +1,22 @@
+{
+  "name": "Crushing - Leg",
+  "sorting": "a",
+  "folder": "IlfkYs48MpwIV5y3",
+  "type": "Item",
+  "_id": "D0F3M3CdslqZ7rzs",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231045922,
+    "modifiedTime": 1744368699322,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1"
+  },
+  "_key": "!folders!D0F3M3CdslqZ7rzs"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Slings",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "sMS2FwYwVLzpyJuB",
+  "description": "",
+  "sort": 675000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231054254,
+    "modifiedTime": 1742110042618,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1"
+  },
+  "_key": "!folders!sMS2FwYwVLzpyJuB"
+}

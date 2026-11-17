@@ -1,0 +1,27 @@
+{
+  "name": "UiA",
+  "sorting": "a",
+  "folder": null,
+  "type": "RollTable",
+  "description": "",
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "8319df42dc105d2da0d54148e0a591030bbeb540"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233386396,
+    "modifiedTime": 1766233387112,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "_id": "KSqRStRhANS9D8ub",
+  "sort": 200000,
+  "_key": "!folders!KSqRStRhANS9D8ub"
+}

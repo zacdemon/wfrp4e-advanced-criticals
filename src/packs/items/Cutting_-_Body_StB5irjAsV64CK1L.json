@@ -1,0 +1,22 @@
+{
+  "name": "Cutting - Body",
+  "sorting": "a",
+  "folder": "0CybKNyNEPLrSCe2",
+  "type": "Item",
+  "_id": "StB5irjAsV64CK1L",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231047754,
+    "modifiedTime": 1745001818023,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1"
+  },
+  "_key": "!folders!StB5irjAsV64CK1L"
+}

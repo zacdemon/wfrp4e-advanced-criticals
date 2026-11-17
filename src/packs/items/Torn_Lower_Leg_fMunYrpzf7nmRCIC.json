@@ -1,0 +1,285 @@
+{
+  "name": "Torn Lower Leg",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "statuses": [
+        "bleeding"
+      ],
+      "name": "Bleeding",
+      "description": "WFRP4E.Conditions.Bleeding",
+      "system": {
+        "condition": {
+          "value": 1,
+          "numbered": true,
+          "trigger": "endRound"
+        },
+        "scriptData": [
+          {
+            "trigger": "manual",
+            "label": "@effect.name",
+            "script": "let uiaBleeding = game.settings.get(\"wfrp4e\", \"uiaBleeding\");\n                            let actor = this.actor;\n                            let effect = this.effect;\n                            let bleedingAmt;\n                            let bleedingRoll;\n                            let msg = \"\"\n\n                            let damage = effect.conditionValue;\n                            let scriptArgs = {msg, damage};\n                            await Promise.all(actor.runScripts(\"preApplyCondition\", {effect, data : scriptArgs}))\n                            msg = scriptArgs.msg;\n                            damage = scriptArgs.damage;\n                            msg += await actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, minimumOne : false, suppressMsg : true})\n\n                            if (actor.status.wounds.value == 0 && !actor.hasCondition(\"unconscious\"))\n                            {\n                                addBleedingUnconscious = async () => {\n                                    await actor.addCondition(\"unconscious\")\n                                    msg += \"<br>\" + game.i18n.format(\"BleedUnc\", {name: actor.prototypeToken.name })\n                                }\n                                if (uiaBleeding) {\n                                    test = await actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {appendTitle : \" - \" + this.effect.name, skipTargets: true, fields : {difficulty : \"challenging\"}});\n                                    await test.roll();\n                                    if (test.failed) {\n                                        await addBleedingUnconscious();\n                                    }\n                                } else {\n                                    await addBleedingUnconscious();\n                                }\n                            }\n\n                            if (actor.hasCondition(\"unconscious\"))\n                            {\n                                bleedingAmt = effect.conditionValue;\n                                bleedingRoll = (await new Roll(\"1d100\").roll()).total;\n                                if (bleedingRoll <= bleedingAmt * 10)\n                                {\n                                    msg += \"<br>\" + game.i18n.format(\"BleedFail\", {name: actor.prototypeToken.name}) + \" (\" + game.i18n.localize(\"Rolled\") + \" \" + bleedingRoll + \")\";\n                                    await actor.addCondition(\"dead\")\n                                }\n                                else if (bleedingRoll % 11 == 0)\n                                {\n                                    msg += \"<br>\" + game.i18n.format(\"BleedCrit\", { name: actor.prototypeToken.name } ) + \" (\" + game.i18n.localize(\"Rolled\") + bleedingRoll + \")\"\n                                    await actor.removeCondition(\"bleeding\")\n                                }\n                                else\n                                {\n                                    msg += \"<br>\" + game.i18n.localize(\"BleedRoll\") + \": \" + bleedingRoll;\n                                }\n                            }\n\n                            await Promise.all(actor.runScripts(\"applyCondition\", {effect, data : {bleedingRoll}}))\n                            if (args.suppressMessage)\n                            {\n                                let messageData = game.wfrp4e.utility.chatDataSetup(msg);\n                                messageData.speaker = {alias: this.effect.name}\n                                messageData.flavor = this.effect.name;\n                                return messageData\n                            }\n                            else\n                            {\n                                return this.script.message(msg)\n                            }",
+            "options": {
+              "targeter": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "deleteEffect": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "2IAuKal4LIMjKd4L",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1766164392423,
+        "modifiedTime": 1766164392423,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!fMunYrpzf7nmRCIC.2IAuKal4LIMjKd4L"
+    },
+    {
+      "_id": "FZKNEGN8CO3RPXMj",
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {},
+          "scriptData": [],
+          "_legacyData": {},
+          "manualEffectKeys": false
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "origin": null,
+      "name": "Torn Leg Muscle (Minor)",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-core.items.Item.wbbDM7rUetyWYgLt.ActiveEffect.rtWfTN6wJ4BbJslf",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.3.2",
+        "createdTime": 1766164397379,
+        "modifiedTime": 1766164397379,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "equipTransfer": false,
+          "prompt": false,
+          "area": {
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "duration": "sustained"
+          },
+          "originalType": "document",
+          "testIndependent": false,
+          "selfOnly": false,
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "scriptData": [
+          {
+            "script": "[Script.re1UFtxvRRjpPB7Z]",
+            "label": "Torn Leg Muscle (Minor)",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "hideScript": "",
+              "activateScript": "",
+              "submissionScript": "",
+              "deleteEffect": false,
+              "defending": false,
+              "runIfDisabled": false,
+              "showDuplicates": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!fMunYrpzf7nmRCIC.FZKNEGN8CO3RPXMj"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> Shrapnel pierces your lower leg, leaving a couple of good-sized exit wounds as they slice their way out through your calf. A virtual Latin library of muscles (gastrocnemius, peronueus longus, soleus) find themselves with a lot fewer working fibers.</p> <p><strong>Effects:</strong> Gain @Condition[Bleeding] (1) and suffer a Torn Muscle (Minor). You also need to pass an Average (+20) Athletics Test or go @Condition[Prone].</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Leg",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": true
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1738231052620,
+    "modifiedTime": 1766164387604,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "tZcJwGRztb2h4N36",
+  "_id": "fMunYrpzf7nmRCIC",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!fMunYrpzf7nmRCIC"
+}

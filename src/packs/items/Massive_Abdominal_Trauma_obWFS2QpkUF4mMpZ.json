@@ -1,0 +1,168 @@
+{
+  "name": "Massive Abdominal Trauma",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "name": "Massive Abdominal Trauma",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "geiZfm9uIWiSshYD",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "script": "let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  \" - \" + this.effect.name})\nawait test.roll();\nif(test.failed)\n{\n    await this.actor.addCondition(\"dead\");\n}\nelse\n{\n    let item = await fromUuid(\"Compendium.wfrp4e-core.items.M8XyRs9DN12XsFTQ\")\n    this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n    await this.actor.addCondition(\"fatigued\",2);\n}",
+            "label": "Massive Abdominal Trauma",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.3.3",
+        "createdTime": 1738332574667,
+        "modifiedTime": 1738332807251,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!obWFS2QpkUF4mMpZ.geiZfm9uIWiSshYD"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You are bent slightly forward as the arrow hits, possibly in the process of trying to duck. This only means the projectile now goes through your body the long way! It enters near your solar plexus, then rips through your stomach sac, the thoracic diaphragm, the large and small intestine, and finally stops when it slams into the bones of your sacrum. To say that it caused a bit of a mess is not an understatement!</p><p><strong>Effects:</strong> Pass a <strong>Challenging (+0) Endurance</strong> Test or expire on the spot from shock. Otherwise you’ll live another Toughness Bonus days before dying from any number of complications involving respiratory distress, peritonitis and blood loss, being effectively helpless and sliding in and out of unconsciousness the whole time. If you receive magical healing before that you’ll survive, but will have contracted @UUID[Compendium.wfrp4e-core.items.Item.M8XyRs9DN12XsFTQ]{Blood Rot} and a permanent state of being @Condition[Fatigued] (2).</p><p>Should you still be interested in an Extraction after all that it’ll require <strong>Surgery (Very Hard)</strong> and count as resolving an internal issue.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Body",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738231040054,
+    "modifiedTime": 1738830870953,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "dfcfKRuNqVlaJss0",
+  "_id": "obWFS2QpkUF4mMpZ",
+  "sort": 1700000,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!obWFS2QpkUF4mMpZ"
+}

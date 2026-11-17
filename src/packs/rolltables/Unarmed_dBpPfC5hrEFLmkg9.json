@@ -1,0 +1,27 @@
+{
+  "name": "Unarmed",
+  "sorting": "a",
+  "folder": "KSqRStRhANS9D8ub",
+  "type": "RollTable",
+  "description": "",
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "07ea18b4e1085465cad852b8ddd32fce5207f152"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "wfrp4e",
+    "systemVersion": "9.3.2",
+    "createdTime": 1766233386396,
+    "modifiedTime": 1766233386396,
+    "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+  },
+  "_id": "dBpPfC5hrEFLmkg9",
+  "sort": 0,
+  "_key": "!folders!dBpPfC5hrEFLmkg9"
+}

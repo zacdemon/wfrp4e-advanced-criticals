@@ -1,0 +1,22 @@
+{
+  "name": "Bullets - Arm",
+  "sorting": "a",
+  "folder": "Df5oi4XBeG2yHZn6",
+  "type": "Item",
+  "_id": "d9ul7VNz3K6ON5iI",
+  "description": "",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.3.3",
+    "createdTime": 1738249711071,
+    "modifiedTime": 1741032923198,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1"
+  },
+  "_key": "!folders!d9ul7VNz3K6ON5iI"
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Pierced Patellar Tendon",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The arrow hits your thigh just above the knee, sinking into the large quadriceps tendon attached to the patella, nailing the tendon to the underlying bone of the lower femur.</p><p><strong>Effects:</strong> Until the arrow is Extracted your M is reduced to 1 and you’ll suffer a -30 penalty to all Tests involving the leg. </p><p>Extraction will be <strong>Challenging (+0)</strong> and requires both hands and one full Action, after which you’ll count as having a @UUID[Compendium.wfrp4e-core.items.Item.nF5z1OEhpi4t6a6S]{Torn Muscle (Minor)}.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Leg",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1738249699695,
+    "modifiedTime": 1741032324873,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "GGMGJXQynVtIPLcV",
+  "_id": "gq5OONKGQSdb5Yvp",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!gq5OONKGQSdb5Yvp"
+}

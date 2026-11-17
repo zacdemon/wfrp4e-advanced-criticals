@@ -1,0 +1,62 @@
+{
+  "name": "Severed Clavicle",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The blade comes down on your shoulder, the cracking sound of your collarbone snapping under the edge not quite as loud as your scream of pain.</p><p><strong>Effects:</strong> You drop anything held in that hand and your arm is useless until you manage to succeed on a <strong>Difficult (-10) Endurance</strong> Test to overcome the pain, rolling at the start of your turn. Regardless, you suffer a -10 penalty to all tests involving any physical movement and -20 to any tests involving that arm until the bone has set in 20 minus your Toughness Bonus days.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "3",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Arm",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.5.1",
+    "createdTime": 1738231047793,
+    "modifiedTime": 1745002620893,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "nGdbmM0UwXX6Mjg8",
+  "_id": "67AXsccXYxMkht5f",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!67AXsccXYxMkht5f"
+}

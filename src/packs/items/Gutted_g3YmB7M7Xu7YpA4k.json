@@ -1,0 +1,62 @@
+{
+  "name": "Gutted",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The bullet, having the temerity to deform and flatten out for maximum tissue damage, tears through your abdominal cavity one side to the other, making a spectacular exit hole through which your torn-up intestines start spilling. Yuck!</p><p><strong>Effects:</strong> Nope…not really something a surgeon can fix! Really. Maybe a magician or a priestess of Shallya? The only thing that can save your life is a spell or prayer** within your Toughness Bonus turns, in which case you’ll live but gain @Condition[Fatigued] (4). Otherwise you’ll perish. </p><p>No Extraction is necessary.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Body",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "13.342",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1738231042018,
+    "modifiedTime": 1741480108881,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "loF3VtXUNpF8jJLL",
+  "_id": "g3YmB7M7Xu7YpA4k",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!g3YmB7M7Xu7YpA4k"
+}

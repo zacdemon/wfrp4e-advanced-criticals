@@ -1,0 +1,271 @@
+{
+  "name": "Punctured Kidney",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+  "effects": [
+    {
+      "img": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "statuses": [
+        "bleeding"
+      ],
+      "name": "Bleeding",
+      "description": "WFRP4E.Conditions.Bleeding",
+      "system": {
+        "condition": {
+          "value": 3,
+          "numbered": true,
+          "trigger": "endRound"
+        },
+        "scriptData": [
+          {
+            "trigger": "manual",
+            "label": "@effect.name",
+            "script": "let uiaBleeding = game.settings.get(\"wfrp4e\", \"uiaBleeding\");\n                            let actor = this.actor;\n                            let effect = this.effect;\n                            let bleedingAmt;\n                            let bleedingRoll;\n                            let msg = \"\"\n\n                            let damage = effect.conditionValue;\n                            let scriptArgs = {msg, damage};\n                            await Promise.all(actor.runScripts(\"preApplyCondition\", {effect, data : scriptArgs}))\n                            msg = scriptArgs.msg;\n                            damage = scriptArgs.damage;\n                            msg += await actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, minimumOne : false, suppressMsg : true})\n\n                            if (actor.status.wounds.value == 0 && !actor.hasCondition(\"unconscious\"))\n                            {\n                                addBleedingUnconscious = async () => {\n                                    await actor.addCondition(\"unconscious\")\n                                    msg += \"<br>\" + game.i18n.format(\"BleedUnc\", {name: actor.prototypeToken.name })\n                                }\n                                if (uiaBleeding) {\n                                    test = await actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {appendTitle : \" - \" + this.effect.name, skipTargets: true, fields : {difficulty : \"challenging\"}});\n                                    await test.roll();\n                                    if (test.failed) {\n                                        await addBleedingUnconscious();\n                                    }\n                                } else {\n                                    await addBleedingUnconscious();\n                                }\n                            }\n\n                            if (actor.hasCondition(\"unconscious\"))\n                            {\n                                bleedingAmt = effect.conditionValue;\n                                bleedingRoll = (await new Roll(\"1d100\").roll()).total;\n                                if (bleedingRoll <= bleedingAmt * 10)\n                                {\n                                    msg += \"<br>\" + game.i18n.format(\"BleedFail\", {name: actor.prototypeToken.name}) + \" (\" + game.i18n.localize(\"Rolled\") + \" \" + bleedingRoll + \")\";\n                                    await actor.addCondition(\"dead\")\n                                }\n                                else if (bleedingRoll % 11 == 0)\n                                {\n                                    msg += \"<br>\" + game.i18n.format(\"BleedCrit\", { name: actor.prototypeToken.name } ) + \" (\" + game.i18n.localize(\"Rolled\") + bleedingRoll + \")\"\n                                    await actor.removeCondition(\"bleeding\")\n                                }\n                                else\n                                {\n                                    msg += \"<br>\" + game.i18n.localize(\"BleedRoll\") + \": \" + bleedingRoll;\n                                }\n                            }\n\n                            await Promise.all(actor.runScripts(\"applyCondition\", {effect, data : {bleedingRoll}}))\n                            if (args.suppressMessage)\n                            {\n                                let messageData = game.wfrp4e.utility.chatDataSetup(msg);\n                                messageData.speaker = {alias: this.effect.name}\n                                messageData.flavor = this.effect.name;\n                                return messageData\n                            }\n                            else\n                            {\n                                return this.script.message(msg)\n                            }",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "ilVlKF9cIY975YOI",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.4.1",
+        "createdTime": 1738832539003,
+        "modifiedTime": 1738832539705,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!FgBBfhpnT6Alkdzh.ilVlKF9cIY975YOI"
+    },
+    {
+      "img": "systems/wfrp4e/icons/conditions/stunned.png",
+      "statuses": [
+        "stunned"
+      ],
+      "name": "Stunned",
+      "description": "WFRP4E.Conditions.Stunned",
+      "system": {
+        "condition": {
+          "value": 1,
+          "numbered": true
+        },
+        "scriptData": [
+          {
+            "trigger": "dialog",
+            "label": "Penalty to all Tests (@effect.name)",
+            "script": "args.fields.modifier -= 10 * this.effect.conditionValue",
+            "options": {
+              "activateScript": "return true",
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": false
+          }
+        ],
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "changes": []
+      },
+      "_id": "OQ7t1UwSm6CjDl64",
+      "type": "base",
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.4.1",
+        "createdTime": 1738832541057,
+        "modifiedTime": 1738832541057,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "showIcon": 2,
+      "start": null,
+      "folder": null,
+      "_key": "!items.effects!FgBBfhpnT6Alkdzh.OQ7t1UwSm6CjDl64"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The arrow punches through one of your floating ribs to lacerate a kidney. This results in massive blood loss as the kidney’s job is to filtrate your entire blood volume over and over again. You’ll run out of blood in no time!</p><p><strong>Effects:</strong> Gain @Condition[Stunned] (1) and @Condition[Bleeding] (3), the latter of which cannot be removed without Surgery.</p><p><strong>Surgery (Very Hard)</strong> is required for Extraction, which will count as resolving an internal issue due to the arrowhead having ended up so deep inside a body cavity.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Body",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.wfrp4e-core.items.sSSUZXOXK2DSpxGx",
+    "duplicateSource": null,
+    "coreVersion": "14.360",
+    "systemId": "wfrp4e",
+    "systemVersion": "8.4.1",
+    "createdTime": 1738231040054,
+    "modifiedTime": 1738832578630,
+    "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+    "exportSource": {
+      "worldId": "test",
+      "uuid": null,
+      "coreVersion": "12.331",
+      "systemId": "wfrp4e",
+      "systemVersion": "8.3.3"
+    }
+  },
+  "folder": "dfcfKRuNqVlaJss0",
+  "_id": "FgBBfhpnT6Alkdzh",
+  "sort": 700000,
+  "ownership": {
+    "default": 0,
+    "yWOr6WVvMImJ3rH1": 3
+  },
+  "_key": "!items!FgBBfhpnT6Alkdzh"
+}
