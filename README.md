@@ -27,3 +27,10 @@ Expqanded criticals according to the supplement by Josef Tham (Based on the work
 Author:  artantares
 Module Development: artantares
 Original Content: Josef Tham, Chuck Morrison
+
+## Development
+Compendium data lives as JSON in `src/packs/` and is compiled into the LevelDB folders in `packs/`.
+- `npm install`
+- `npm run extract`: LevelDB `packs/` -> JSON `src/packs/` (overwrites the JSON)
+- `npm run build`: JSON `src/packs/` -> LevelDB `packs/` (close Foundry first)
+- `npm run validate`: checks JSON, effect-script syntax, table links and ranges
