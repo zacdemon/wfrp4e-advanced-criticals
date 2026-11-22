@@ -4,111 +4,6 @@
   "img": "modules/wfrp4e-core/icons/injuries/injury.png",
   "effects": [
     {
-      "name": "Split Skull",
-      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
-      "_id": "LMVedFJapi0EkNob",
-      "type": "base",
-      "system": {
-        "transferData": {
-          "type": "document",
-          "originalType": "document",
-          "documentType": "Actor",
-          "avoidTest": {
-            "value": "none",
-            "opposed": false,
-            "prevention": true,
-            "reversed": false
-          },
-          "testIndependent": false,
-          "equipTransfer": false,
-          "selfOnly": false,
-          "prompt": false,
-          "area": {
-            "templateData": {
-              "borderColor": null,
-              "fillColor": null,
-              "texture": null
-            },
-            "keep": false,
-            "aura": {
-              "transferred": false,
-              "render": false
-            },
-            "duration": "sustained"
-          },
-          "zone": {
-            "type": "zone",
-            "transferred": false,
-            "traits": {},
-            "skipImmediateOnPlacement": false,
-            "keep": false
-          }
-        },
-        "itemTargetData": {
-          "ids": [],
-          "allItems": false
-        },
-        "scriptData": [
-          {
-            "script": "let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  \" - \" + this.effect.name, fields : {difficulty : \"very hard\"}})\nawait test.roll();\nif(test.failed)\n{\n    this.actor.addCondition(\"unconscious\")\n}\nelse\n{\n    this.actor.addCondition(\"prone\")\n}",
-            "label": "Split Skull",
-            "trigger": "immediate",
-            "options": {
-              "targeter": false,
-              "defending": false,
-              "deleteEffect": false
-            },
-            "async": false
-          }
-        ],
-        "zone": {
-          "type": "zone",
-          "traits": {},
-          "skipImmediateOnPlacement": false
-        },
-        "sourceData": {
-          "test": {}
-        },
-        "condition": {
-          "numbered": false
-        },
-        "changes": []
-      },
-      "disabled": false,
-      "duration": {
-        "value": null,
-        "units": "seconds",
-        "expiry": null,
-        "expired": false
-      },
-      "description": "",
-      "origin": null,
-      "tint": "#ffffff",
-      "transfer": true,
-      "statuses": [],
-      "sort": 0,
-      "flags": {
-        "wfrp4e": {
-          "manualEffectKeys": false
-        }
-      },
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "14.360",
-        "systemId": "wfrp4e",
-        "systemVersion": "9.1.3",
-        "createdTime": 1752446343675,
-        "modifiedTime": 1752446420559,
-        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
-      },
-      "start": null,
-      "showIcon": 1,
-      "folder": null,
-      "_key": "!items.effects!YlTlPVO2JCHYD2bD.LMVedFJapi0EkNob"
-    },
-    {
       "_id": "UtBFpTuuQYgFGFyM",
       "flags": {
         "wfrp4e": {
@@ -325,6 +220,114 @@
       "showIcon": 1,
       "folder": null,
       "_key": "!items.effects!YlTlPVO2JCHYD2bD.JgMqbBbqtTdtqDA6"
+    },
+    {
+      "_id": "kmu15rUBBgPkBHML",
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        },
+        "artantares-advanced-criticals": {
+          "critTest": true
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "origin": null,
+      "name": "Split Skull (Test)",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-core.items.Item.JKm6YDR88Friuw6h.ActiveEffect.sw8YrBAP6gfhSTSH",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.1.3",
+        "createdTime": 1752446444712,
+        "modifiedTime": 1752446444712,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "equipTransfer": false,
+          "prompt": false,
+          "area": {
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "duration": "sustained"
+          },
+          "originalType": "document",
+          "testIndependent": false,
+          "selfOnly": false,
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "scriptData": [
+          {
+            "script": "// Expanded Criticals: Test prompted when this critical is received (generated by tools/crit-tests.mjs).\n// Rolled by the actor's player when the GM adds it (module setting \"Who rolls critical Tests\").\nconst api = game.modules.get(\"artantares-advanced-criticals\")?.api;\nif (!api?.rollCritTest) return ui.notifications.error(\"Expanded Criticals is not active: roll this critical's Test by hand.\");\n{\n  const test = await api.rollCritTest(this, {skill: \"Endurance\", difficulty: \"vhard\", success: \"Prone, and a Minor Infection.\", failure: \"Unconscious; Blood Rot on an Impressive Failure (-4 SL or worse), otherwise a Minor Infection.\"});\n  if (test) {\n    if (test.failed) {\n      await this.actor.addCondition(\"unconscious\");\n    }\n    else {\n      await this.actor.addCondition(\"prone\");\n    }\n    await api.addCoreItem(this, (test.failed && test.result.SL <= -4) ? \"bloodrot\" : \"minor\");\n  }\n}",
+            "label": "Test: Endurance",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!YlTlPVO2JCHYD2bD.kmu15rUBBgPkBHML"
     }
   ],
   "flags": {

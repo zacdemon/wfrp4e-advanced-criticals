@@ -11,6 +11,8 @@
  * through untouched, so Up In Arms / Core modifiers are never applied twice.
  */
 
+import { registerCritTestSettings, critTestApi } from "./crit-tests.mjs";
+
 const MODULE_ID = "artantares-advanced-criticals";
 const SKIP = Symbol("expcrit-skip");
 
@@ -27,6 +29,8 @@ const esc = (s) => foundry.utils.escapeHTML ? foundry.utils.escapeHTML(String(s 
 /* -------------------------------------------- */
 
 Hooks.once("init", () => {
+  registerCritTestSettings();
+
   game.settings.register(MODULE_ID, "promptOnCrit", {
     name: "EXPCRIT.Settings.PromptOnCrit.Name",
     hint: "EXPCRIT.Settings.PromptOnCrit.Hint",
@@ -315,5 +319,5 @@ Hooks.once("setup", () => {
   }
 
   const module = game.modules.get(MODULE_ID);
-  module.api = { DAMAGE_TYPES, promptCritical, rollCritical, openCriticalDialog, guessDamageType, itemFromMessage, columnSource, systemUsesUiA, critTableLocation };
+  module.api = { DAMAGE_TYPES, promptCritical, rollCritical, openCriticalDialog, guessDamageType, itemFromMessage, columnSource, systemUsesUiA, critTableLocation, ...critTestApi };
 });

@@ -4,6 +4,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import * as acorn from "acorn";
+import { CRIT_TESTS, NOT_ON_ADD } from "./crit-tests-data.mjs";
 
 const ROOT = path.join("src", "packs");
 const TYPE_FOLDER = { arrows: "Arrows", bullets: "Bullets", crushing: "Crushing", cutting: "Cutting", flames: "Flames", piercing: "Piercing", shrapnel: "Shrapnel", slings: "Slings", teeth: "Teeth", unarmed: "Unarmed" };
@@ -49,6 +50,31 @@ for (const item of Object.values(items)) {
     }
   }
 }
+
+// Criticals with a Test on receipt: every critical whose text calls for a Test is either automated
+// (CRIT_TESTS: exactly one generated "(Test)" effect) or reviewed as not rolled on receipt (NOT_ON_ADD).
+const DIFFICULTIES = new Set(["veasy", "easy", "average", "challenging", "difficult", "hard", "vhard"]);
+const TEST_TEXT = /(?:Easy|Average|Challenging|Difficult|Hard|Very Hard)\s*\([+-\u2212\u2013]?\s*\d+\)\s*(?:\w+\s){0,2}?(?:[A-Z][a-z]+(?: \([^)]*\))?\s)?Tests?|\b(?:pass|fail|make|succeed|roll|attempt)\w*\s+(?:a|an|another)\s+[^.]{0,60}?Test/i;
+for (const item of Object.values(items)) {
+  const where = `${folders[item.folder]} / ${item.name} (${item._id})`;
+  const generated = (item.effects ?? []).filter(e => e.flags?.[MODULE_ID]?.critTest);
+  const spec = CRIT_TESTS[item._id];
+  if (spec) {
+    if (generated.length !== 1) errors.push(`${where}: expected 1 generated (Test) effect, found ${generated.length}; run npm run crit-tests`);
+    for (const t of spec.tests ?? []) if (!DIFFICULTIES.has(t.difficulty)) errors.push(`${where}: bad difficulty '${t.difficulty}'`);
+  }
+  else if (generated.length) errors.push(`${where}: generated (Test) effect but no CRIT_TESTS entry`);
+  for (const e of item.effects ?? []) {
+    if (e.flags?.[MODULE_ID]?.critTest) continue;
+    for (const s of e.system?.scriptData ?? [])
+      if (s.trigger === "immediate" && /setup(Skill|Characteristic)\(/.test(s.script ?? "")) errors.push(`${where} / ${e.name}: hand-written immediate Test script; add it to tools/crit-tests-data.mjs instead`);
+  }
+  const text = (item.system?.description?.value ?? "").replace(/<[^>]+>/g, " ").replace(/@\w+\[([^\]]+)\](\{([^}]*)\})?/g, (m, a, b, c) => c || a.split(".").pop()).replace(/\s+/g, " ");
+  const effectsText = text.slice(text.indexOf("Effects")).replace(/Extraction (will be|is)[^.]*\.?/g, "").replace(/(Surgery|Heal)[^.]*required for Extraction\.?/g, "");
+  if (TEST_TEXT.test(effectsText) && !spec && !NOT_ON_ADD[item._id]) errors.push(`${where}: text calls for a Test but the critical is in neither CRIT_TESTS nor NOT_ON_ADD`);
+}
+stats.critTests = Object.keys(CRIT_TESTS).length;
+
 for (const m of macroDocs.filter(d => d._key?.startsWith("!macros!"))) checkScript(m.command, `macro ${m.name}`);
 
 for (const t of tableDocs.filter(d => d._key?.startsWith("!tables!"))) {

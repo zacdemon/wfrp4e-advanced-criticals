@@ -117,115 +117,6 @@
       "_key": "!items.effects!G5px1ixm4vqyXh2M.s2uRQfS14bBeAOqs"
     },
     {
-      "name": "Shattered Forearm",
-      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
-      "_id": "p4JmjRPutVxD1p0c",
-      "type": "base",
-      "system": {
-        "transferData": {
-          "type": "document",
-          "originalType": "document",
-          "documentType": "Actor",
-          "avoidTest": {
-            "value": "none",
-            "opposed": false,
-            "prevention": true,
-            "reversed": false
-          },
-          "testIndependent": false,
-          "equipTransfer": false,
-          "selfOnly": false,
-          "prompt": false,
-          "area": {
-            "templateData": {
-              "borderColor": null,
-              "fillColor": null,
-              "texture": null
-            },
-            "keep": false,
-            "aura": {
-              "transferred": false,
-              "render": false
-            },
-            "duration": "sustained"
-          },
-          "zone": {
-            "type": "zone",
-            "transferred": false,
-            "traits": {},
-            "skipImmediateOnPlacement": false,
-            "keep": false
-          }
-        },
-        "itemTargetData": {
-          "ids": [],
-          "allItems": false
-        },
-        "scriptData": [
-          {
-            "script": "let test2 = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  \" - \" + this.effect.name, fields : {difficulty : \"challenging\"}})\nawait test2.roll();\nif(test2.failed)\n{\n    let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.kKccDTGzWzSXCBOb\")\n    this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n}",
-            "label": "Shattered Forearm",
-            "trigger": "immediate",
-            "options": {
-              "targeter": false,
-              "defending": false,
-              "deleteEffect": false
-            },
-            "async": false
-          }
-        ],
-        "zone": {
-          "type": "zone",
-          "traits": {},
-          "skipImmediateOnPlacement": false
-        },
-        "sourceData": {
-          "test": {}
-        },
-        "condition": {
-          "value": null,
-          "numbered": false
-        },
-        "changes": []
-      },
-      "disabled": false,
-      "duration": {
-        "value": null,
-        "units": "seconds",
-        "expiry": null,
-        "expired": false
-      },
-      "description": "",
-      "origin": null,
-      "tint": "#ffffff",
-      "transfer": true,
-      "statuses": [],
-      "sort": 0,
-      "flags": {
-        "wfrp4e": {
-          "manualEffectKeys": false,
-          "applicationData": {},
-          "scriptData": [],
-          "_legacyData": {}
-        }
-      },
-      "_stats": {
-        "compendiumSource": "Compendium.wfrp4ed-advanced-criticals.advanced-criticals.Item.3UPwg8yEZFSwQSII.ActiveEffect.yOrEQisCUtXVHZqc",
-        "duplicateSource": null,
-        "coreVersion": "14.360",
-        "systemId": "wfrp4e",
-        "systemVersion": "8.4.1",
-        "createdTime": 1741475695933,
-        "modifiedTime": 1741475731757,
-        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
-        "exportSource": null
-      },
-      "start": null,
-      "showIcon": 1,
-      "folder": null,
-      "_key": "!items.effects!G5px1ixm4vqyXh2M.p4JmjRPutVxD1p0c"
-    },
-    {
       "name": "Shattered Forearm (Conditions)",
       "img": "modules/wfrp4e-core/icons/injuries/injury.png",
       "_id": "hQievULoBg0rO84Z",
@@ -329,6 +220,114 @@
       "showIcon": 1,
       "folder": null,
       "_key": "!items.effects!G5px1ixm4vqyXh2M.hQievULoBg0rO84Z"
+    },
+    {
+      "_id": "oBlnSCufSGRbG080",
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        },
+        "artantares-advanced-criticals": {
+          "critTest": true
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "origin": null,
+      "name": "Shattered Forearm (Test)",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-core.items.Item.JKm6YDR88Friuw6h.ActiveEffect.sw8YrBAP6gfhSTSH",
+        "duplicateSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "8.4.1",
+        "createdTime": 1741475608583,
+        "modifiedTime": 1741475608583,
+        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
+        "exportSource": null
+      },
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "equipTransfer": false,
+          "prompt": false,
+          "area": {
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "duration": "sustained"
+          },
+          "originalType": "document",
+          "testIndependent": false,
+          "selfOnly": false,
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "scriptData": [
+          {
+            "script": "// Expanded Criticals: Test prompted when this critical is received (generated by tools/crit-tests.mjs).\n// Rolled by the actor's player when the GM adds it (module setting \"Who rolls critical Tests\").\nconst api = game.modules.get(\"artantares-advanced-criticals\")?.api;\nif (!api?.rollCritTest) return ui.notifications.error(\"Expanded Criticals is not active: roll this critical's Test by hand.\");\n{\n  const test = await api.rollCritTest(this, {skill: \"Endurance\", difficulty: \"challenging\", failure: \"Contract a Festering Wound.\"});\n  if (test) {\n    if (test.failed) {\n      await api.addCoreItem(this, \"festering\");\n    }\n  }\n}",
+            "label": "Test: Endurance",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!G5px1ixm4vqyXh2M.oBlnSCufSGRbG080"
     }
   ],
   "flags": {

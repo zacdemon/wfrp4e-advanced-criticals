@@ -30,5 +30,16 @@
   "EXPCRIT.Type.teeth": "Teeth & Claws",
   "EXPCRIT.Type.unarmed": "Unarmed",
   "EXPCRIT.Error.NoTable": "Expanded Criticals: no world table for {key} / {column}. Import the module's tables into the world (Compendium > Tables (Expanded Criticals) > Import All). Falling back to the system table.",
-  "EXPCRIT.Error.NotActive": "Expanded Criticals: module API not available. Is the module enabled?"
+  "EXPCRIT.Error.NotActive": "Expanded Criticals: module API not available. Is the module enabled?",
+  "EXPCRIT.Settings.TestRoller.Name": "Who rolls critical Tests",
+  "EXPCRIT.Settings.TestRoller.Hint": "Criticals that call for a Test (Endurance, Cool, Athletics...) prompt it as soon as they are added to an actor, then apply the result. 'Actor's player' sends the roll dialog to the player who owns the character when the GM adds the critical (falls back to the GM if no owner is online). 'Whoever adds the critical' is the system's default for its own criticals.",
+  "EXPCRIT.Settings.TestRoller.Owner": "The actor's player",
+  "EXPCRIT.Settings.TestRoller.Adder": "Whoever adds the critical",
+  "EXPCRIT.Tests.Waiting": "Waiting for {user} to roll {test} for {actor}...",
+  "EXPCRIT.Tests.NotRolled": "The {test} Test was not rolled (dialog closed or no answer). Apply its result by hand.",
+  "EXPCRIT.Tests.Speaker": "Expanded Criticals",
+  "EXPCRIT.Tests.Dropped": "Dropped {items}!",
+  "EXPCRIT.Tests.TwoHandedKept": "{items} is held in both hands: not dropped, but it can't be used next turn.",
+  "EXPCRIT.Tests.MissingItem": "Could not find {uuid}. Is the WFRP4e Core Rulebook module enabled? Add it by hand.",
+  "EXPCRIT.Tests.NextTest": "{name}: {mod} to the next Test"
 }

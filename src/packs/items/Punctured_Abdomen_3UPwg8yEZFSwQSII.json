@@ -4,111 +4,6 @@
   "img": "modules/wfrp4e-core/icons/injuries/injury.png",
   "effects": [
     {
-      "name": "Punctured Abdomen",
-      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
-      "_id": "yOrEQisCUtXVHZqc",
-      "type": "base",
-      "system": {
-        "transferData": {
-          "type": "document",
-          "originalType": "document",
-          "documentType": "Actor",
-          "avoidTest": {
-            "value": "none",
-            "opposed": false,
-            "prevention": true,
-            "reversed": false
-          },
-          "testIndependent": false,
-          "equipTransfer": false,
-          "selfOnly": false,
-          "prompt": false,
-          "area": {
-            "templateData": {
-              "borderColor": null,
-              "fillColor": null,
-              "texture": null
-            },
-            "keep": false,
-            "aura": {
-              "transferred": false,
-              "render": false
-            },
-            "duration": "sustained"
-          },
-          "zone": {
-            "type": "zone",
-            "transferred": false,
-            "traits": {},
-            "skipImmediateOnPlacement": false,
-            "keep": false
-          }
-        },
-        "itemTargetData": {
-          "ids": [],
-          "allItems": false
-        },
-        "scriptData": [
-          {
-            "script": "let test1 = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  \" - \" + this.effect.name})\nawait test1.roll();\nif(test1.failed)\n{\n    await this.actor.addCondition(\"prone\");\n}\n\nlet test2 = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  \" - \" + this.effect.name, fields : {difficulty : \"hard\"}})\nawait test2.roll();\nif(test2.failed)\n{\n    let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.kKccDTGzWzSXCBOb\")\n    this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect: this.effect.id})\n}",
-            "label": "Punctured Abdomen",
-            "trigger": "immediate",
-            "options": {
-              "targeter": false,
-              "deleteEffect": false
-            },
-            "async": false
-          }
-        ],
-        "zone": {
-          "type": "zone",
-          "traits": {},
-          "skipImmediateOnPlacement": false
-        },
-        "sourceData": {
-          "test": {}
-        },
-        "condition": {
-          "value": null,
-          "numbered": false
-        },
-        "changes": []
-      },
-      "disabled": false,
-      "duration": {
-        "value": null,
-        "units": "seconds",
-        "expiry": null,
-        "expired": false
-      },
-      "description": "",
-      "origin": null,
-      "tint": "#ffffff",
-      "transfer": true,
-      "statuses": [],
-      "sort": 0,
-      "flags": {
-        "wfrp4e": {
-          "manualEffectKeys": false
-        }
-      },
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "coreVersion": "14.360",
-        "systemId": "wfrp4e",
-        "systemVersion": "8.4.1",
-        "createdTime": 1738831905693,
-        "modifiedTime": 1738832499656,
-        "lastModifiedBy": "yWOr6WVvMImJ3rH1",
-        "exportSource": null
-      },
-      "start": null,
-      "showIcon": 1,
-      "folder": null,
-      "_key": "!items.effects!3UPwg8yEZFSwQSII.yOrEQisCUtXVHZqc"
-    },
-    {
       "name": "Punctured Abdomen (Conditions)",
       "img": "modules/wfrp4e-core/icons/injuries/injury.png",
       "_id": "KR4Sdirc511a4Rd7",
@@ -212,6 +107,114 @@
       "showIcon": 1,
       "folder": null,
       "_key": "!items.effects!3UPwg8yEZFSwQSII.KR4Sdirc511a4Rd7"
+    },
+    {
+      "name": "Punctured Abdomen (Test)",
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "_id": "MACr5H5hoUGGGjw9",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "originalType": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "testIndependent": false,
+          "equipTransfer": false,
+          "selfOnly": false,
+          "prompt": false,
+          "area": {
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "duration": "sustained"
+          },
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "scriptData": [
+          {
+            "script": "// Expanded Criticals: Test prompted when this critical is received (generated by tools/crit-tests.mjs).\n// Rolled by the actor's player when the GM adds it (module setting \"Who rolls critical Tests\").\nconst api = game.modules.get(\"artantares-advanced-criticals\")?.api;\nif (!api?.rollCritTest) return ui.notifications.error(\"Expanded Criticals is not active: roll this critical's Test by hand.\");\n{\n  const test = await api.rollCritTest(this, {skill: \"Endurance\", difficulty: \"challenging\", failure: \"Gain Prone.\"});\n  if (test) {\n    if (test.failed) {\n      await this.actor.addCondition(\"prone\");\n    }\n  }\n}\n{\n  const test = await api.rollCritTest(this, {skill: \"Endurance\", difficulty: \"hard\", failure: \"Contract a Festering Wound.\"});\n  if (test) {\n    if (test.failed) {\n      await api.addCoreItem(this, \"festering\");\n    }\n  }\n}",
+            "label": "Test: Endurance, Endurance",
+            "trigger": "immediate",
+            "options": {
+              "targeter": false,
+              "deleteEffect": true
+            },
+            "async": false
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        },
+        "artantares-advanced-criticals": {
+          "critTest": true
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "10.1.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!3UPwg8yEZFSwQSII.MACr5H5hoUGGGjw9"
     }
   ],
   "flags": {
