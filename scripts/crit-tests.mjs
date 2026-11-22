@@ -210,8 +210,11 @@ export async function addCoreItem(ctx, key, modify) {
     return null;
   }
   const data = item.toObject();
+  const value = data.system?.location?.value;
   if (modify) modify(data);
-  return ctx.actor.createEmbeddedDocuments("Item", [data]);
+  // A display value set by `modify` ("Left Eye", "3 Teeth") would otherwise be replaced by the one derived from the location key.
+  const options = data.system?.location && data.system.location.value !== value ? { skipLocationValue: true } : {};
+  return ctx.actor.createEmbeddedDocuments("Item", [data], options);
 }
 
 /** Temporary actor effect: penalty to the next rolled Test, removed once that Test is rolled. */

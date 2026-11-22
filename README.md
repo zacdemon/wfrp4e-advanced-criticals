@@ -7,6 +7,8 @@ Expqanded criticals according to the supplement by Josef Tham (Based on the work
 - "Roll Critical" macro rewritten to use the same dialog (requires the module to be enabled).
 - Critical Tests: 102 criticals whose text calls for a Test when the wound is received (Endurance, Cool, Athletics, Strength, Toughness...) now prompt it as soon as the critical is added to an actor, with the printed difficulty, and apply the result (conditions, dropped weapons, Festering Wound / Blood Rot / Minor Infection, next-Test penalties, SL-based outcomes). Outcomes that can't be automated are whispered to the GM (and the actor's owners) as a chat note.
 - Setting "Who rolls critical Tests": the actor's player (default) or whoever adds the critical.
+- Granted injuries: 26 criticals now add the core injuries/diseases their text gives (e.g. Smashed Mouth: Broken Head (Major) + 1d10 teeth; Battered Wrist and Forearm Injury: Torn Arm Muscle (Minor); Festering Wound on open fractures; Severed Foot: Amputated Foot; random lost face parts for Chewy-Chewy, Destroyed Face and Tyson Move; Horrible Burns adds the eyes/ears/nose it fails to save).
+- Corrected grants: Gored Glutes gave a Broken Bone instead of a Torn Muscle (Major); Kidney Injury and Unarmed Internal Bleeding gave an arm Broken Bone (Internal Bleeding a Major one) instead of a body Broken Bone (Minor); lost fingers/toes now add the rolled number (1d10/2 etc., rounded up) instead of always one; Broken Teeth, Eat This, Lost Eye (1d10/2) and Knee To The Face (1d10+5) roll the printed number of teeth.
 - Fixes in the old test scripts: wrong difficulty keys ("very easy", "very hard"), a misspelt Unconscious, Grazed Arm deleting the whole critical after the next Test, Crippled Foot and Loosened Teeth ignoring their Test, Split Skull missing its infection, Massive Abdominal Trauma giving Blood Rot on a pass.
 
 ## Using the critical picker
@@ -47,6 +49,7 @@ When a critical that calls for a Test is added to an actor (dragged from the cri
 2. If the GM adds it to a character owned by an online player, that player gets the roll dialog (setting "Who rolls critical Tests"); otherwise whoever added it rolls. The critical shows on the sheet once the Test is rolled.
 3. The result is applied: conditions, dropping what is held in that hand (or the primary hand), diseases, a penalty on the next Test, SL-dependent results. Anything else (lose your next Action, opposed Tests, lost body parts...) is posted as a chat note to the GM and the owners.
 4. Closing the roll dialog (or no answer within 5 minutes) adds the critical without rolling and posts a note to apply the result by hand.
+Injuries and diseases the text gives on receipt (Broken Bone, Torn Muscle, Amputated parts, Festering Wound, Blood Rot, Minor Infection) are added from WFRP4e Core as separate items, so they stay when the critical is removed. Those that only come later (after Surgery, if gangrene sets in, "for healing purposes") are listed with a reason in `tools/grants-data.mjs` (GRANT_EXCEPTIONS).
 Tests that are not rolled when the wound is received (each turn, after the encounter, daily, Heal Tests by someone else, optional self-repair) keep their existing behaviour; they are listed in `tools/crit-tests-data.mjs` (NOT_ON_ADD).
 
 ## Development
@@ -55,4 +58,5 @@ Compendium data lives as JSON in `src/packs/` and is compiled into the LevelDB f
 - `npm run extract`: LevelDB `packs/` -> JSON `src/packs/` (overwrites the JSON)
 - `npm run build`: JSON `src/packs/` -> LevelDB `packs/` (close Foundry first)
 - `npm run crit-tests`: regenerates the "(Test)" effects from `tools/crit-tests-data.mjs`
-- `npm run validate`: checks JSON, effect-script syntax, table links and ranges, and that every critical whose text calls for a Test is covered
+- `npm run grants`: regenerates the granted-injury effects from `tools/grants-data.mjs`
+- `npm run validate`: checks JSON, effect-script syntax, table links and ranges, that every critical whose text calls for a Test is covered, and that every injury/disease the text gives is granted (or excused)

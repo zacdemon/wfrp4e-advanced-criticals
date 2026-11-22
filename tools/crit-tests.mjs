@@ -74,6 +74,9 @@ for (const [id, spec] of Object.entries(CRIT_TESTS)) {
   const before = JSON.stringify(item);
   const remove = new Set(spec.remove ?? []);
 
+  // Keep the generated effect where it was, so the other generator (tools/grants.mjs) doesn't reorder it.
+  const oldIdx = item.effects.findIndex(e => e.flags?.[MODULE_ID]?.critTest);
+  const keepBefore = oldIdx < 0 ? null : item.effects.slice(0, oldIdx).filter(e => !remove.has(e.name)).length;
   item.effects = item.effects.filter(e => !e.flags?.[MODULE_ID]?.critTest && !remove.has(e.name)).filter(e => {
     const scripts = e.system?.scriptData ?? [];
     const kept = scripts.filter(s => !isTestScript(s));
@@ -107,7 +110,8 @@ for (const [id, spec] of Object.entries(CRIT_TESTS)) {
     options: { targeter: false, deleteEffect: true },
     async: false
   }];
-  item.effects.push(effect);
+  if (keepBefore === null) item.effects.push(effect);
+  else item.effects.splice(Math.min(keepBefore, item.effects.length), 0, effect);
 
   if (JSON.stringify(item) !== before) {
     fs.writeFileSync(path.join(DIR, entry.file), JSON.stringify(item, null, 2) + "\n");

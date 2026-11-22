@@ -6,7 +6,8 @@
     "extract": "node tools/packs.mjs extract",
     "build": "node tools/packs.mjs compile",
     "validate": "node tools/validate.mjs",
-    "crit-tests": "node tools/crit-tests.mjs"
+    "crit-tests": "node tools/crit-tests.mjs",
+    "grants": "node tools/grants.mjs"
   },
   "devDependencies": {
     "@foundryvtt/foundryvtt-cli": "^3.0.5",

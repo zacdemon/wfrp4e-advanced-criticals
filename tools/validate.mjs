@@ -5,6 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import * as acorn from "acorn";
 import { CRIT_TESTS, NOT_ON_ADD } from "./crit-tests-data.mjs";
+import { GRANTS, GRANT_EXCEPTIONS, CORE_NAMES } from "./grants-data.mjs";
 
 const ROOT = path.join("src", "packs");
 const TYPE_FOLDER = { arrows: "Arrows", bullets: "Bullets", crushing: "Crushing", cutting: "Cutting", flames: "Flames", piercing: "Piercing", shrapnel: "Shrapnel", slings: "Slings", teeth: "Teeth", unarmed: "Unarmed" };
@@ -74,6 +75,50 @@ for (const item of Object.values(items)) {
   if (TEST_TEXT.test(effectsText) && !spec && !NOT_ON_ADD[item._id]) errors.push(`${where}: text calls for a Test but the critical is in neither CRIT_TESTS nor NOT_ON_ADD`);
 }
 stats.critTests = Object.keys(CRIT_TESTS).length;
+
+// Granted items: every core injury/disease a critical's text gives the victim (Broken Bone / Torn Muscle
+// (Minor|Major), Amputation, Festering Wound, Blood Rot, Minor Infection) is added by one of its scripts,
+// or the critical is in GRANT_EXCEPTIONS with a reason. Core ids used in scripts must be known core items.
+const CRIT_TEST_KEYS = { festering: "Festering Wound", bloodrot: "Blood Rot", minor: "Minor Infection", teeth: "Amputated Teeth" };
+function categories(str) {
+  const c = new Set();
+  for (const m of str.matchAll(/Broken[\w\s]*?\((Minor|Major)\)/gi)) c.add(`broken-${m[1].toLowerCase()}`);
+  for (const m of str.matchAll(/Torn[\w\s]*?\((Minor|Major)\)/gi)) c.add(`torn-${m[1].toLowerCase()}`);
+  if (/Festering Wound/i.test(str)) c.add("festering");
+  if (/Blood Rot/i.test(str)) c.add("bloodrot");
+  if (/Minor Infection/i.test(str)) c.add("minor");
+  if (/Amputat/i.test(str)) c.add("amputation");
+  return c;
+}
+const grantSpecs = new Set(Object.keys(GRANTS));
+for (const id of Object.keys(GRANT_EXCEPTIONS)) if (!items[id]) errors.push(`GRANT_EXCEPTIONS: item ${id} not found`);
+for (const item of Object.values(items).filter(i => i.type === "critical")) {
+  const where = `${folders[item.folder]} / ${item.name} (${item._id})`;
+  const granted = [];
+  for (const e of item.effects ?? []) for (const s of e.system?.scriptData ?? []) {
+    const code = s.script ?? "";
+    if (s.trigger === "immediate" && /^\s*\[Script\.\w+\]\s*$/.test(code)) granted.push(e.name); // system script: named after what it grants
+    for (const m of code.matchAll(/wfrp4e-core\.items\.(?:Item\.)?([A-Za-z0-9]{16})/g)) {
+      if (CORE_NAMES[m[1]]) granted.push(CORE_NAMES[m[1]]);
+      else errors.push(`${where} / ${e.name}: script uses unknown core item ${m[1]} (add it to CORE_NAMES in tools/grants-data.mjs if it is a real wfrp4e-core injury/disease)`);
+    }
+    for (const m of code.matchAll(/\bgrant\("([A-Za-z0-9]{16})"/g)) granted.push(CORE_NAMES[m[1]] ?? "");
+    for (const call of code.matchAll(/addCoreItem\(this,[^;]*/g)) for (const m of call[0].matchAll(/"(\w+)"/g)) if (CRIT_TEST_KEYS[m[1]]) granted.push(CRIT_TEST_KEYS[m[1]]);
+  }
+  if (grantSpecs.has(item._id) && !(item.effects ?? []).some(e => e.flags?.[MODULE_ID]?.grant || e.flags?.[MODULE_ID]?.grantFix)) errors.push(`${where}: in GRANTS but no generated effect; run npm run grants`);
+  const have = categories(granted.join(" | "));
+  const text = (item.system?.description?.value ?? "").replace(/<[^>]+>/g, " ").replace(/@\w+\[([^\]]+)\](\{([^}]*)\})?/g, (m, a, b, c) => c || a.split(".").pop()).replace(/\s+/g, " ");
+  const need = categories(text.slice(text.indexOf("Effects")));
+  const missing = [...need].filter(c => c === "amputation" ? ![...have].some(h => h === "amputation") : !have.has(c));
+  const ex = GRANT_EXCEPTIONS[item._id];
+  if (ex && !ex.reason) errors.push(`${where}: GRANT_EXCEPTIONS entry without a reason`);
+  if (ex && ex.name !== item.name) errors.push(`${where}: GRANT_EXCEPTIONS name '${ex.name}' != '${item.name}'`);
+  const excused = new Set(ex?.skip ?? []);
+  for (const c of missing) if (!excused.has(c)) errors.push(`${where}: text gives '${c}' but no script grants it (add it to tools/grants-data.mjs, or to GRANT_EXCEPTIONS with a reason)`);
+  for (const c of excused) if (!missing.includes(c)) errors.push(`${where}: GRANT_EXCEPTIONS skips '${c}' but it is granted or not in the text; remove it`);
+}
+stats.grants = Object.keys(GRANTS).length;
+stats.grantExceptions = Object.keys(GRANT_EXCEPTIONS).length;
 
 for (const m of macroDocs.filter(d => d._key?.startsWith("!macros!"))) checkScript(m.command, `macro ${m.name}`);
 

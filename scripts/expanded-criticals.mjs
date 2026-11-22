@@ -310,6 +310,7 @@ Hooks.once("setup", () => {
   }
   else if (game.modules.get("lib-wrapper")?.active && globalThis.libWrapper) {
     globalThis.libWrapper.register(MODULE_ID, "game.wfrp4e.tables.formatChatRoll", formatChatRollWrapper, "MIXED");
+    globalThis.libWrapper.ignore_conflicts?.(MODULE_ID, ["artantares-mutations", "wfrp4e-automated-miscasts"], "game.wfrp4e.tables.formatChatRoll");
   }
   else {
     originalFormatChatRoll = tables.formatChatRoll;

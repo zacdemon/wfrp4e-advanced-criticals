@@ -101,7 +101,17 @@ for (const part of ["Left Eye", "Right Eye", "Left Ear", "Right Ear", "Nose"]) {
   const t = await api.rollCritTest(this, {skill: "Endurance", difficulty: "challenging", title: \`\${this.item.name}: \${part}\`, failure: \`Lose the \${part.toLowerCase()}.\`});
   if (t?.failed) lost.push(part);
 }
-await api.gmNote(this, lost.length ? \`Loses: \${lost.join(", ")} (see Amputated Parts). Total Fellowship loss is at least -30.\` : "Keeps every eye, ear and the nose. Fellowship loss from the scarring is still at least -30.");` },
+// Each failed part is lost: add the core Amputated Eye/Ear/Nose.
+const AMPUTATED = {Eye: "Compendium.wfrp4e-core.items.Item.weczkAMPlTjX7lqU", Ear: "Compendium.wfrp4e-core.items.Item.8piWcBKFlQ2J1E3A", Nose: "Compendium.wfrp4e-core.items.Item.SpPRZZRHxly7uo2G"};
+for (const part of lost) {
+  const [s, p] = part.includes(" ") ? part.split(" ") : [null, part];
+  await api.addCoreItem(this, AMPUTATED[p], d => {
+    if (!s) return;
+    d.system.location.value = part;
+    d.system.location.key = (s === "Left" ? "l" : "r") + p;
+  });
+}
+await api.gmNote(this, lost.length ? \`Loses: \${lost.join(", ")} (Amputated items added). Total Fellowship loss is at least -30.\` : "Keeps every eye, ear and the nose. Fellowship loss from the scarring is still at least -30.");` },
 
   // ---------------- Piercing ----------------
   k5ko3gnmnQHc0xWM: { name: "A Close Shave", tests: [{ skill: "Cool", difficulty: "challenging", failure: "-10 to your next rolled Test.", fail: ["next:-10"] }] },
@@ -146,7 +156,7 @@ if (test?.failed) await api.dropHeld(this, {where: "location"});` },
   vqg2AhljwZUYuAT7: { name: "Near Miss", tests: [{ skill: "Cool", difficulty: "easy", failure: "-10 to your next rolled Test.", fail: ["next:-10"] }] },
   // The supplement prints "Easy (+20)"; Easy is +40 in WFRP4e, which is what the item always used.
   "0C3o31Qi0pJc9WOh": { name: "Smashed Ear", tests: [{ skill: "Endurance", difficulty: "easy", fail: ["cond:unconscious"], pass: ["cond:stunned:2"] }] },
-  "3ehTjdoy72W5vZoY": { name: "Smashed Mouth", tests: [{ skill: "Endurance", difficulty: "challenging", fail: ["cond:unconscious"], pass: ["cond:stunned:3"], always: ["note:Also: Broken Bone (Major) and 1d10 teeth lost (Amputation (Average)); add them by hand. If the projectile was a Lead Bullet, a Challenging (+0) Toughness Test is needed to keep the tongue."] }] },
+  "3ehTjdoy72W5vZoY": { name: "Smashed Mouth", tests: [{ skill: "Endurance", difficulty: "challenging", fail: ["cond:unconscious"], pass: ["cond:stunned:3"], always: ["note:If the projectile was a Lead Bullet, a Challenging (+0) Toughness Test is also needed or the tongue is lost (see Amputated Parts); add Amputated Tongue if it fails."] }] },
 
   // ---------------- Teeth & Claws ----------------
   vHxXA4Nyej78zxbJ: { name: "Bite Size", tests: [{ skills: ["Cool", "Endurance"], difficulty: "vhard", fail: ["cond:stunned:3"] }] },
