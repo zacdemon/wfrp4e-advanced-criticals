@@ -117,111 +117,6 @@
       "_key": "!items.effects!FzFlZW06hfsvelBc.CSgGQ1UhShrll4oN"
     },
     {
-      "name": "Spinal Blaze",
-      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
-      "_id": "EViOSay8IGYkmzcC",
-      "type": "base",
-      "system": {
-        "transferData": {
-          "type": "document",
-          "originalType": "document",
-          "documentType": "Actor",
-          "avoidTest": {
-            "value": "none",
-            "opposed": false,
-            "prevention": true,
-            "reversed": false
-          },
-          "testIndependent": false,
-          "equipTransfer": false,
-          "selfOnly": false,
-          "prompt": false,
-          "area": {
-            "templateData": {
-              "borderColor": null,
-              "fillColor": null,
-              "texture": null
-            },
-            "keep": false,
-            "aura": {
-              "transferred": false,
-              "render": false
-            },
-            "duration": "sustained"
-          },
-          "zone": {
-            "type": "zone",
-            "transferred": false,
-            "traits": {},
-            "skipImmediateOnPlacement": false,
-            "keep": false
-          }
-        },
-        "itemTargetData": {
-          "ids": [],
-          "allItems": false
-        },
-        "scriptData": [
-          {
-            "script": "let test = await this.actor.setupCharacteristic(\"t\", {skipTargets: true, appendTitle :  \" - \" + this.effect.name, fields : {difficulty : \"difficult\"}})\nawait test.roll();\nif(!test.failed)\n{\n    this.actor.removeCondition(\"unconscious\")\n}",
-            "label": "Spinal Blaze",
-            "trigger": "startTurn",
-            "options": {
-              "targeter": false,
-              "defending": false,
-              "deleteEffect": false
-            },
-            "async": false
-          }
-        ],
-        "zone": {
-          "type": "zone",
-          "traits": {},
-          "skipImmediateOnPlacement": false
-        },
-        "sourceData": {
-          "test": {}
-        },
-        "condition": {
-          "numbered": false
-        },
-        "changes": []
-      },
-      "disabled": false,
-      "duration": {
-        "value": null,
-        "units": "seconds",
-        "expiry": null,
-        "expired": false
-      },
-      "description": "",
-      "origin": null,
-      "tint": "#ffffff",
-      "transfer": true,
-      "statuses": [],
-      "sort": 0,
-      "flags": {
-        "wfrp4e": {
-          "manualEffectKeys": false
-        }
-      },
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "14.360",
-        "systemId": "wfrp4e",
-        "systemVersion": "9.1.3",
-        "createdTime": 1752563718371,
-        "modifiedTime": 1752563803455,
-        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
-      },
-      "start": null,
-      "showIcon": 1,
-      "folder": null,
-      "_key": "!items.effects!FzFlZW06hfsvelBc.EViOSay8IGYkmzcC"
-    },
-    {
       "name": "Spinal Blaze (Conditions)",
       "img": "modules/wfrp4e-core/icons/injuries/injury.png",
       "_id": "o6LH6mnGMrWPgaQw",
@@ -325,6 +220,114 @@
       "showIcon": 1,
       "folder": null,
       "_key": "!items.effects!FzFlZW06hfsvelBc.o6LH6mnGMrWPgaQw"
+    },
+    {
+      "_id": "YWhuJqCzBz6ajyAZ",
+      "flags": {
+        "wfrp4e": {
+          "manualEffectKeys": false
+        },
+        "artantares-advanced-criticals": {
+          "critTurn": true
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "origin": null,
+      "name": "Spinal Blaze (Start of Turn)",
+      "description": "",
+      "statuses": [],
+      "_stats": {
+        "compendiumSource": "Compendium.wfrp4e-core.items.Item.pjJagbErW5tu3LJR.ActiveEffect.KSraZUHBV7dm7jom",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "wfrp4e",
+        "systemVersion": "9.1.3",
+        "createdTime": 1752563703616,
+        "modifiedTime": 1752563703616,
+        "lastModifiedBy": "XtBZYPNGm0g6PJIk"
+      },
+      "img": "modules/wfrp4e-core/icons/injuries/injury.png",
+      "type": "base",
+      "system": {
+        "transferData": {
+          "type": "document",
+          "documentType": "Actor",
+          "avoidTest": {
+            "value": "none",
+            "opposed": false,
+            "prevention": true,
+            "reversed": false
+          },
+          "equipTransfer": false,
+          "prompt": false,
+          "area": {
+            "aura": {
+              "transferred": false,
+              "render": false
+            },
+            "templateData": {
+              "borderColor": null,
+              "fillColor": null,
+              "texture": null
+            },
+            "keep": false,
+            "duration": "sustained"
+          },
+          "originalType": "document",
+          "testIndependent": false,
+          "selfOnly": false,
+          "zone": {
+            "type": "zone",
+            "transferred": false,
+            "traits": {},
+            "skipImmediateOnPlacement": false,
+            "keep": false
+          }
+        },
+        "scriptData": [
+          {
+            "script": "// Expanded Criticals: Test at the start of each of the afflicted creature's turns in combat (generated by tools/crit-tests.mjs).\n// warhammer-lib runs it once per round, on the client of the actor's active owner (its player if online, otherwise the GM).\nconst api = game.modules.get(\"artantares-advanced-criticals\")?.api;\nif (!api?.turnTest) return ui.notifications.error(\"Expanded Criticals is not active: resolve Spinal Blaze by hand.\");\nif (!api.turnReady(this)) return;\n{\n  const test = await api.turnTest(this, {characteristic: \"t\", difficulty: \"difficult\", success: \"The paralysis passes: Unconscious removed.\"});\n  if (test) {\n    if (test.failed) {\n      // no further effect\n    }\n    else {\n      await this.actor.removeCondition(\"unconscious\");\n      await api.stopTurnTests(this);\n    }\n  }\n}",
+            "label": "Start of Turn: T Test",
+            "trigger": "startTurn",
+            "options": {
+              "targeter": false,
+              "deleteEffect": false
+            },
+            "async": true
+          }
+        ],
+        "zone": {
+          "type": "zone",
+          "traits": {},
+          "skipImmediateOnPlacement": false
+        },
+        "sourceData": {
+          "test": {}
+        },
+        "itemTargetData": {
+          "ids": [],
+          "allItems": false
+        },
+        "condition": {
+          "value": null,
+          "numbered": false
+        },
+        "changes": []
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!FzFlZW06hfsvelBc.YWhuJqCzBz6ajyAZ"
     }
   ],
   "flags": {

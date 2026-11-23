@@ -4,7 +4,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import * as acorn from "acorn";
-import { CRIT_TESTS as TESTS, CRIT_CHOICES, CHOICE_EXCEPTIONS, NOT_ON_ADD } from "./crit-tests-data.mjs";
+import { CRIT_TESTS as TESTS, CRIT_CHOICES, CHOICE_EXCEPTIONS, NOT_ON_ADD, CRIT_TURN_TESTS, CRIT_TURN_PENALTIES, RECURRING_NOT_AUTOMATED } from "./crit-tests-data.mjs";
 
 const CRIT_TESTS = { ...TESTS, ...CRIT_CHOICES };
 import { GRANTS, GRANT_EXCEPTIONS, CORE_NAMES } from "./grants-data.mjs";
@@ -32,6 +32,7 @@ function checkScript(code, where) {
   catch (e) { errors.push(`Script syntax error in ${where}: ${e.message}`); return; }
   if (/\bfields\.modifer\b/.test(code)) errors.push(`Script typo 'modifer' in ${where}`);
   if (/^\s*[A-Za-z_$][\w$]*\s*;?\s*$/.test(code)) errors.push(`Script is a bare identifier (no-op) in ${where}: ${code.trim()}`);
+  if (/\.delete\s*(;|$)/m.test(code)) errors.push(`Script references .delete without calling it (no-op) in ${where}`);
 }
 
 const itemDocs = loadPack("items");
@@ -77,6 +78,35 @@ for (const item of Object.values(items)) {
   if (TEST_TEXT.test(effectsText) && !spec && !NOT_ON_ADD[item._id]) errors.push(`${where}: text calls for a Test but the critical is in neither CRIT_TESTS nor NOT_ON_ADD`);
 }
 stats.critTests = Object.keys(TESTS).length;
+
+// Recurring Tests/rolls in combat: every critical whose text repeats something each turn is automated
+// (CRIT_TURN_TESTS: exactly one generated "(Start of Turn)"/"(End of Turn)" effect, or a hand-written
+// startTurn/endTurn script) or reviewed in RECURRING_NOT_AUTOMATED (daily/weekly, situational, after the encounter).
+const RECURRING_TEXT = /(?:start|beginning|end) of (?:each of )?(?:your|each|every) (?:(?:subsequent|next) )?turns?|(?:each|every) (?:subsequent )?turn\b|each of your (?:subsequent |next )?turns|(?:each|every|once) (?:day|week|month)|\bdaily\b|\bweekly\b|\bmonthly\b|before (?:you(?:'|’)re allowed to use|each Action)|after the encounter|if not attacking/i;
+for (const id of Object.keys(RECURRING_NOT_AUTOMATED)) if (!items[id]) errors.push(`RECURRING_NOT_AUTOMATED: item ${id} not found`);
+let turnCount = 0;
+for (const item of Object.values(items).filter(i => i.type === "critical")) {
+  const where = `${folders[item.folder]} / ${item.name} (${item._id})`;
+  const gen = (item.effects ?? []).filter(e => e.flags?.[MODULE_ID]?.critTurn);
+  const spec = CRIT_TURN_TESTS[item._id];
+  if (spec) {
+    turnCount++;
+    if (gen.length !== 1) errors.push(`${where}: expected 1 generated (Start/End of Turn) effect, found ${gen.length}; run npm run crit-tests`);
+    if (gen[0] && gen[0].system?.scriptData?.[0]?.trigger !== spec.trigger) errors.push(`${where}: generated turn effect has the wrong trigger`);
+    for (const t of spec.tests ?? []) if (!DIFFICULTIES.has(t.difficulty)) errors.push(`${where}: bad difficulty '${t.difficulty}'`);
+    if (RECURRING_NOT_AUTOMATED[item._id]) errors.push(`${where}: in both CRIT_TURN_TESTS and RECURRING_NOT_AUTOMATED`);
+  }
+  else if (gen.length) errors.push(`${where}: generated turn effect but no CRIT_TURN_TESTS entry`);
+  const pen = (item.effects ?? []).filter(e => e.flags?.[MODULE_ID]?.critTurnPenalty);
+  if (CRIT_TURN_PENALTIES[item._id] ? pen.length !== 1 : pen.length) errors.push(`${where}: CRIT_TURN_PENALTIES entry and generated (-N) effect disagree (${pen.length}); run npm run crit-tests`);
+  const handWritten = (item.effects ?? []).some(e => !e.flags?.[MODULE_ID]?.critTurn && (e.system?.scriptData ?? []).some(s => ["startTurn", "endTurn"].includes(s.trigger)));
+  const text = (item.system?.description?.value ?? "").replace(/<[^>]+>/g, " ").replace(/@\w+\[([^\]]+)\](\{([^}]*)\})?/g, (m, a, b, c) => c || a.split(".").pop()).replace(/\s+/g, " ");
+  const effectsText = text.slice(text.indexOf("Effects"));
+  if (RECURRING_TEXT.test(effectsText) && !spec && !handWritten && !CRIT_TURN_PENALTIES[item._id] && !RECURRING_NOT_AUTOMATED[item._id] && !CRIT_TESTS[item._id])
+    errors.push(`${where}: text repeats something each turn/day but it is in neither CRIT_TURN_TESTS nor RECURRING_NOT_AUTOMATED`);
+}
+stats.critTurnTests = turnCount;
+stats.critTurnPenalties = Object.keys(CRIT_TURN_PENALTIES).length;
 
 // Choices on receipt: every critical whose text offers a choice is automated (a `choices` entry or the
 // "dropchoose" action, i.e. a generated script calling chooseCritOption / dropChosen) or in CHOICE_EXCEPTIONS.

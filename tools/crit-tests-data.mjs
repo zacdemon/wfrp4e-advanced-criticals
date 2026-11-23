@@ -85,7 +85,7 @@ if (test?.failed) await this.actor.addCondition("stunned", 1);` },
   dk904tei1ZfGCboK: { name: "Hip Strike", tests: [{ skill: "Athletics", difficulty: "challenging", fail: ["cond:prone"] }] },
   U7VlTL99EO81kKSH: { name: "Lacerated Hamstrings", tests: [{ skill: "Athletics", difficulty: "challenging", fail: ["cond:prone"] }] },
   PTv5fLjvjgHa14Kc: { name: "Shin Hit", tests: [{ skill: "Endurance", difficulty: "average", failure: "-10 to all Agility Tests for the next 1d10 turns.", fail: ["code:const turns = (await new Roll(\"1d10\").evaluate()).total;\nawait api.addEffect(this, {name: `Shin Hit: -10 Agility (${turns} turns)`, script: \"args.fields.modifier -= 10;\", activateScript: \"return args.characteristic == 'ag';\", hideScript: \"return args.characteristic != 'ag';\", rounds: turns});\nawait api.gmNote(this, `-10 to Agility Tests for ${turns} turns.`);"] }] },
-  IGFqneU8USA9eCRS: { name: "Damaged Eye", tests: [{ skill: "Endurance", difficulty: "hard", failure: "Drop what is in your primary hand to clap it to the injury.", fail: ["drop:primary", "note:The hand stays clapped to the eye: they may Test Endurance at the start of each of their turns to use it normally again."] }] },
+  IGFqneU8USA9eCRS: { name: "Damaged Eye", tests: [{ skill: "Endurance", difficulty: "hard", failure: "Drop what is in your primary hand to clap it to the injury.", fail: ["drop:primary", "code:await api.addTurnTest(this, {trigger: \"startTurn\", spec: {skill: \"Endurance\", difficulty: \"average\", success: \"The hand comes away from the eye: it can be used normally again.\"}, passNote: \"The hand comes away from the eye and can be used normally again.\"});", "note:The hand stays clapped to the eye: an Average Endurance Test is prompted at the start of each of their turns in combat until they pass."] }] },
 
   // ---------------- Flames & Energy ----------------
   i89FvnkoRyB2nE7X: { name: "Amputation By Fire", tests: [{ skill: "Endurance", difficulty: "challenging", fail: ["cond:unconscious"], pass: ["cond:prone", "cond:stunned:4"] }] },
@@ -259,16 +259,16 @@ export const NOT_ON_ADD = {
   LORNFwiqtMd7UdL5: "Dislocated Kneecap: optional self-repair or Heal by someone else",
   HrrHNMxGQkbW9zJn: "Bleeding Hand: Test before each Action with the hand",
   "67AXsccXYxMkht5f": "Severed Clavicle: Test at the start of each turn",
-  jOZmCBnHcBNgZbgU: "Ooomph: Test at the end of each turn (existing endTurn script)",
+  jOZmCBnHcBNgZbgU: "Ooomph: Test at the end of each turn (CRIT_TURN_TESTS)",
   "8NBFVzAeXwYLcQbI": "Tummy Slice: Test at the start of each turn",
   O4tl8qhoPK5bLkSS: "Blinded: Tests per eye after the encounter",
   "55uJ4MHRmDsAGm6s": "Lacerated Foot: Test after the encounter",
   ldmb95dZVEK3KJEE: "Belly Burn: Test at the start of each turn",
   scVBZKhKe9RPuKA8: "Broiled Lungs: weekly Tests",
-  "9s0vHFKnSf3YCEBG": "Spinal Burn: Test at the end of each turn (existing endTurn script)",
+  "9s0vHFKnSf3YCEBG": "Spinal Burn: Test at the end of each turn (CRIT_TURN_TESTS)",
   hmUTSjmWPrrvch1j: "Burned Airways: weekly Tests",
   HfuBGzQrYmDaULr5: "Corneal Damage: daily Tests",
-  FzFlZW06hfsvelBc: "Spinal Blaze: Test at the start of each turn (existing startTurn script)",
+  FzFlZW06hfsvelBc: "Spinal Blaze: Test at the start of each turn (CRIT_TURN_TESTS)",
   XmEDOeOJsy3fyHhM: "A Mere Prick: Test only if not attacking next turn",
   WvYrbf5HFpaiUR9j: "Thigh Wound: automatic failures, no Test",
   "7EwXhvZp8Pm1hkv1": "Pierced Hand: Heal Test to remove the fragment",
@@ -296,4 +296,169 @@ export const NOT_ON_ADD = {
   X4K2vh2oECIwBsNN: "Arrhythmia: Extended Test at the start of each turn",
   fGjzrm4Y8cf81wEC: "Crushed Larynx: Heal Test",
   Q0KJ9adNN6IZBMR3: "Dislocated Kneecap: optional self-repair or Heal by someone else"
+};
+
+// Recurring Tests and rolls in combat: `npm run crit-tests` turns each entry into a
+// "<Critical> (Start of Turn)" / "(End of Turn)" effect with a startTurn / endTurn script. warhammer-lib runs
+// it once per round when the combat turn changes, on the client of the actor's active owner (its player if
+// online, otherwise the GM), so the Test opens on that screen. Nothing happens outside combat.
+//
+// trigger: "startTurn" | "endTurn"
+// each:    actions every turn (before any Test)          chance: {pct, what, hit: [actions], miss?: [actions]}
+// tests:   as in CRIT_TESTS (+ optional: true = closing the dialog skips the Test silently)
+// custom:  raw script after the guards; `api` and `this` are in scope
+// Extra actions here: "uncond:<key>[:n]" removeCondition, "stop[:<html>]" end the recurring Test (deletes this
+//   effect), "turnnote:<html>" public chat line, "penalty:<mod>[:physical][:halfmove]" penalty for the rest of the
+//   turn, "ungrant:<item name>[:any]" undo an injury granted on receipt, "fatigue:<at 10: dead|unconscious>".
+// remove: names of existing hand-written effects this replaces.
+
+const STOMACH = { trigger: "startTurn", tests: [{ skill: "Endurance", difficulty: "challenging",
+  failure: "-20 to all physical Actions and Tests, and half Movement, for the rest of this turn.", fail: ["penalty:-20:physical:halfmove"] }] };
+const FATIGUE_LEVEL = `Number(this.actor.hasCondition("fatigued")?.conditionValue ?? 0)`;
+const FATIGUE_END = (at10) => [`code:await this.actor.addCondition("fatigued");
+const level = ${FATIGUE_LEVEL};
+if (level >= 10) {
+${at10 === "dead"
+    ? `  await this.actor.addCondition("dead");\n  await api.stopTurnTests(this, \`Fatigued (\${level}): the heart gives out.\`);`
+    : `  await this.actor.addCondition("unconscious");\n  await api.stopTurnTests(this, \`Fatigued (\${level}): Unconscious, and dies of suffocation in \${this.actor.system.characteristics.t.bonus} rounds (Toughness Bonus) unless the airway is cleared.\`);`}
+}
+else await api.turnNote(this, \`Gains a Fatigued Condition (now \${level}).\`);`];
+
+export const CRIT_TURN_TESTS = {
+  // ---- penalty for the turn on a failed Test ----
+  "8NBFVzAeXwYLcQbI": { name: "Tummy Slice", ...STOMACH },
+  GDduQlJIwcEHHZXd: { name: "Abdominal Pain", ...STOMACH },
+  ldmb95dZVEK3KJEE: { name: "Belly Burn", ...STOMACH },
+
+  // ---- a Condition / useless part until the Test is passed ----
+  p6KPoQHJIXFv0JVv: { name: "Chest Wound", trigger: "startTurn", tests: [{ skill: "Endurance", difficulty: "challenging",
+    success: "No longer counts as Fatigued.", pass: ["uncond:fatigued", "stop"] }] },
+  "2eGNocxMOg8ZBC1b": { name: "Rib Contusion", trigger: "startTurn", tests: [{ skill: "Endurance", difficulty: "average",
+    success: "Fatigued (1) removed.", pass: ["uncond:fatigued", "stop"] }] },
+  RZzttOcDmbhK641H: { name: "Rib Contusion", trigger: "endTurn", tests: [{ skill: "Endurance", difficulty: "average",
+    success: "Fatigued (1) removed.", pass: ["uncond:fatigued", "stop"] }] },
+  FMGW5xtjzt0FzB5V: { name: "Bruised Rib", trigger: "endTurn", tests: [{ skill: "Endurance", difficulty: "average",
+    success: "Fatigued (1) removed.", pass: ["uncond:fatigued", "stop"] }] },
+  jOZmCBnHcBNgZbgU: { name: "Ooomph", trigger: "endTurn", tests: [{ skill: "Endurance", difficulty: "average",
+    success: "Fatigued (1) removed.", pass: ["uncond:fatigued", "stop"] }], remove: ["Ooomph"] },
+  "0iE2pXSdjQAfW9Wl": { name: "Stunned Spinal Cord", trigger: "startTurn", tests: [{ characteristic: "t", difficulty: "difficult",
+    success: "The paralysis passes: Unconscious removed.", pass: ["uncond:unconscious", "stop"] }] },
+  FzFlZW06hfsvelBc: { name: "Spinal Blaze", trigger: "startTurn", tests: [{ characteristic: "t", difficulty: "difficult",
+    success: "The paralysis passes: Unconscious removed.", pass: ["uncond:unconscious", "stop"] }], remove: ["Spinal Blaze"] },
+  yL5bdv4UD7mZ4rcE: { name: "Spinal Blow", trigger: "startTurn", tests: [{ skill: "Endurance", difficulty: "easy",
+    success: "Can rise from Prone again (-1 M and -10 Agility for the rest of the encounter).", pass: ["stop:Can rise from Prone again."] }] },
+  VHlYPM4N22I3yCEt: { name: "Fractured Vertebrae", trigger: "endTurn", tests: [{ skill: "Endurance", difficulty: "hard",
+    success: "Can rise and use the legs again.", pass: ["stop:Can rise and use the legs again."] }] },
+  rHSnReOCWswiHAAZ: { name: "Bruised Thigh", trigger: "endTurn", tests: [{ skill: "Endurance", difficulty: "hard",
+    success: "The leg can be used again.", pass: ["ungrant:Amputated Leg", "stop:The leg can be used again (Amputated Leg removed)."] }] },
+  "9s0vHFKnSf3YCEBG": { name: "Spinal Burn", trigger: "endTurn", tests: [{ skill: "Endurance", difficulty: "hard",
+    success: "Regains the use of both legs.", pass: ["ungrant:Amputated Leg:any", "stop:Regains the use of both legs (Amputated Legs removed)."] }], remove: ["Spinal Burn"] },
+  rVyFvP8sV6j0Ddpk: { name: "Sprained Finger", trigger: "startTurn", tests: [{ skill: "Endurance", difficulty: "challenging",
+    success: "The hand can be used again (one finger stays useless until the end of the encounter).", pass: ["stop:The hand can be used again; one finger stays useless until the end of the encounter."] }] },
+  "67AXsccXYxMkht5f": { name: "Severed Clavicle", trigger: "startTurn", tests: [{ skill: "Endurance", difficulty: "difficult",
+    success: "Overcomes the pain: the arm can be used again (still -20 to Tests with it until the bone sets).", pass: ["stop:Overcomes the pain: the arm can be used again (still -20 to Tests with that arm, and -10 to physical movement, until the bone sets)."] }] },
+  rx6zamwiLQiIi1Zw: { name: "Ri-i-i-i-ip", trigger: "startTurn", tests: [{ skill: "Cool", difficulty: "challenging",
+    success: "The arm can be used for Actions again.", pass: ["stop:The arm can be used for Actions again."] }] },
+  X4K2vh2oECIwBsNN: { name: "Arrhythmia", trigger: "startTurn", custom: `const total = Number(this.effect.getFlag("artantares-advanced-criticals", "sl") ?? 0);
+const test = await api.turnTest(this, {skill: "Endurance", difficulty: "challenging", success: "Extended Test: SL count towards the 4 needed.", failure: "Unconscious (an Astounding Failure, -6 SL, kills)."});
+if (!test) return;
+const sl = Number(test.result?.SL ?? 0);
+if (sl <= -6) {
+  await this.actor.addCondition("dead");
+  return api.stopTurnTests(this, "Astounding Failure: the heart stops.");
+}
+if (test.failed) await this.actor.addCondition("unconscious");
+const now = Math.max(0, total + sl);
+if (now >= 4) return api.stopTurnTests(this, \`\${now} / 4 SL: the heart beats normally again.\`);
+await this.effect.setFlag("artantares-advanced-criticals", "sl", now);
+await api.turnNote(this, \`Extended Test: \${now} / 4 SL.\`);` },
+  hqXbwZVNdhbJ8eUQ: { name: "Grazed Ankle", trigger: "startTurn", tests: [{ skills: ["Cool", "Endurance"], difficulty: "challenging", optional: true,
+    success: "Ignores the -1 M penalty this turn.", failure: "The -1 M penalty stays (at -4 SL or worse the cut opens further: no more Tests).",
+    pass: ["penalty:0:move1"], fail: ["code:if (Number(test.result?.SL ?? 0) <= -4) await api.stopTurnTests(this, \"The cut opens further: no more Tests to ignore the -1 M penalty this encounter.\");"] }] },
+
+  // ---- a Condition every turn ----
+  MzWkUpqwF5FuHmL5: { name: "Crushed Larynx", trigger: "endTurn", each: FATIGUE_END("unconscious"), remove: ["Crushed Larynx"] },
+  fGjzrm4Y8cf81wEC: { name: "Crushed Larynx", trigger: "endTurn", each: FATIGUE_END("unconscious") },
+  zhQuDrutCumeCZnj: { name: "Crushed Larynx", trigger: "endTurn", each: FATIGUE_END("unconscious") },
+  szjWloSBSV5lq0Bb: { name: "Torn Throat", trigger: "endTurn", each: FATIGUE_END("unconscious") },
+  K2AO6zrSf45cBJw3: { name: "Sucking Chest Wound", trigger: "endTurn", each: FATIGUE_END("unconscious"), remove: ["Sucking Chest Wound"] },
+  j0u1LH223Uku48Yu: { name: "Sucking Chest Wound", trigger: "endTurn", each: FATIGUE_END("unconscious") },
+  YEYNDXvCY6SJ1ANb: { name: "Cardiac Tamponade", trigger: "endTurn", each: FATIGUE_END("dead") },
+  NiYOFr3nHcHfB5Aa: { name: "Throat Punch", trigger: "startTurn", custom: `if (this.actor.hasCondition("stunned")) return;
+const level = ${FATIGUE_LEVEL};
+if (!level) return;
+if (level >= 3) {
+  await this.actor.removeCondition("fatigued", level);
+  return api.stopTurnTests(this, "The throat recovers: all Fatigued Conditions removed.");
+}
+await this.actor.addCondition("fatigued");
+await api.turnNote(this, \`Struggling to breathe: Fatigued (\${level + 1}).\`);` },
+
+  // ---- a percentile chance every turn ----
+  "3251Ilk0iiir7d6b": { name: "Penetrated Skull", trigger: "startTurn", chance: { pct: 10, what: "going Unconscious (until Extraction)",
+    hit: ["cond:unconscious", "stop"] }, remove: ["Penetrated Skull"] },
+  HjW2KXChtKoyRhlT: { name: "Scalp Flap", trigger: "startTurn", chance: { pct: 20, what: "the flap falling into the eyes (Blinded 1)", hit: ["cond:blinded:1"] } },
+  weEqFHoocgBcgVL9: { name: "Broken Heart", trigger: "startTurn", chance: { pct: 10, what: "the fragment lacerating the heart (instant death)", hit: ["cond:dead", "stop"] } },
+  WjnTeUwzVBMx3Awu: { name: "Injured Hand", trigger: "startTurn", each: [`code:const roll = await new Roll("ceil(1d10 / 2) - 1").evaluate();
+await roll.toMessage({speaker: ChatMessage.getSpeaker({actor: this.actor}), flavor: \`<strong>Injured Hand</strong>: the hand counts as having lost \${roll.total} finger(s) this turn (see Amputated Parts).\`});`] }
+};
+
+// Criticals with a time-based or situational recurring Test/roll that is NOT automated (reviewed; reasons).
+export const RECURRING_NOT_AUTOMATED = {
+  AWDEqYt6sjbCtEJg: "Rattle-Rattle: daily Test to wake (downtime; no game clock hook)",
+  RYjQJ29m4v19HPSP: "Brain Damage: daily Toughness Test (downtime)",
+  HfuBGzQrYmDaULr5: "Corneal Damage: daily Tests (downtime)",
+  r9O55VccZaatzhtu: "Pierced Pericardium: 10% chance of death each day (downtime)",
+  rl6IkVi9hRgv2U2f: "Pierced Pericardium: 10% chance of death each day (downtime)",
+  "5r6lqiQTGpDP7grl": "Burnt Ear: one Deafened removed each day (downtime)",
+  scVBZKhKe9RPuKA8: "Broiled Lungs: weekly Tests (downtime)",
+  hmUTSjmWPrrvch1j: "Burned Airways: weekly Tests (downtime)",
+  "0qLJZJ8rD6XsAqHt": "Clipped Lung: one Fatigued removed each week (downtime)",
+  VTEWKsPJSe11dPH5: "Collapsed Lung: one Fatigued removed each week (downtime)",
+  sisFQVtt4zrU8yji: "Collapsed Lung: one Fatigued removed each week (downtime)",
+  sogtCTp6MrtlfFeQ: "Damaged Lung: one Fatigued removed each week (downtime)",
+  Za06r7MpQFtGFIrW: "Takedown: monthly Test (downtime)",
+  aCh1tEJRc68cvfUH: "Whip-Lash Trauma: monthly Test (downtime)",
+  pUdM0tV29QCxqJ0M: "Cracked Collarbone: Test before each Action with the arm (situational)",
+  Et7fsq8GjYO5Rfhv: "Cracked Collarbone: Test before each Action with the arm (situational)",
+  HrrHNMxGQkbW9zJn: "Bleeding Hand: Test before each Action with the hand (situational)",
+  JPOqvnh3G8MeVQ1J: "Shredded Hand: Test before each Action with the hand (situational)",
+  "1j0qp1ai0VZAwMMr": "Forearm Food: Test before each Action with the hand (situational)",
+  XmEDOeOJsy3fyHhM: "A Mere Prick: Test only if not attacking next turn (situational)",
+  NMbSTEMK2hvvVNso: "Wrecked Foot: Toughness Test after the encounter (one-off)",
+  "55uJ4MHRmDsAGm6s": "Lacerated Foot: Test after the encounter (one-off)",
+  O4tl8qhoPK5bLkSS: "Blinded: Tests per eye after the encounter (one-off)",
+  Uhy7LuF8zy6PEvzW: "Amputation Case: Surgery within a week after the encounter (downtime)",
+  pvdPRgDZDxrDdaoV: "Amputation Case: Surgery within a week after the encounter (downtime)",
+  S0H8cDdSqnbme37n: "Cracked Fibula: lasts until bound up after the encounter (no Test)",
+  hHMfw6Mbx1bCX7hw: "Fractured Fibula: lasts until bound up after the encounter (no Test)",
+  "9HEWkSVf9sVahqlz": "Dislocated Elbow: Heal Test after the encounter, once per day (by the healer)",
+  F3pPhjy1YwvAG9VG: "Dislocated Elbow: Heal Test after the encounter, once per day (by the healer)",
+  spXpsN4qdHejPamJ: "Dislocated Elbow: Heal Test after the encounter, once per day (by the healer)",
+  P8FtCkQB1dkcSEpY: "Lodged In Bone: Extraction after the encounter (Surgery)",
+  "4H2GBpPVNZRkeJZm": "Pierced Humerus: Extraction after the encounter (Surgery)",
+  mCFcirUnRo1Jv6E1: "Shoulder Wound: optional Charm Test when given Medical Attention (situational)",
+  s3yuDAliMTTPcz10: "Torn Hand: becomes a Torn Muscle (Major) after the encounter (no Test)",
+  h0mMQDdvQfJ8evB6: "Damaged Shoe: -10 Agility for the next turn (existing endTurn script; no Test)"
+};
+
+// "-10 to (all / that arm's) Tests until the end of your next turn / the beginning of your next turn":
+// `npm run crit-tests` gives each a "<Critical> (<mod>)" dialog-modifier effect that removes itself at that point
+// (endTurn / startTurn script; outside combat delete it by hand). scope "all" is ticked automatically;
+// "arm" / "hand" is offered in the roll dialog but left for the player to tick when the Test uses that limb.
+// remove: hand-written effects replaced (several deleted the whole critical, or never expired).
+export const CRIT_TURN_PENALTIES = {
+  ipo754AJDT9nBMoB: { name: "Collarbone Chop", mod: -10, until: "endTurn", scope: "all" },
+  ax5O8B8FjyRv5LEy: { name: "Raked Face", mod: -10, until: "endTurn", scope: "all" },
+  p7RWGb1Re9hW5P0J: { name: "Graze", mod: -10, until: "endTurn", scope: "all", remove: ["Graze"] },
+  "2PfXo0pk4Tv12aNk": { name: "Scratched Face", mod: -10, until: "endTurn", scope: "all", remove: ["Scratched Face"] },
+  BloD7erRPbzBXkjx: { name: "Blistered Cheek", mod: -10, until: "endTurn", scope: "all", remove: ["Blistered Cheek"] },
+  s6bq5d8oZc8IJ7ZI: { name: "Heat Rash", mod: -10, until: "endTurn", scope: "all", remove: ["Heat Rash"] },
+  eWNKPBYpuC5n0zmT: { name: "Licked By Flame", mod: -10, until: "endTurn", scope: "all", remove: ["Licked By Flame"] },
+  "0NIOGHwyZ0Es2Zvo": { name: "Blistered Hand", mod: -10, until: "endTurn", scope: "arm" },
+  x88TC9VNYSax26hH: { name: "Bruised Knuckles", mod: -10, until: "endTurn", scope: "hand" },
+  twRE7Xk2chn7hTl6: { name: "Raked Hand", mod: -10, until: "endTurn", scope: "hand" },
+  poU1LPQkYl7DhtdC: { name: "One To The Belly", mod: -10, until: "startTurn", scope: "all", remove: ["One To The Belly"] },
+  cI4UNduDGGtqSuMH: { name: "Split Nose Tip", mod: -10, until: "startTurn", scope: "all", remove: ["Split Nose Tip"] },
+  yzcDAsLrWr3yixGA: { name: "Fashion Vandal", mod: -10, until: "startTurn", scope: "all" }
 };

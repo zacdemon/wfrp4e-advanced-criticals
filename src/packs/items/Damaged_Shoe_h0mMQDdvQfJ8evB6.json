@@ -50,7 +50,7 @@
         },
         "scriptData": [
           {
-            "script": "this.effect.delete",
+            "script": "await this.effect.delete();",
             "label": "Damaged Shoe",
             "trigger": "endTurn",
             "options": {

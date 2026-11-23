@@ -73,5 +73,12 @@
   "EXPCRIT.Choice.Chose": "{actor} chose: {option}.",
   "EXPCRIT.Choice.DropWhich": "Drop whatever you hold in one of your hands. Which one?",
   "EXPCRIT.Choice.EmptyHand": "The empty hand (drop nothing)",
-  "EXPCRIT.Choice.TwoHanded": "Held in both hands"
+  "EXPCRIT.Choice.TwoHanded": "Held in both hands",
+  "EXPCRIT.Turn.NotYet": "The {test} Test for this turn still hasn't been rolled after 5 minutes. Resolve it by hand if it won't be rolled (a late roll still applies).",
+  "EXPCRIT.Turn.ChanceHit": "{chance}% chance: {what}!",
+  "EXPCRIT.Turn.ChanceMiss": "{chance}% chance of {what}: not this turn.",
+  "EXPCRIT.Turn.Penalty": "{name}: {mod} to physical Tests this turn",
+  "EXPCRIT.Turn.PenaltyMove": "{name}: {mod} to physical Tests and half Movement this turn",
+  "EXPCRIT.Turn.HalfMove": "Half Movement",
+  "EXPCRIT.Turn.EndsAtTurnEnd": "Ends at the end of the turn"
 }

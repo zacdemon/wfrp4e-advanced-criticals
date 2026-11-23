@@ -18,6 +18,8 @@ const MODULE_ID = "artantares-advanced-criticals";
 const QUERY = `${MODULE_ID}.rollCritTest`;
 const CHOICE_QUERY = `${MODULE_ID}.chooseCritOption`;
 const QUERY_TIMEOUT = 5 * 60 * 1000;
+// Generated effect names end in one of these; the rest is the critical's name.
+const TITLE_SUFFIX = /\s*\((Test|Choice|Start of Turn|End of Turn)\)$/;
 
 // Characteristic each basic skill falls back to (used only to choose the better of two skills).
 const SKILL_CHAR = { Cool: "wp", Endurance: "t", Athletics: "ag", Heal: "int", Perception: "i", Dodge: "ag" };
@@ -143,7 +145,7 @@ function rollerFor(actor) {
 export async function rollCritTest(ctx, spec = {}) {
   const actor = ctx?.actor;
   if (!actor) return null;
-  spec = { ...spec, title: spec.title ?? ctx.effect?.name?.replace(/\s*\((Test|Choice)\)$/, "") ?? ctx.item?.name };
+  spec = { ...spec, title: spec.title ?? ctx.effect?.name?.replace(TITLE_SUFFIX, "") ?? ctx.item?.name };
   const roller = rollerFor(actor);
   let result = null;
   if (roller.id !== game.user.id) {
@@ -162,7 +164,7 @@ export async function rollCritTest(ctx, spec = {}) {
   else {
     result = await rollLocal(actor, spec);
   }
-  if (!result) {
+  if (!result && !spec.optional) {
     await gmNote(ctx, loc("EXPCRIT.Tests.NotRolled", { test: describeTest(spec) }));
   }
   return result;
@@ -181,7 +183,7 @@ export function describeTest(spec) {
 /** Whisper a note about this critical to the GMs and the actor's owners. */
 export async function gmNote(ctx, html) {
   const actor = ctx?.actor;
-  const title = ctx?.effect?.name?.replace(/\s*\((Test|Choice)\)$/, "") ?? ctx?.item?.name ?? "";
+  const title = ctx?.effect?.name?.replace(TITLE_SUFFIX, "") ?? ctx?.item?.name ?? "";
   const whisper = game.users.filter((u) => u.isGM || (actor && actor.testUserPermission(u, "OWNER"))).map((u) => u.id);
   return ChatMessage.create({
     content: `<p><strong>${esc(title)}</strong> (${esc(actor?.name)})</p><p>${html}</p>`,
@@ -204,7 +206,7 @@ export async function dropHeld(ctx, { where = "location", keepTwoHanded = false 
   const kept = keepTwoHanded ? weapons.filter((w) => w.system.twohanded?.value) : [];
   const dropped = weapons.filter((w) => !kept.includes(w));
   for (const w of dropped) await w.system.toggleEquip();
-  if (dropped.length) ui.notifications.notify(`<strong>${esc(ctx.effect?.name?.replace(/\s*\((Test|Choice)\)$/, ""))}</strong>: ${loc("EXPCRIT.Tests.Dropped", { items: dropped.map((i) => i.name).join(", ") })}`);
+  if (dropped.length) ui.notifications.notify(`<strong>${esc(ctx.effect?.name?.replace(TITLE_SUFFIX, ""))}</strong>: ${loc("EXPCRIT.Tests.Dropped", { items: dropped.map((i) => i.name).join(", ") })}`);
   if (kept.length) await gmNote(ctx, loc("EXPCRIT.Tests.TwoHandedKept", { items: kept.map((i) => esc(i.name)).join(", ") }));
   return dropped;
 }
@@ -226,7 +228,7 @@ export async function addCoreItem(ctx, key, modify) {
 
 /** Temporary actor effect: penalty to the next rolled Test, removed once that Test is rolled. */
 export async function nextTestPenalty(ctx, modifier) {
-  const title = ctx.effect?.name?.replace(/\s*\((Test|Choice)\)$/, "") ?? ctx.item?.name;
+  const title = ctx.effect?.name?.replace(TITLE_SUFFIX, "") ?? ctx.item?.name;
   return addEffect(ctx, {
     name: loc("EXPCRIT.Tests.NextTest", { name: title, mod: modifier }),
     script: `args.fields.modifier += ${Number(modifier)};`,
@@ -309,7 +311,7 @@ async function chooseLocal(actor, spec = {}) {
 export async function chooseCritOption(ctx, spec = {}) {
   const actor = ctx?.actor;
   if (!actor) return null;
-  spec = { ...spec, title: spec.title ?? ctx.item?.name ?? ctx.effect?.name?.replace(/\s*\((Test|Choice)\)$/, "") };
+  spec = { ...spec, title: spec.title ?? ctx.item?.name ?? ctx.effect?.name?.replace(TITLE_SUFFIX, "") };
   const enabled = (spec.options ?? []).filter((o) => !o.disabled);
   if (!enabled.length) return null;
   const roller = rollerFor(actor);
@@ -357,4 +359,146 @@ export async function dropChosen(ctx) {
   return [weapon];
 }
 
-export const critTestApi = { rollCritTest, chooseCritOption, dropChosen, gmNote, dropHeld, addCoreItem, nextTestPenalty, addEffect, describeTest, CORE_ITEMS };
+/* -------------------------------------------- */
+/*  Recurring Tests (start / end of each turn)  */
+/* -------------------------------------------- */
+// Generated "<Critical> (Start of Turn)" / "(End of Turn)" effects carry a startTurn / endTurn script.
+// warhammer-lib runs those when the combat turn advances, once per combatant per round, on the client of
+// the actor's active owner (its player if online, otherwise the GM), so the Test opens on that screen.
+
+const PHYSICAL_SKIP = ["int", "wp", "fel"];
+
+/** Should this turn's recurring Test/roll happen? (not for the dead; only on the owner's client) */
+export function turnReady(ctx) {
+  const actor = ctx?.actor;
+  if (!actor) return false;
+  if (actor.hasCondition?.("dead")) return false;
+  return true;
+}
+
+/**
+ * Roll a recurring Test (rollCritTest on this client). If nobody has rolled it 5 minutes later, the GM gets
+ * a note to resolve it by hand; a late roll still applies.
+ */
+export async function turnTest(ctx, spec = {}) {
+  const title = spec.title ?? ctx.effect?.name?.replace(TITLE_SUFFIX, "") ?? ctx.item?.name;
+  spec = { ...spec, title };
+  let done = false;
+  const timer = setTimeout(() => {
+    if (!done) gmNote(ctx, loc("EXPCRIT.Turn.NotYet", { test: describeTest(spec) }));
+  }, QUERY_TIMEOUT);
+  try { return await rollCritTest(ctx, spec); }
+  finally { done = true; clearTimeout(timer); }
+}
+
+/** The recurring Test is over (passed, or no longer possible): remove this effect from the critical. */
+export async function stopTurnTests(ctx, html) {
+  if (html) await turnNote(ctx, html);
+  try { await ctx.effect?.delete(); }
+  catch (err) { console.warn(`${MODULE_ID} | could not remove ${ctx.effect?.name}`, err); }
+}
+
+/** Public chat line for a recurring roll's outcome (everyone sees what happened at the table). */
+export async function turnNote(ctx, html) {
+  const title = ctx?.effect?.name?.replace(TITLE_SUFFIX, "") ?? ctx?.item?.name ?? "";
+  return ChatMessage.create({
+    content: `<p><strong>${esc(title)}</strong>: ${html}</p>`,
+    speaker: ChatMessage.getSpeaker({ actor: ctx.actor }),
+    flags: { [MODULE_ID]: { critNote: true } }
+  });
+}
+
+/** Percentile chance ("Each turn there is a 10% chance ..."): rolls 1d100 to chat, true when it happens. */
+export async function chanceRoll(ctx, chance, what) {
+  const title = ctx?.effect?.name?.replace(TITLE_SUFFIX, "") ?? ctx?.item?.name ?? "";
+  const roll = await new Roll("1d100").evaluate();
+  const hit = roll.total <= chance;
+  await roll.toMessage({
+    speaker: ChatMessage.getSpeaker({ actor: ctx.actor }),
+    flavor: `<strong>${esc(title)}</strong>: ${loc(hit ? "EXPCRIT.Turn.ChanceHit" : "EXPCRIT.Turn.ChanceMiss", { chance, what })}`
+  });
+  return hit;
+}
+
+/**
+ * Penalty for the rest of this turn (Tummy Slice, Abdominal Pain, Belly Burn): an actor effect with a dialog
+ * modifier (physical Tests only when `physical`), optionally halved Movement, removed at the end of the turn
+ * (or when the combat ends). `move`: Movement change for the turn (Grazed Ankle: +1 cancels its -1).
+ */
+export async function turnPenalty(ctx, { modifier = -20, physical = true, halveMove = false, move = 0, label } = {}) {
+  const title = ctx.effect?.name?.replace(TITLE_SUFFIX, "") ?? ctx.item?.name;
+  const name = label ? `${title}: ${label}` : loc(halveMove ? "EXPCRIT.Turn.PenaltyMove" : "EXPCRIT.Turn.Penalty", { name: title, mod: modifier });
+  const skip = JSON.stringify(PHYSICAL_SKIP);
+  const cleanup = `if (globalThis.warhammer?.utility?.getActiveDocumentOwner?.(this.actor)?.id === game.user.id) await this.effect.delete();`;
+  const scriptData = [];
+  if (modifier) scriptData.push({
+    label: name,
+    trigger: "dialog",
+    script: `args.fields.modifier += ${Number(modifier)};`,
+    options: physical
+      ? { hideScript: `return ${skip}.includes(args.characteristic);`, activateScript: `return !${skip}.includes(args.characteristic);` }
+      : { hideScript: "", activateScript: "return true;" }
+  });
+  if (move) scriptData.push({
+    label: name,
+    trigger: "prePrepareItems",
+    script: `this.actor.system.details.move.value = Math.max(0, Number(this.actor.system.details.move.value) + ${Number(move)});`,
+    options: {}
+  });
+  if (halveMove) scriptData.push({
+    label: loc("EXPCRIT.Turn.HalfMove"),
+    trigger: "prePrepareItems",
+    script: "this.actor.system.details.move.value = Math.floor(Number(this.actor.system.details.move.value) / 2);",
+    options: {}
+  });
+  scriptData.push({ label: loc("EXPCRIT.Turn.EndsAtTurnEnd"), trigger: "endTurn", script: cleanup, options: {}, async: true });
+  scriptData.push({ label: loc("EXPCRIT.Turn.EndsAtTurnEnd"), trigger: "endCombat", script: cleanup, options: {}, async: true });
+  return ctx.actor.createEmbeddedDocuments("ActiveEffect", [{
+    name,
+    img: ctx.item?.img ?? "modules/wfrp4e-core/icons/injuries/injury.png",
+    origin: ctx.actor.uuid,
+    system: { transferData: { type: "document", documentType: "Actor" }, scriptData },
+    flags: { [MODULE_ID]: { fromCritical: ctx.item?.name ?? null, turnPenalty: true } }
+  }]);
+}
+
+/**
+ * Undo an injury this critical granted on receipt (Bruised Thigh / Spinal Burn: "Amputated Leg" until the Test
+ * is passed). Removes the items with that name created around the same time as the critical, at `keys` (default: the
+ * critical's location key) or anywhere when keys is "any".
+ */
+export async function removeGranted(ctx, name, keys) {
+  const actor = ctx.actor;
+  // Granted items are created by the critical's immediate script, i.e. *before* the critical itself is stored
+  // (seconds earlier on a busy server): accept the ones created within 10 minutes of it.
+  const at = Number(ctx.item?._stats?.createdTime ?? 0);
+  const near = (i) => !at || Math.abs(Number(i._stats?.createdTime ?? 0) - at) <= 10 * 60 * 1000;
+  const want = keys === "any" ? null : new Set([].concat(keys ?? ctx.item?.system?.location?.key ?? []));
+  const items = actor.items.filter((i) => i.name === name && near(i)
+    && (!want || !want.size || want.has(i.system?.location?.key)));
+  if (items.length) await actor.deleteEmbeddedDocuments("Item", items.map((i) => i.id));
+  return items;
+}
+
+/**
+ * A recurring Test that only starts under some outcome (Damaged Eye: the hand stays clapped to the eye after a
+ * failed Test): an actor effect whose startTurn/endTurn script rolls the Test and removes itself once passed.
+ * spec: rollCritTest spec; passNote: html shown when it is passed.
+ */
+export async function addTurnTest(ctx, { trigger = "startTurn", spec = {}, passNote = "" } = {}) {
+  const title = ctx.effect?.name?.replace(TITLE_SUFFIX, "") ?? ctx.item?.name;
+  const label = trigger === "endTurn" ? "End of Turn" : "Start of Turn";
+  const script = `const api = game.modules.get("${MODULE_ID}")?.api;
+if (!api?.turnTest || !api.turnReady(this)) return;
+const test = await api.turnTest(this, ${JSON.stringify({ ...spec, title })});
+if (test && !test.failed) await api.stopTurnTests(this, ${JSON.stringify(passNote)});`;
+  return ctx.actor.createEmbeddedDocuments("ActiveEffect", [{
+    name: `${title} (${label})`,
+    img: ctx.item?.img ?? "modules/wfrp4e-core/icons/injuries/injury.png",
+    origin: ctx.actor.uuid,
+    system: { transferData: { type: "document", documentType: "Actor" }, scriptData: [{ label: describeTest(spec), trigger, script, options: {}, async: true }] },
+    flags: { [MODULE_ID]: { fromCritical: ctx.item?.name ?? null, critTurn: true } }
+  }]);
+}
+
+export const critTestApi = { turnReady, turnTest, stopTurnTests, turnNote, chanceRoll, turnPenalty, removeGranted, addTurnTest, rollCritTest, chooseCritOption, dropChosen, gmNote, dropHeld, addCoreItem, nextTestPenalty, addEffect, describeTest, CORE_ITEMS };
