@@ -4,7 +4,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import * as acorn from "acorn";
-import { CRIT_TESTS, NOT_ON_ADD } from "./crit-tests-data.mjs";
+import { CRIT_TESTS as TESTS, CRIT_CHOICES, CHOICE_EXCEPTIONS, NOT_ON_ADD } from "./crit-tests-data.mjs";
+
+const CRIT_TESTS = { ...TESTS, ...CRIT_CHOICES };
 import { GRANTS, GRANT_EXCEPTIONS, CORE_NAMES } from "./grants-data.mjs";
 
 const ROOT = path.join("src", "packs");
@@ -74,7 +76,31 @@ for (const item of Object.values(items)) {
   const effectsText = text.slice(text.indexOf("Effects")).replace(/Extraction (will be|is)[^.]*\.?/g, "").replace(/(Surgery|Heal)[^.]*required for Extraction\.?/g, "");
   if (TEST_TEXT.test(effectsText) && !spec && !NOT_ON_ADD[item._id]) errors.push(`${where}: text calls for a Test but the critical is in neither CRIT_TESTS nor NOT_ON_ADD`);
 }
-stats.critTests = Object.keys(CRIT_TESTS).length;
+stats.critTests = Object.keys(TESTS).length;
+
+// Choices on receipt: every critical whose text offers a choice is automated (a `choices` entry or the
+// "dropchoose" action, i.e. a generated script calling chooseCritOption / dropChosen) or in CHOICE_EXCEPTIONS.
+const CHOICE_TEXT = /\bchoos\w*|\bchoice\b|\beither\b|\bmay spend\b|\bone of your hands\b|\bpick the (?:best|worst)\b|\bGM decides\b|\bGM.s decision\b|\bdepending on your method\b|\bif you (?:want|wish|prefer)\b/i;
+let choiceCount = 0;
+for (const id of Object.keys(CHOICE_EXCEPTIONS)) if (!items[id]) errors.push(`CHOICE_EXCEPTIONS: item ${id} not found`);
+for (const [id, spec] of Object.entries(CRIT_TESTS)) for (const c of spec.choices ?? []) {
+  if (!c.prompt || !(c.options?.length >= 2)) errors.push(`${spec.name} (${id}): a choice needs a prompt and at least 2 options`);
+  const ids = (c.options ?? []).map(o => o.id);
+  if (new Set(ids).size !== ids.length || ids.some(x => !x)) errors.push(`${spec.name} (${id}): choice option ids must be unique and non-empty`);
+}
+for (const item of Object.values(items).filter(i => i.type === "critical")) {
+  const where = `${folders[item.folder]} / ${item.name} (${item._id})`;
+  const text = (item.system?.description?.value ?? "").replace(/<[^>]+>/g, " ").replace(/@\w+\[([^\]]+)\](\{([^}]*)\})?/g, (m, a, b, c) => c || a.split(".").pop()).replace(/\s+/g, " ");
+  const generated = (item.effects ?? []).filter(e => e.flags?.[MODULE_ID]?.critTest).flatMap(e => e.system?.scriptData ?? []).map(s => s.script ?? "").join("\n");
+  const automated = /api\.(chooseCritOption|dropChosen)\(/.test(generated);
+  if (automated) choiceCount++;
+  const asks = CHOICE_TEXT.test(text.slice(text.indexOf("Effects")));
+  if (asks && !automated && !CHOICE_EXCEPTIONS[item._id]) errors.push(`${where}: text offers a choice but no generated script asks for it (add it to CRIT_CHOICES / a choices entry in tools/crit-tests-data.mjs, or to CHOICE_EXCEPTIONS with a reason)`);
+  if (CHOICE_EXCEPTIONS[item._id] && automated) errors.push(`${where}: in CHOICE_EXCEPTIONS but its choice is automated; remove the exception`);
+  if (CHOICE_EXCEPTIONS[item._id] && !asks) errors.push(`${where}: in CHOICE_EXCEPTIONS but its text no longer matches; remove the exception`);
+}
+stats.critChoices = choiceCount;
+stats.choiceExceptions = Object.keys(CHOICE_EXCEPTIONS).length;
 
 // Granted items: every core injury/disease a critical's text gives the victim (Broken Bone / Torn Muscle
 // (Minor|Major), Amputation, Festering Wound, Blood Rot, Minor Infection) is added by one of its scripts,

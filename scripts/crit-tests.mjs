@@ -16,6 +16,7 @@
 
 const MODULE_ID = "artantares-advanced-criticals";
 const QUERY = `${MODULE_ID}.rollCritTest`;
+const CHOICE_QUERY = `${MODULE_ID}.chooseCritOption`;
 const QUERY_TIMEOUT = 5 * 60 * 1000;
 
 // Characteristic each basic skill falls back to (used only to choose the better of two skills).
@@ -50,6 +51,12 @@ export function registerCritTestSettings() {
     const actor = await fromUuid(actorUuid);
     if (!actor?.isOwner) return { error: "not-owner" };
     return rollLocal(actor, spec);
+  };
+  // Runs on the owning player's client: the critical offers a choice (Duck And Cover: Prone or Ablaze ...).
+  CONFIG.queries[CHOICE_QUERY] = async ({ actorUuid, spec } = {}) => {
+    const actor = await fromUuid(actorUuid);
+    if (!actor?.isOwner) return { error: "not-owner" };
+    return { choice: await chooseLocal(actor, spec) };
   };
 }
 
@@ -136,7 +143,7 @@ function rollerFor(actor) {
 export async function rollCritTest(ctx, spec = {}) {
   const actor = ctx?.actor;
   if (!actor) return null;
-  spec = { ...spec, title: spec.title ?? ctx.effect?.name?.replace(/\s*\(Test\)$/, "") ?? ctx.item?.name };
+  spec = { ...spec, title: spec.title ?? ctx.effect?.name?.replace(/\s*\((Test|Choice)\)$/, "") ?? ctx.item?.name };
   const roller = rollerFor(actor);
   let result = null;
   if (roller.id !== game.user.id) {
@@ -174,7 +181,7 @@ export function describeTest(spec) {
 /** Whisper a note about this critical to the GMs and the actor's owners. */
 export async function gmNote(ctx, html) {
   const actor = ctx?.actor;
-  const title = ctx?.effect?.name?.replace(/\s*\(Test\)$/, "") ?? ctx?.item?.name ?? "";
+  const title = ctx?.effect?.name?.replace(/\s*\((Test|Choice)\)$/, "") ?? ctx?.item?.name ?? "";
   const whisper = game.users.filter((u) => u.isGM || (actor && actor.testUserPermission(u, "OWNER"))).map((u) => u.id);
   return ChatMessage.create({
     content: `<p><strong>${esc(title)}</strong> (${esc(actor?.name)})</p><p>${html}</p>`,
@@ -197,7 +204,7 @@ export async function dropHeld(ctx, { where = "location", keepTwoHanded = false 
   const kept = keepTwoHanded ? weapons.filter((w) => w.system.twohanded?.value) : [];
   const dropped = weapons.filter((w) => !kept.includes(w));
   for (const w of dropped) await w.system.toggleEquip();
-  if (dropped.length) ui.notifications.notify(`<strong>${esc(ctx.effect?.name?.replace(/\s*\(Test\)$/, ""))}</strong>: ${loc("EXPCRIT.Tests.Dropped", { items: dropped.map((i) => i.name).join(", ") })}`);
+  if (dropped.length) ui.notifications.notify(`<strong>${esc(ctx.effect?.name?.replace(/\s*\((Test|Choice)\)$/, ""))}</strong>: ${loc("EXPCRIT.Tests.Dropped", { items: dropped.map((i) => i.name).join(", ") })}`);
   if (kept.length) await gmNote(ctx, loc("EXPCRIT.Tests.TwoHandedKept", { items: kept.map((i) => esc(i.name)).join(", ") }));
   return dropped;
 }
@@ -219,7 +226,7 @@ export async function addCoreItem(ctx, key, modify) {
 
 /** Temporary actor effect: penalty to the next rolled Test, removed once that Test is rolled. */
 export async function nextTestPenalty(ctx, modifier) {
-  const title = ctx.effect?.name?.replace(/\s*\(Test\)$/, "") ?? ctx.item?.name;
+  const title = ctx.effect?.name?.replace(/\s*\((Test|Choice)\)$/, "") ?? ctx.item?.name;
   return addEffect(ctx, {
     name: loc("EXPCRIT.Tests.NextTest", { name: title, mod: modifier }),
     script: `args.fields.modifier += ${Number(modifier)};`,
@@ -252,4 +259,102 @@ export async function addEffect(ctx, { name, script, hideScript = "", activateSc
   return ctx.actor.createEmbeddedDocuments("ActiveEffect", [data]);
 }
 
-export const critTestApi = { rollCritTest, gmNote, dropHeld, addCoreItem, nextTestPenalty, addEffect, describeTest, CORE_ITEMS };
+/**
+ * Ask on this client which option to take. spec: {title, prompt, options: [{id, label, hint, disabled}]}
+ * Returns the chosen id, or null (closed / timed out).
+ */
+async function chooseLocal(actor, spec = {}) {
+  const options = (spec.options ?? []).filter((o) => o && o.id);
+  const first = options.find((o) => !o.disabled);
+  if (!first) return null;
+  const rows = options.map((o) => `
+    <label class="expcrit-choice" style="display:flex;gap:8px;align-items:flex-start;margin:4px 0;${o.disabled ? "opacity:.5" : ""}">
+      <input type="radio" name="choice" value="${esc(o.id)}" ${o.id === first.id ? "checked" : ""} ${o.disabled ? "disabled" : ""}>
+      <span><strong>${esc(o.label)}</strong>${o.hint ? `<br><span class="hint">${esc(o.hint)}</span>` : ""}</span>
+    </label>`).join("");
+  const content = `<div class="expcrit-choice-dialog">
+      <p><strong>${esc(actor.name)}</strong>: ${esc(spec.prompt ?? "")}</p>
+      ${rows}
+    </div>`;
+  let app = null;
+  const timer = setTimeout(() => app?.close(), QUERY_TIMEOUT - 5000);
+  try {
+    return await foundry.applications.api.DialogV2.wait({
+      window: { title: `${spec.title ?? ""}: ${loc("EXPCRIT.Choice.Title")}`, icon: "fa-solid fa-code-branch" },
+      position: { width: 420 },
+      content,
+      rejectClose: false,
+      render: (event, dialog) => { app = dialog ?? event?.target ?? null; },
+      buttons: [{
+        action: "choose",
+        label: loc("EXPCRIT.Choice.Confirm"),
+        icon: "fa-solid fa-check",
+        default: true,
+        callback: (event, button) => button.form.elements.choice?.value ?? null
+      }]
+    }) ?? null;
+  }
+  catch (err) {
+    console.error(`${MODULE_ID} | critical choice failed`, err);
+    return null;
+  }
+  finally { clearTimeout(timer); }
+}
+
+/**
+ * A critical that offers a choice when it is received. Called from the item's immediate script with `this` as ctx.
+ * Asked of the same user as the critical's Tests (setting "Who rolls critical Tests").
+ * Returns the chosen option id, or null (closed / no answer: a GM note says to apply it by hand).
+ */
+export async function chooseCritOption(ctx, spec = {}) {
+  const actor = ctx?.actor;
+  if (!actor) return null;
+  spec = { ...spec, title: spec.title ?? ctx.item?.name ?? ctx.effect?.name?.replace(/\s*\((Test|Choice)\)$/, "") };
+  const enabled = (spec.options ?? []).filter((o) => !o.disabled);
+  if (!enabled.length) return null;
+  const roller = rollerFor(actor);
+  let choice = null;
+  if (roller.id !== game.user.id) {
+    ui.notifications.info(loc("EXPCRIT.Choice.Waiting", { user: roller.name, actor: actor.name }));
+    try {
+      const res = await roller.query(CHOICE_QUERY, { actorUuid: actor.uuid, spec }, { timeout: QUERY_TIMEOUT });
+      if (res?.error) throw new Error(res.error);
+      choice = res?.choice ?? null;
+    }
+    catch (err) {
+      console.warn(`${MODULE_ID} | ${roller.name} did not answer the critical choice`, err);
+      if (!/timed? ?out/i.test(String(err?.message ?? err))) choice = await chooseLocal(actor, spec);
+    }
+  }
+  else choice = await chooseLocal(actor, spec);
+  if (choice && !enabled.some((o) => o.id === choice)) choice = null;
+  if (!choice) {
+    await gmNote(ctx, loc("EXPCRIT.Choice.NotChosen", { options: (spec.options ?? []).map((o) => esc(o.label)).join(" / ") }));
+    return null;
+  }
+  const picked = enabled.find((o) => o.id === choice);
+  await ChatMessage.create({
+    content: `<p><strong>${esc(spec.title)}</strong>: ${loc("EXPCRIT.Choice.Chose", { actor: esc(actor.name), option: esc(picked.label) })}</p>`,
+    speaker: ChatMessage.getSpeaker({ actor })
+  });
+  return choice;
+}
+
+/** "Drop whatever you held in one of your hands": the victim picks which held item (or the empty hand). */
+export async function dropChosen(ctx) {
+  const actor = ctx.actor;
+  const held = actor.itemTypes.weapon.filter((w) => w.system.isEquipped);
+  if (!held.length) return [];
+  const hands = held.reduce((n, w) => n + (w.system.twohanded?.value ? 2 : 1), 0);
+  const options = held.map((w) => ({ id: w.id, label: w.name, hint: w.system.twohanded?.value ? loc("EXPCRIT.Choice.TwoHanded") : "" }));
+  if (hands < 2) options.push({ id: "none", label: loc("EXPCRIT.Choice.EmptyHand") });
+  const pick = await chooseCritOption(ctx, { prompt: loc("EXPCRIT.Choice.DropWhich"), options });
+  if (!pick || pick === "none") return [];
+  const weapon = actor.items.get(pick);
+  if (!weapon?.system?.isEquipped) return [];
+  await weapon.system.toggleEquip();
+  ui.notifications.notify(`<strong>${esc(ctx.item?.name ?? "")}</strong>: ${loc("EXPCRIT.Tests.Dropped", { items: weapon.name })}`);
+  return [weapon];
+}
+
+export const critTestApi = { rollCritTest, chooseCritOption, dropChosen, gmNote, dropHeld, addCoreItem, nextTestPenalty, addEffect, describeTest, CORE_ITEMS };

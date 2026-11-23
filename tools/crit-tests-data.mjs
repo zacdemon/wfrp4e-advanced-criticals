@@ -11,7 +11,11 @@
 //   "next:-10"                                 penalty to the next rolled Test (temporary effect)
 //   "note:<html>"                              whispered chat note to the GM (+ owners) for what can't be automated
 //   "code:<js>"                                raw script; `test`, `api` and `this` are in scope
+//   "dropchoose"                               the victim picks which held item to drop (or the empty hand)
 // remove: names of existing effects replaced by the generated one (their immediate scripts are superseded).
+// choices: [{prompt, after?, options: [{id, label, hint?, if?: "<js expr enabling it>", do: [actions]}]}]
+//   a choice the victim makes when the wound is received (asked of the same user as the Tests, setting
+//   "Who rolls critical Tests"); before the Tests unless `after`. Closed / no answer: GM note.
 
 const ARM_PENALTY = (what) => `code:await api.addEffect(this, {name: \`\${this.item.name}: -10 (${what})\`, script: "args.fields.modifier -= 10;"});\nawait api.gmNote(this, "-10 to Tests using that arm until the Test is passed (tick the modifier in the roll dialog; delete the effect once it is passed).");`;
 
@@ -133,7 +137,7 @@ if (test.failed && (this.item.system.weaponsAtLocation ?? []).some(w => w.system
   test = await api.rollCritTest(this, {skill: "Endurance", difficulty: "average", title: \`\${this.item.name} (two hands: reroll)\`, failure: "Drop anything held in that hand."});
 if (test?.failed) await api.dropHeld(this, {where: "location"});` },
   h8qrSnKHUgz7cuEQ: { name: "Busted Ribcage", tests: [{ skill: "Endurance", difficulty: "challenging", fail: ["cond:prone"] }] },
-  PvKPMpAcP8aGouoi: { name: "Groin Gash", pre: ["cond:prone", "cond:bleeding:2"], tests: [{ skill: "Endurance", difficulty: "challenging", fail: ["cond:stunned:2"] }], remove: ["Groin Gash (Conditions)"] },
+  PvKPMpAcP8aGouoi: { name: "Groin Gash", pre: ["dropchoose", "cond:prone", "cond:bleeding:2"], tests: [{ skill: "Endurance", difficulty: "challenging", fail: ["cond:stunned:2"] }], remove: ["Groin Gash (Conditions)"] },
   qWr9xQjAMME2mBbd: { name: "Horrific Chest Injury", tests: [
     { skill: "Athletics", difficulty: "average", fail: ["cond:prone"] },
     { skill: "Endurance", difficulty: "easy", failure: "Contract a Minor Infection (if the GM uses the Infection rules).", fail: ["item:minor", "note:Minor Infection added. Delete it if you are not using the Infection rules."] }] },
@@ -188,6 +192,50 @@ if (test?.failed) await api.dropHeld(this, {where: "location"});` },
 // Criticals that mention a Test the afflicted creature rolls, but not when the wound is received
 // (recurring each turn/day, after the encounter, conditional, or rolled by someone else). They keep their
 // existing behaviour; listed here so the validator can tell they were reviewed.
+// Criticals whose only on-receipt rule is a choice (no Test). Same generator; the effect is "<Critical> (Choice)".
+export const CRIT_CHOICES = {
+  VNnaUz9pQegOl34J: { name: "Duck And Cover", choices: [{
+    prompt: "Flames lick your clothing. Roll on the ground to put them out, or stay on your feet?",
+    options: [
+      { id: "prone", label: "Duck and cover: gain Prone", do: ["cond:prone"] },
+      { id: "ablaze", label: "Stay on your feet: gain Ablaze (1)", do: ["cond:ablaze:1"] }
+    ] }], remove: ["Duck And Cover (Conditions)"] },
+  EP1zke51auzU5Yk3: { name: "The Old Thrust And Twist", choices: [{
+    prompt: "That is not survivable. Spend Fate, or, out of Fate Points, a Resilience Point to twist away?",
+    options: [
+      { id: "fate", label: "Spend a Fate Point", hint: "You avoid death; the GM decides what happens instead.", if: "Number(this.actor.system.status?.fate?.value ?? 0) > 0",
+        do: ["code:await this.actor.update({\"system.status.fate.value\": Number(this.actor.system.status.fate.value) - 1});", "note:Spent a Fate Point to avoid death. The GM decides what happens instead."] },
+      { id: "resilience", label: "Spend a Resilience Point: Prone, Stunned (3) and Bleeding (1)", hint: "Only when out of Fate Points.", if: "Number(this.actor.system.status?.fate?.value ?? 0) <= 0 && Number(this.actor.system.status?.resilience?.value ?? 0) > 0",
+        do: ["code:await this.actor.update({\"system.status.resilience.value\": Number(this.actor.system.status.resilience.value) - 1});", "cond:prone", "cond:stunned:3", "cond:bleeding:1"] },
+      { id: "die", label: "Accept death", do: ["cond:dead"] }
+    ] }], remove: ["The Old Thrust And Twist (Conditions)"] }
+};
+
+// Criticals whose text mentions a choice / "either" / "GM decides" that is not the victim's choice on receipt.
+// The validator requires every such critical to be automated (CRIT_CHOICES, a `choices` entry, "dropchoose")
+// or listed here with the reason.
+export const CHOICE_EXCEPTIONS = {
+  NZMVDGMlrra4w33P: "Brain Damage: 'either Condition' refers to the Test's two outcomes, not a choice",
+  qvpOwLpvsqNF2eZb: "Brain Damage: 'either Condition' refers to the Test's two outcomes, not a choice",
+  nBFfCicVtiovy8Kf: "Burning Equipment: what burns depends on the gear carried; the GM decides",
+  "5NdTvbMCKQNEqYLy": "Cerebral Hemorrhage: GM decides whether the surgeon is knowledgeable (later rehabilitation)",
+  Exe25VLUOMRDtxL7: "Choking: 'either tongue or vocal cords' is flavour; the penalty is the same",
+  MzWkUpqwF5FuHmL5: "Crushed Larynx: later Heal Test by yourself or someone else, not on receipt",
+  fGjzrm4Y8cf81wEC: "Crushed Larynx: later Heal Test by yourself or someone else, not on receipt",
+  zhQuDrutCumeCZnj: "Crushed Larynx: later Heal Test by yourself or someone else, not on receipt",
+  LORNFwiqtMd7UdL5: "Dislocated Kneecap: optional later self-repair; the skill is picked when attempting it",
+  Q0KJ9adNN6IZBMR3: "Dislocated Kneecap: optional later self-repair; the skill is picked when attempting it",
+  p91MPWbx6NOYahVn: "Dislocated Kneecap: optional later self-repair; the skill is picked when attempting it",
+  "3nLasxyEkj7LTXOZ": "Dislocated Shoulder: optional later self-repair; the skill is picked when attempting it",
+  "68MFqbar18iZfCL7": "Dislocated Shoulder: optional later self-repair; the skill is picked when attempting it",
+  BDDD6k9wgmbkS1JX: "Dislocated Shoulder: optional later self-repair; the skill is picked when attempting it",
+  XO0l3Y3GhwYjx7FH: "Eye Injury: about the later Surgery, not on receipt",
+  t872vdOoyvXj2hyq: "Pierced Wrist: later remedy (Extraction or two Actions), not on receipt",
+  JPOqvnh3G8MeVQ1J: "Shredded Hand: 'pick the worst' skill for a Test before later Actions (no choice for the victim)",
+  "27XFH1k68HoS2nIk": "Torn Clothing: narrative; the GM decides what is damaged",
+  ok9nO9abuUDSRLor: "Tug-Of-War: two-handed grip rolls twice and keeps the best result (no choice; see the Test's note)"
+};
+
 export const NOT_ON_ADD = {
   GgC6ZlIFEL4U1GAm: "Pierced Flank: Cool Test only to extract without the Heal skill",
   mc4l9MIhgW8Ykbcd: "Gurgle: long-term Endurance Test when the broken bone heals",

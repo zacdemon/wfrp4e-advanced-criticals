@@ -65,5 +65,13 @@
   "EXPCRIT.Tests.Dropped": "Dropped {items}!",
   "EXPCRIT.Tests.TwoHandedKept": "{items} is held in both hands: not dropped, but it can't be used next turn.",
   "EXPCRIT.Tests.MissingItem": "Could not find {uuid}. Is the WFRP4e Core Rulebook module enabled? Add it by hand.",
-  "EXPCRIT.Tests.NextTest": "{name}: {mod} to the next Test"
+  "EXPCRIT.Tests.NextTest": "{name}: {mod} to the next Test",
+  "EXPCRIT.Choice.Title": "choose",
+  "EXPCRIT.Choice.Confirm": "Confirm",
+  "EXPCRIT.Choice.Waiting": "Waiting for {user} to choose for {actor}...",
+  "EXPCRIT.Choice.NotChosen": "No choice was made (dialog closed or no answer): {options}. Apply one by hand.",
+  "EXPCRIT.Choice.Chose": "{actor} chose: {option}.",
+  "EXPCRIT.Choice.DropWhich": "Drop whatever you hold in one of your hands. Which one?",
+  "EXPCRIT.Choice.EmptyHand": "The empty hand (drop nothing)",
+  "EXPCRIT.Choice.TwoHanded": "Held in both hands"
 }
